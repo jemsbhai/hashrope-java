@@ -1,0 +1,21 @@
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\06-concatenation-red\snapshot\test\hashrope\PolynomialHashTest.java:33: error: cannot find symbol
+                eq(h.hash(joined),h.hashConcat(h.hash(left),right.length,h.hash(right)));
+                                   ^
+  symbol:   method hashConcat(BigInteger,int,BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\06-concatenation-red\snapshot\test\hashrope\PolynomialHashTest.java:34: error: cannot find symbol
+                eq(h.hash(joined),h.hashConcat(h.hash(left),BigInteger.valueOf(right.length),h.hash(right)));
+                                   ^
+  symbol:   method hashConcat(BigInteger,BigInteger,BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\06-concatenation-red\snapshot\test\hashrope\PolynomialHashTest.java:37: error: cannot find symbol
+            eq(BigInteger.valueOf(9).multiply(h.base().modPow(huge,p)).add(BigInteger.valueOf(7)).mod(p),h.hashConcat(BigInteger.valueOf(9),huge,BigInteger.valueOf(7)));
+                                                                                                          ^
+  symbol:   method hashConcat(BigInteger,BigInteger,BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\06-concatenation-red\snapshot\test\hashrope\PolynomialHashTest.java:38: error: cannot find symbol
+            eq(h.power(-7).multiply(BigInteger.valueOf(9)).add(BigInteger.valueOf(7)).mod(p),h.hashConcat(BigInteger.valueOf(9),-7,BigInteger.valueOf(7)));
+                                                                                              ^
+  symbol:   method hashConcat(BigInteger,int,BigInteger)
+  location: variable h of type PolynomialHash
+4 errors

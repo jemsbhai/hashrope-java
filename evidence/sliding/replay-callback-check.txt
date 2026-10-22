@@ -1,0 +1,3 @@
+12-current-hash-order-red: expected exit 1; observed exit 1
+13-append-order-green: expected exit 0; observed exit 0
+Replay outputs: C:\Users\User\AppData\Local\Temp\hashrope-sliding-replay-b804d17b8ccb4554b25db843fda2b756

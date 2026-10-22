@@ -1,0 +1,94 @@
+# hashrope 0.2.2; schema=1; see SCHEMA.md; UTF-8; decimal integers; hex bytes
+error	default-base--1	2305843009213693951	-1	constructor					ValueError	Base must be in [2, p-1], got -1
+error	default-base-0	2305843009213693951	0	constructor					ValueError	Base must be in [2, p-1], got 0
+error	default-base-1	2305843009213693951	1	constructor					ValueError	Base must be in [2, p-1], got 1
+error	default-base-2305843009213693951	2305843009213693951	2305843009213693951	constructor					ValueError	Base must be in [2, p-1], got 2305843009213693951
+error	default-base-2305843009213693952	2305843009213693951	2305843009213693952	constructor					ValueError	Base must be in [2, p-1], got 2305843009213693952
+error	default-empty-leaf	2305843009213693951	131	leaf					ValueError	Leaf cannot be empty
+error	default-node-reps--3	2305843009213693951	131	repeatNode	L61	-3			ValueError	RepeatNode reps must be >= 2, got -3
+error	default-node-reps--1	2305843009213693951	131	repeatNode	L61	-1			ValueError	RepeatNode reps must be >= 2, got -1
+error	default-node-reps-0	2305843009213693951	131	repeatNode	L61	0			ValueError	RepeatNode reps must be >= 2, got 0
+error	default-node-reps-1	2305843009213693951	131	repeatNode	L61	1			ValueError	RepeatNode reps must be >= 2, got 1
+error	default-repeat-negative	2305843009213693951	131	repeat	L61	-1			ValueError	RepeatNode reps must be >= 2, got -1
+error	default-repeat-null	2305843009213693951	131	repeat	E	2			AttributeError	'NoneType' object has no attribute 'len'
+error	default-internal-left-null	2305843009213693951	131	internal	E	L61			AttributeError	'NoneType' object has no attribute 'len'
+error	default-internal-right-null	2305843009213693951	131	internal	L61	E			AttributeError	'NoneType' object has no attribute 'len'
+error	default-overlap-zero	2305843009213693951	131	overlapHash	1	0	1	0	ZeroDivisionError	integer division or modulo by zero
+error	default-unbalanced	2305843009213693951	131	validate	L61,L62,R100,I				AssertionError	Left child too light: 1/101
+error	default-sliding-ctor-0-1	2305843009213693951	131	slidingConstructor	0	1			ValueError	d_max must be >= 1, got 0
+error	default-sliding-ctor--1-1	2305843009213693951	131	slidingConstructor	-1	1			ValueError	d_max must be >= 1, got -1
+error	default-sliding-ctor-1-0	2305843009213693951	131	slidingConstructor	1	0			ValueError	m_max must be >= 1, got 0
+error	default-sliding-ctor-1--1	2305843009213693951	131	slidingConstructor	1	-1			ValueError	m_max must be >= 1, got -1
+error	default-sliding-copy-decoded	2305843009213693951	131	slidingCopy	4	3	6162	3:1	ValueError	Invalid copy: offset 3 exceeds decoded length 2
+error	default-sliding-copy-window	2305843009213693951	131	slidingCopy	4	3	6162636465666768	5:1	ValueError	Copy offset 5 exceeds window size 4. Increase d_max (currently 4) to at least 5.
+error	default-sliding-copy-zero	2305843009213693951	131	slidingCopy	4	3	6162	0:1	ZeroDivisionError	integer division or modulo by zero
+error	wide-base--1	170141183460469231731687303715884105727	-1	constructor					ValueError	Base must be in [2, p-1], got -1
+error	wide-base-0	170141183460469231731687303715884105727	0	constructor					ValueError	Base must be in [2, p-1], got 0
+error	wide-base-1	170141183460469231731687303715884105727	1	constructor					ValueError	Base must be in [2, p-1], got 1
+error	wide-base-170141183460469231731687303715884105727	170141183460469231731687303715884105727	170141183460469231731687303715884105727	constructor					ValueError	Base must be in [2, p-1], got 170141183460469231731687303715884105727
+error	wide-base-170141183460469231731687303715884105728	170141183460469231731687303715884105727	170141183460469231731687303715884105728	constructor					ValueError	Base must be in [2, p-1], got 170141183460469231731687303715884105728
+error	wide-empty-leaf	170141183460469231731687303715884105727	257	leaf					ValueError	Leaf cannot be empty
+error	wide-node-reps--3	170141183460469231731687303715884105727	257	repeatNode	L61	-3			ValueError	RepeatNode reps must be >= 2, got -3
+error	wide-node-reps--1	170141183460469231731687303715884105727	257	repeatNode	L61	-1			ValueError	RepeatNode reps must be >= 2, got -1
+error	wide-node-reps-0	170141183460469231731687303715884105727	257	repeatNode	L61	0			ValueError	RepeatNode reps must be >= 2, got 0
+error	wide-node-reps-1	170141183460469231731687303715884105727	257	repeatNode	L61	1			ValueError	RepeatNode reps must be >= 2, got 1
+error	wide-repeat-negative	170141183460469231731687303715884105727	257	repeat	L61	-1			ValueError	RepeatNode reps must be >= 2, got -1
+error	wide-repeat-null	170141183460469231731687303715884105727	257	repeat	E	2			AttributeError	'NoneType' object has no attribute 'len'
+error	wide-internal-left-null	170141183460469231731687303715884105727	257	internal	E	L61			AttributeError	'NoneType' object has no attribute 'len'
+error	wide-internal-right-null	170141183460469231731687303715884105727	257	internal	L61	E			AttributeError	'NoneType' object has no attribute 'len'
+error	wide-overlap-zero	170141183460469231731687303715884105727	257	overlapHash	1	0	1	0	ZeroDivisionError	integer division or modulo by zero
+error	wide-unbalanced	170141183460469231731687303715884105727	257	validate	L61,L62,R100,I				AssertionError	Left child too light: 1/101
+error	wide-sliding-ctor-0-1	170141183460469231731687303715884105727	257	slidingConstructor	0	1			ValueError	d_max must be >= 1, got 0
+error	wide-sliding-ctor--1-1	170141183460469231731687303715884105727	257	slidingConstructor	-1	1			ValueError	d_max must be >= 1, got -1
+error	wide-sliding-ctor-1-0	170141183460469231731687303715884105727	257	slidingConstructor	1	0			ValueError	m_max must be >= 1, got 0
+error	wide-sliding-ctor-1--1	170141183460469231731687303715884105727	257	slidingConstructor	1	-1			ValueError	m_max must be >= 1, got -1
+error	wide-sliding-copy-decoded	170141183460469231731687303715884105727	257	slidingCopy	4	3	6162	3:1	ValueError	Invalid copy: offset 3 exceeds decoded length 2
+error	wide-sliding-copy-window	170141183460469231731687303715884105727	257	slidingCopy	4	3	6162636465666768	5:1	ValueError	Copy offset 5 exceeds window size 4. Increase d_max (currently 4) to at least 5.
+error	wide-sliding-copy-zero	170141183460469231731687303715884105727	257	slidingCopy	4	3	6162	0:1	ZeroDivisionError	integer division or modulo by zero
+error	small-base--1	31	-1	constructor					ValueError	Base must be in [2, p-1], got -1
+error	small-base-0	31	0	constructor					ValueError	Base must be in [2, p-1], got 0
+error	small-base-1	31	1	constructor					ValueError	Base must be in [2, p-1], got 1
+error	small-base-31	31	31	constructor					ValueError	Base must be in [2, p-1], got 31
+error	small-base-32	31	32	constructor					ValueError	Base must be in [2, p-1], got 32
+error	small-empty-leaf	31	3	leaf					ValueError	Leaf cannot be empty
+error	small-node-reps--3	31	3	repeatNode	L61	-3			ValueError	RepeatNode reps must be >= 2, got -3
+error	small-node-reps--1	31	3	repeatNode	L61	-1			ValueError	RepeatNode reps must be >= 2, got -1
+error	small-node-reps-0	31	3	repeatNode	L61	0			ValueError	RepeatNode reps must be >= 2, got 0
+error	small-node-reps-1	31	3	repeatNode	L61	1			ValueError	RepeatNode reps must be >= 2, got 1
+error	small-repeat-negative	31	3	repeat	L61	-1			ValueError	RepeatNode reps must be >= 2, got -1
+error	small-repeat-null	31	3	repeat	E	2			AttributeError	'NoneType' object has no attribute 'len'
+error	small-internal-left-null	31	3	internal	E	L61			AttributeError	'NoneType' object has no attribute 'len'
+error	small-internal-right-null	31	3	internal	L61	E			AttributeError	'NoneType' object has no attribute 'len'
+error	small-overlap-zero	31	3	overlapHash	1	0	1	0	ZeroDivisionError	integer division or modulo by zero
+error	small-unbalanced	31	3	validate	L61,L62,R100,I				AssertionError	Left child too light: 1/101
+error	small-sliding-ctor-0-1	31	3	slidingConstructor	0	1			ValueError	d_max must be >= 1, got 0
+error	small-sliding-ctor--1-1	31	3	slidingConstructor	-1	1			ValueError	d_max must be >= 1, got -1
+error	small-sliding-ctor-1-0	31	3	slidingConstructor	1	0			ValueError	m_max must be >= 1, got 0
+error	small-sliding-ctor-1--1	31	3	slidingConstructor	1	-1			ValueError	m_max must be >= 1, got -1
+error	small-sliding-copy-decoded	31	3	slidingCopy	4	3	6162	3:1	ValueError	Invalid copy: offset 3 exceeds decoded length 2
+error	small-sliding-copy-window	31	3	slidingCopy	4	3	6162636465666768	5:1	ValueError	Copy offset 5 exceeds window size 4. Increase d_max (currently 4) to at least 5.
+error	small-sliding-copy-zero	31	3	slidingCopy	4	3	6162	0:1	ZeroDivisionError	integer division or modulo by zero
+error	boundary-base--1	2305843009213693951	-1	constructor					ValueError	Base must be in [2, p-1], got -1
+error	boundary-base-0	2305843009213693951	0	constructor					ValueError	Base must be in [2, p-1], got 0
+error	boundary-base-1	2305843009213693951	1	constructor					ValueError	Base must be in [2, p-1], got 1
+error	boundary-base-2305843009213693951	2305843009213693951	2305843009213693951	constructor					ValueError	Base must be in [2, p-1], got 2305843009213693951
+error	boundary-base-2305843009213693952	2305843009213693951	2305843009213693952	constructor					ValueError	Base must be in [2, p-1], got 2305843009213693952
+error	boundary-empty-leaf	2305843009213693951	2305843009213693950	leaf					ValueError	Leaf cannot be empty
+error	boundary-node-reps--3	2305843009213693951	2305843009213693950	repeatNode	L61	-3			ValueError	RepeatNode reps must be >= 2, got -3
+error	boundary-node-reps--1	2305843009213693951	2305843009213693950	repeatNode	L61	-1			ValueError	RepeatNode reps must be >= 2, got -1
+error	boundary-node-reps-0	2305843009213693951	2305843009213693950	repeatNode	L61	0			ValueError	RepeatNode reps must be >= 2, got 0
+error	boundary-node-reps-1	2305843009213693951	2305843009213693950	repeatNode	L61	1			ValueError	RepeatNode reps must be >= 2, got 1
+error	boundary-repeat-negative	2305843009213693951	2305843009213693950	repeat	L61	-1			ValueError	RepeatNode reps must be >= 2, got -1
+error	boundary-repeat-null	2305843009213693951	2305843009213693950	repeat	E	2			AttributeError	'NoneType' object has no attribute 'len'
+error	boundary-internal-left-null	2305843009213693951	2305843009213693950	internal	E	L61			AttributeError	'NoneType' object has no attribute 'len'
+error	boundary-internal-right-null	2305843009213693951	2305843009213693950	internal	L61	E			AttributeError	'NoneType' object has no attribute 'len'
+error	boundary-overlap-zero	2305843009213693951	2305843009213693950	overlapHash	1	0	1	0	ZeroDivisionError	integer division or modulo by zero
+error	boundary-unbalanced	2305843009213693951	2305843009213693950	validate	L61,L62,R100,I				AssertionError	Left child too light: 1/101
+error	boundary-sliding-ctor-0-1	2305843009213693951	2305843009213693950	slidingConstructor	0	1			ValueError	d_max must be >= 1, got 0
+error	boundary-sliding-ctor--1-1	2305843009213693951	2305843009213693950	slidingConstructor	-1	1			ValueError	d_max must be >= 1, got -1
+error	boundary-sliding-ctor-1-0	2305843009213693951	2305843009213693950	slidingConstructor	1	0			ValueError	m_max must be >= 1, got 0
+error	boundary-sliding-ctor-1--1	2305843009213693951	2305843009213693950	slidingConstructor	1	-1			ValueError	m_max must be >= 1, got -1
+error	boundary-sliding-copy-decoded	2305843009213693951	2305843009213693950	slidingCopy	4	3	6162	3:1	ValueError	Invalid copy: offset 3 exceeds decoded length 2
+error	boundary-sliding-copy-window	2305843009213693951	2305843009213693950	slidingCopy	4	3	6162636465666768	5:1	ValueError	Copy offset 5 exceeds window size 4. Increase d_max (currently 4) to at least 5.
+error	boundary-sliding-copy-zero	2305843009213693951	2305843009213693950	slidingCopy	4	3	6162	0:1	ZeroDivisionError	integer division or modulo by zero
+error	noninvertible-power	15	3	power	-1				ValueError	base is not invertible for the given modulus

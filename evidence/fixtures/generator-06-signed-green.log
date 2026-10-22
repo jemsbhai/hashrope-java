@@ -1,0 +1,8 @@
+test_pinned_generation_is_deterministic_and_complete (test_generate_fixtures.FixtureGeneratorTest) ... ok
+test_rejects_unpinned_artifact (test_generate_fixtures.FixtureGeneratorTest) ... ok
+test_signed_edge_cases_and_empty_repeat_identities_are_represented (test_generate_fixtures.FixtureGeneratorTest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.110s
+
+OK

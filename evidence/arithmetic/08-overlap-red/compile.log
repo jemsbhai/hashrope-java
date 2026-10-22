@@ -1,0 +1,36 @@
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\08-overlap-red\snapshot\test\hashrope\PolynomialHashTest.java:34: error: cannot find symbol
+                eq(h.hash(repeated),h.hashOverlap(h.hash(pattern),pattern.length,length,prefix));
+                                     ^
+  symbol:   method hashOverlap(BigInteger,int,int,BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\08-overlap-red\snapshot\test\hashrope\PolynomialHashTest.java:35: error: cannot find symbol
+                eq(h.hash(repeated),h.hashOverlap(h.hash(pattern),BigInteger.valueOf(pattern.length),BigInteger.valueOf(length),prefix));
+                                     ^
+  symbol:   method hashOverlap(BigInteger,BigInteger,BigInteger,BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\08-overlap-red\snapshot\test\hashrope\PolynomialHashTest.java:39: error: cannot find symbol
+        fails(ArithmeticException.class,"integer division or modulo by zero",()->h.hashOverlap(BigInteger.ONE,0,3,BigInteger.ZERO));
+                                                                                  ^
+  symbol:   method hashOverlap(BigInteger,int,int,BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\08-overlap-red\snapshot\test\hashrope\PolynomialHashTest.java:40: error: cannot find symbol
+        eq(new BigInteger("816090348086983744"),h.hashOverlap(BigInteger.valueOf(9),-3,10,BigInteger.valueOf(7)));
+                                                 ^
+  symbol:   method hashOverlap(BigInteger,int,int,BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\08-overlap-red\snapshot\test\hashrope\PolynomialHashTest.java:41: error: cannot find symbol
+        eq(new BigInteger("30635930022662941"),h.hashOverlap(BigInteger.valueOf(9),3,-10,BigInteger.valueOf(7)));
+                                                ^
+  symbol:   method hashOverlap(BigInteger,int,int,BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\08-overlap-red\snapshot\test\hashrope\PolynomialHashTest.java:42: error: cannot find symbol
+        eq(new BigInteger("457929790439679507"),h.hashOverlap(BigInteger.valueOf(9),-3,-10,BigInteger.valueOf(7)));
+                                                 ^
+  symbol:   method hashOverlap(BigInteger,int,int,BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\08-overlap-red\snapshot\test\hashrope\PolynomialHashTest.java:43: error: cannot find symbol
+        eq(BigInteger.valueOf(7),h.hashOverlap(BigInteger.valueOf(9),3,0,BigInteger.valueOf(7)));
+                                  ^
+  symbol:   method hashOverlap(BigInteger,int,int,BigInteger)
+  location: variable h of type PolynomialHash
+7 errors

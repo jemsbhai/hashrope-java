@@ -1,0 +1,19 @@
+{
+  "cycle": "03-folding-compatibility",
+  "phase": "red",
+  "startedUtc": "2026-10-22T21:04:31.8346942Z",
+  "finishedUtc": "2026-10-22T21:04:32.4750756Z",
+  "compileExit": 0,
+  "testExit": 1,
+  "passed": false,
+  "sourceHashes": [
+    {
+      "path": "snapshot\\src\\hashrope\\PolynomialHash.java",
+      "sha256": "1a03765b0f88adb1d15f732b28b10a4cce2ea955fc17fb6a99ef9da3d9f7d534"
+    },
+    {
+      "path": "snapshot\\test\\hashrope\\PolynomialHashTest.java",
+      "sha256": "bf5fe482caeb766e16480e90e10af2d35e2f63a95cdc124d8864613ae4186ecd"
+    }
+  ]
+}

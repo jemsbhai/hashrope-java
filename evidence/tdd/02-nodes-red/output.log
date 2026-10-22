@@ -1,0 +1,264 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< io.github.jemsbhai:hashrope >---------------------
+[INFO] Building Hashrope 0.2.2
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] Loaded 24200 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ hashrope ---
+[INFO] skip non existing resourceDirectory C:\Users\User\Documents\Codex\2026-10-22\task\port\java\src\main\resources
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ hashrope ---
+[INFO] Loaded 74 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 2 source files with javac [debug release 17] to target\classes
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ hashrope ---
+[INFO] Copying 0 resource from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ hashrope ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 1 source file with javac [debug release 17] to target\test-classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[38,20] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[39,38] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[40,38] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[41,24] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[42,39] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[43,9] cannot find symbol
+  symbol:   class Node
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[43,19] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[44,27] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[45,29] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[46,24] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[51,9] cannot find symbol
+  symbol:   class Node
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[52,9] cannot find symbol
+  symbol:   class Internal
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[52,25] cannot find symbol
+  symbol:   class Internal
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[56,24] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[57,9] cannot find symbol
+  symbol:   class RepeatNode
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[57,33] cannot find symbol
+  symbol:   class RepeatNode
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[60,24] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[61,66] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[62,29] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[63,29] cannot find symbol
+  symbol:   class Internal
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[64,35] cannot find symbol
+  symbol:   class RepeatNode
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[65,61] cannot find symbol
+  symbol:   class RepeatNode
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[66,57] cannot find symbol
+  symbol:   class Internal
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[70,48] cannot find symbol
+  symbol:   class Node
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[71,20] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[71,57] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[72,20] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[72,58] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[73,57] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[75,9] cannot find symbol
+  symbol:   class Node
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[75,19] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[77,24] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[79,52] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[80,9] cannot find symbol
+  symbol:   class Node
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[80,21] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[81,27] cannot find symbol
+  symbol:   class RepeatNode
+  location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[81,71] cannot find symbol
+  symbol:   variable Rope
+  location: class hashrope.RopeTest
+[INFO] 37 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[ERROR] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.852 s
+[INFO] Finished at: 2026-10-22T17:05:52-04:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:testCompile (default-testCompile) on project hashrope: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[38,20] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[39,38] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[40,38] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[41,24] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[42,39] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[43,9] cannot find symbol
+[ERROR]   symbol:   class Node
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[43,19] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[44,27] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[45,29] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[46,24] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[51,9] cannot find symbol
+[ERROR]   symbol:   class Node
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[52,9] cannot find symbol
+[ERROR]   symbol:   class Internal
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[52,25] cannot find symbol
+[ERROR]   symbol:   class Internal
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[56,24] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[57,9] cannot find symbol
+[ERROR]   symbol:   class RepeatNode
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[57,33] cannot find symbol
+[ERROR]   symbol:   class RepeatNode
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[60,24] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[61,66] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[62,29] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[63,29] cannot find symbol
+[ERROR]   symbol:   class Internal
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[64,35] cannot find symbol
+[ERROR]   symbol:   class RepeatNode
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[65,61] cannot find symbol
+[ERROR]   symbol:   class RepeatNode
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[66,57] cannot find symbol
+[ERROR]   symbol:   class Internal
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[70,48] cannot find symbol
+[ERROR]   symbol:   class Node
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[71,20] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[71,57] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[72,20] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[72,58] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[73,57] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[75,9] cannot find symbol
+[ERROR]   symbol:   class Node
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[75,19] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[77,24] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[79,52] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[80,9] cannot find symbol
+[ERROR]   symbol:   class Node
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[80,21] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[81,27] cannot find symbol
+[ERROR]   symbol:   class RepeatNode
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] /C:/Users/User/Documents/Codex/2026-10-22/task/port/java/src/test/java/hashrope/RopeTest.java:[81,71] cannot find symbol
+[ERROR]   symbol:   variable Rope
+[ERROR]   location: class hashrope.RopeTest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

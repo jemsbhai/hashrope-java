@@ -1,0 +1,55 @@
+test_generate_fixtures (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: test_generate_fixtures (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_generate_fixtures
+Traceback (most recent call last):
+  File "C:\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\data\code\claudecode\hashrope-java\evidence\fixtures\snapshots\red\tests\test_generate_fixtures.py", line 11, in <module>
+    SPEC.loader.exec_module(GEN)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\data\\code\\claudecode\\hashrope-java\\evidence\\fixtures\\snapshots\\red\\tools\\generate_fixtures.py'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
+test_pinned_generation_is_deterministic_and_complete (test_generate_fixtures.FixtureGeneratorTest) ... ok
+test_rejects_unpinned_artifact (test_generate_fixtures.FixtureGeneratorTest) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 1.597s
+
+OK
+test_pinned_generation_is_deterministic_and_complete (test_generate_fixtures.FixtureGeneratorTest) ... ok
+test_rejects_unpinned_artifact (test_generate_fixtures.FixtureGeneratorTest) ... ok
+test_signed_edge_cases_and_empty_repeat_identities_are_represented (test_generate_fixtures.FixtureGeneratorTest) ... FAIL
+
+======================================================================
+FAIL: test_signed_edge_cases_and_empty_repeat_identities_are_represented (test_generate_fixtures.FixtureGeneratorTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\data\code\claudecode\hashrope-java\evidence\fixtures\snapshots\signed-red\tests\test_generate_fixtures.py", line 53, in test_signed_edge_cases_and_empty_repeat_identities_are_represented
+    self.assertTrue(any(row[0] == "phi" and int(row[5]) < 0 for row in rows))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.211s
+
+FAILED (failures=1)
+test_pinned_generation_is_deterministic_and_complete (test_generate_fixtures.FixtureGeneratorTest) ... ok
+test_rejects_unpinned_artifact (test_generate_fixtures.FixtureGeneratorTest) ... ok
+test_signed_edge_cases_and_empty_repeat_identities_are_represented (test_generate_fixtures.FixtureGeneratorTest) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.321s
+
+OK
+Confirmed both fixture-generator red -> green cycles

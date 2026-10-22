@@ -1,0 +1,5 @@
+Exception in thread "main" java.lang.AssertionError: Expected java.lang.IllegalArgumentException
+	at hashrope.PolynomialHashTest.fails(PolynomialHashTest.java:174)
+	at hashrope.PolynomialHashTest.nonpositiveModuliAreRejected(PolynomialHashTest.java:28)
+	at hashrope.PolynomialHashTest.runAll(PolynomialHashTest.java:25)
+	at hashrope.PolynomialHashTest.main(PolynomialHashTest.java:13)

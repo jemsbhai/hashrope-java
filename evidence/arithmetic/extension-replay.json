@@ -1,0 +1,33 @@
+{
+  "snapshots": [
+    {
+      "snapshot": "11-subclass-traversal-green",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "tests": 4,
+      "matched": true
+    },
+    {
+      "snapshot": "11-subclass-traversal-red",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "tests": null,
+      "matched": true
+    },
+    {
+      "snapshot": "12-overlap-dispatch-green",
+      "expectedExit": 0,
+      "actualExit": 0,
+      "tests": 3,
+      "matched": true
+    },
+    {
+      "snapshot": "12-overlap-dispatch-red",
+      "expectedExit": 1,
+      "actualExit": 1,
+      "tests": null,
+      "matched": true
+    }
+  ],
+  "matched": true
+}

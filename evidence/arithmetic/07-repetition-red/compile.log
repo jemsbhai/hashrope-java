@@ -1,0 +1,21 @@
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\07-repetition-red\snapshot\test\hashrope\PolynomialHashTest.java:32: error: cannot find symbol
+                eq(h.hash(repeated),h.hashRepeat(h.hash(pattern),pattern.length,q));
+                                     ^
+  symbol:   method hashRepeat(BigInteger,int,int)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\07-repetition-red\snapshot\test\hashrope\PolynomialHashTest.java:33: error: cannot find symbol
+                eq(h.hash(repeated),h.hashRepeat(h.hash(pattern),BigInteger.valueOf(pattern.length),BigInteger.valueOf(q)));
+                                     ^
+  symbol:   method hashRepeat(BigInteger,BigInteger,BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\07-repetition-red\snapshot\test\hashrope\PolynomialHashTest.java:38: error: cannot find symbol
+            eq(h.hash(pattern).multiply(sum).mod(p),h.hashRepeat(h.hash(pattern),BigInteger.valueOf(pattern.length),huge));
+                                                     ^
+  symbol:   method hashRepeat(BigInteger,BigInteger,BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\07-repetition-red\snapshot\test\hashrope\PolynomialHashTest.java:41: error: cannot find symbol
+            eq(degenerate.hash(two).multiply(huge).mod(p),degenerate.hashRepeat(degenerate.hash(two),BigInteger.TWO,huge));
+                                                                    ^
+  symbol:   method hashRepeat(BigInteger,BigInteger,BigInteger)
+  location: variable degenerate of type PolynomialHash
+4 errors

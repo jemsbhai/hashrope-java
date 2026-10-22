@@ -1,0 +1,19 @@
+{
+  "cycle": "13-extension-regression",
+  "phase": "refactor",
+  "startedUtc": "2026-10-22T21:22:46.7040168Z",
+  "finishedUtc": "2026-10-22T21:22:47.4374352Z",
+  "compileExit": 0,
+  "testExit": 0,
+  "passed": true,
+  "sourceHashes": [
+    {
+      "sha256": "32d554b5e3df539cb5b36fb9647230749596101911217491c6ad726d4b68f94d",
+      "path": "snapshot\\src\\hashrope\\PolynomialHash.java"
+    },
+    {
+      "sha256": "7b645ba0bd825485d74030625c15734eb437c63325ba64a5cea643018a5ab2b5",
+      "path": "snapshot\\test\\hashrope\\PolynomialHashTest.java"
+    }
+  ]
+}

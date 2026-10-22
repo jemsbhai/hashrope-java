@@ -1,0 +1,19 @@
+{
+  "cycle": "02-folding-products",
+  "phase": "red",
+  "startedUtc": "2026-10-22T21:03:52.5378214Z",
+  "finishedUtc": "2026-10-22T21:03:52.9973124Z",
+  "compileExit": 1,
+  "testExit": null,
+  "passed": false,
+  "sourceHashes": [
+    {
+      "path": "snapshot\\src\\hashrope\\PolynomialHash.java",
+      "sha256": "2a516bf3dd5262f93d5d9cf9299614afd45e3fb8e0270df4457b26967e835864"
+    },
+    {
+      "path": "snapshot\\test\\hashrope\\PolynomialHashTest.java",
+      "sha256": "9b32f0c9ee2e33ddf1253e1e9d94d30c7e5d551ce69b57b7857759d8660b2e6f"
+    }
+  ]
+}

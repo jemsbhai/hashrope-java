@@ -1,0 +1,50 @@
+[
+  {
+    "path": "command.txt",
+    "sha256": "0a1f8580ef1a7996bbb3c7ce8b4d4a728f3791e60fbe9b55601edfa9d9498555"
+  },
+  {
+    "path": "exit-code.txt",
+    "sha256": "13bf7b3039c63bf5a50491fa3cfd8eb4e699d1ba1436315aef9cbe5711530354"
+  },
+  {
+    "path": "output.log",
+    "sha256": "9871f31ba0329d54d5a8b3875e815ab499c1858fd6a9024fb619a68b387248b8"
+  },
+  {
+    "path": "pom.xml",
+    "sha256": "81f2f60e84dd1072f8c3de46a1d58b4d5f9a493ed1dec2c116179a04b9ff38bc"
+  },
+  {
+    "path": "src/main/java/hashrope/Internal.java",
+    "sha256": "35303b0d0d43b186099742cdd85a7fe01d83c96dd45d8b31646a21d551d69208"
+  },
+  {
+    "path": "src/main/java/hashrope/Leaf.java",
+    "sha256": "8f55dbdc6fd8e884302a482736a47deda3174443b5f23aa5ea67c0c87b0d7a28"
+  },
+  {
+    "path": "src/main/java/hashrope/Node.java",
+    "sha256": "3690ad0a0e91d3e25fb84fb93f2b1fa49d22be1e1274fa60762d10518e29f7ba"
+  },
+  {
+    "path": "src/main/java/hashrope/PolynomialHash.java",
+    "sha256": "f9025d62e413cb253ac55bde7c28ef262d8dfd3201060201c220867b9820f8ae"
+  },
+  {
+    "path": "src/main/java/hashrope/RepeatNode.java",
+    "sha256": "f42dacc8601a09f776d8ae8bf790361a4a1c9d778506e7011638ee7d9b39de8d"
+  },
+  {
+    "path": "src/main/java/hashrope/Rope.java",
+    "sha256": "3d3dbffcadb45af5e220f6281152f7fe6ab403f0bcabe12e7baccdb38792a9d0"
+  },
+  {
+    "path": "src/main/java/hashrope/SlidingWindow.java",
+    "sha256": "d34249a2c03a82de1ed9a34a14f625270394f48949b4ea6d1c48e67a4dfc32dc"
+  },
+  {
+    "path": "src/test/java/hashrope/SlidingWindowTest.java",
+    "sha256": "427a979b3a9eb01df2ef434c2d70d067889fcad48f08add37f0b5a6e2c672c27"
+  }
+]

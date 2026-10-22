@@ -1,0 +1,19 @@
+{
+  "cycle": "08-overlap",
+  "phase": "green",
+  "startedUtc": "2026-10-22T21:07:56.8391306Z",
+  "finishedUtc": "2026-10-22T21:07:57.5961006Z",
+  "compileExit": 0,
+  "testExit": 0,
+  "passed": true,
+  "sourceHashes": [
+    {
+      "path": "snapshot\\src\\hashrope\\PolynomialHash.java",
+      "sha256": "83c8d335793a320d5d20a0078ceafa0a3558136599be153a45bc56b8483489ad"
+    },
+    {
+      "path": "snapshot\\test\\hashrope\\PolynomialHashTest.java",
+      "sha256": "a674666627c20717ad5e98370986b125178980a886cde6bebdd724e10e52196e"
+    }
+  ]
+}

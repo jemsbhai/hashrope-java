@@ -1,0 +1,5 @@
+Exception in thread "main" java.lang.AssertionError: expected 0 but got 6
+	at hashrope.PolynomialHashTest.eq(PolynomialHashTest.java:63)
+	at hashrope.PolynomialHashTest.pythonFoldingCompatibility(PolynomialHashTest.java:21)
+	at hashrope.PolynomialHashTest.runAll(PolynomialHashTest.java:18)
+	at hashrope.PolynomialHashTest.main(PolynomialHashTest.java:12)

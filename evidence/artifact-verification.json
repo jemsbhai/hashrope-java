@@ -1,0 +1,119 @@
+{
+  "runtime": {
+    "jdk": "24.0.1",
+    "maven": "3.10.0",
+    "release": 17,
+    "class_major": 61
+  },
+  "test_results": {
+    "library": {
+      "totals": {
+        "tests": 10608,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "suites": [
+        {
+          "suite": "hashrope.ApiTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "hashrope.DifferentialTest",
+          "tests": 10545,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "hashrope.PolynomialHashDispatchTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "hashrope.PropertyTest",
+          "tests": 17,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "hashrope.RopeTest",
+          "tests": 15,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "hashrope.SlidingWindowTest",
+          "tests": 19,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "hashrope.SubclassParityTest",
+          "tests": 3,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        },
+        {
+          "suite": "hashrope.SubstringTraversalTest",
+          "tests": 4,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ]
+    },
+    "consumer": {
+      "totals": {
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "suites": [
+        {
+          "suite": "example.ConsumerSmokeTest",
+          "tests": 2,
+          "failures": 0,
+          "errors": 0,
+          "skipped": 0
+        }
+      ]
+    }
+  },
+  "arithmetic_assertions": 3868,
+  "fixture_records": 10544,
+  "fresh_fixture_regeneration": "byte-identical to committed corpus",
+  "artifacts": [
+    {
+      "path": "java/target/hashrope-0.2.2.jar",
+      "bytes": 19285,
+      "sha256": "26125c0c92c1cc0bbb63c43e588c491dcfb4c33d7e7beb8cbb1245a4e9f946c9",
+      "entries": 18,
+      "integrity": "passed"
+    },
+    {
+      "path": "java/target/hashrope-0.2.2-sources.jar",
+      "bytes": 15208,
+      "sha256": "bbf0bc0462d313de7b4904cfc5090b4f3c401d260cb40d5fa86e17a6878b0d88",
+      "entries": 17,
+      "integrity": "passed"
+    },
+    {
+      "path": "java/target/hashrope-0.2.2-javadoc.jar",
+      "bytes": 148797,
+      "sha256": "17a2a0ad73279f26d063bde0522517fd42884ecb002e8a1f7ad7c6fc2f73d7bf",
+      "entries": 58,
+      "integrity": "passed"
+    }
+  ]
+}

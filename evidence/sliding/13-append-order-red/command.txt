@@ -1,0 +1,1 @@
+mvn -B -ntp -s C:\Users\User\Documents\Codex\2026-10-22\task\port/tools/isolated-settings.xml -gs C:\Users\User\Documents\Codex\2026-10-22\task\port/tools/isolated-settings.xml -Dmaven.repo.local=C:/Users/User/Documents/Codex/2026-10-22/task/m2 -f C:\Users\User\Documents\Codex\2026-10-22\task\sliding-work\run-13-append-order-red/pom.xml test -Dtest=SlidingWindowTest

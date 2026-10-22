@@ -1,0 +1,5 @@
+javac --release 17 -d classes hashrope/*.java RopeProbe.java
+java -cp classes RopeProbe ../../java/src/test/resources/fixtures/golden.tsv
+
+Executed with JDK 24.0.1. hashrope/ contains the exact source snapshot at probe time.
+The fixture SHA-256 is a0c18d9a5ea1ab06179e8818a0166d06974c1ba6be55d349604ae16bb28365da.

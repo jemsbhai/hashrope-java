@@ -1,0 +1,4 @@
+JDK 24.0.1
+Command: javadoc -quiet -Xdoclint:all -Werror -encoding UTF-8 -d arithmetic-work/javadoc-final arithmetic-work/src/hashrope/PolynomialHash.java
+Exit code: 0
+Warnings: 0

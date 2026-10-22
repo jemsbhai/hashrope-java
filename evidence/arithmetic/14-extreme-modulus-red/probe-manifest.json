@@ -1,0 +1,31 @@
+{
+  "phase": "red",
+  "startedUtc": "2026-10-22T21:23:48.745818+00:00",
+  "elapsedSeconds": 10.032000000002881,
+  "outcome": "watchdog-killed",
+  "exitCode": null,
+  "timeoutSeconds": 10,
+  "maxHeap": "512m",
+  "commands": {
+    "compile": [
+      "C:\\Program Files\\Java\\jdk-24\\bin\\javac.exe",
+      "-encoding",
+      "UTF-8",
+      "-d",
+      "arithmetic-work\\evidence\\14-extreme-modulus-red\\classes",
+      "arithmetic-work\\evidence\\14-extreme-modulus-red\\snapshot\\hashrope\\PolynomialHash.java",
+      "arithmetic-work\\evidence\\14-extreme-modulus-red\\snapshot\\hashrope\\ExtremeModulusProbe.java"
+    ],
+    "probe": [
+      "C:\\Program Files\\Java\\jdk-24\\bin\\java.exe",
+      "-Xmx512m",
+      "-cp",
+      "arithmetic-work\\evidence\\14-extreme-modulus-red\\classes",
+      "hashrope.ExtremeModulusProbe"
+    ]
+  },
+  "sourceHashes": {
+    "PolynomialHash.java": "32d554b5e3df539cb5b36fb9647230749596101911217491c6ad726d4b68f94d",
+    "ExtremeModulusProbe.java": "5cd7e37e886c52c4cb8ed5d58c676490541318edaebeba3de9b1416db33d444a"
+  }
+}

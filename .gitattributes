@@ -1,0 +1,2 @@
+# Preserve exact bytes of hashed fixtures, source snapshots and captured evidence.
+* -text

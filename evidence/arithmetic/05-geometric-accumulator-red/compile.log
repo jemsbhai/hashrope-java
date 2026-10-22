@@ -1,0 +1,41 @@
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\05-geometric-accumulator-red\snapshot\test\hashrope\PolynomialHashTest.java:27: error: cannot find symbol
+                    eq(expected,PolynomialHash.phi(BigInteger.valueOf(q),alpha,p));
+                                              ^
+  symbol:   method phi(BigInteger,BigInteger,BigInteger)
+  location: class PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\05-geometric-accumulator-red\snapshot\test\hashrope\PolynomialHashTest.java:33: error: cannot find symbol
+            eq(huge.mod(p),PolynomialHash.phi(huge,BigInteger.ONE,p));
+                                         ^
+  symbol:   method phi(BigInteger,BigInteger,BigInteger)
+  location: class PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\05-geometric-accumulator-red\snapshot\test\hashrope\PolynomialHashTest.java:34: error: cannot find symbol
+            eq(BigInteger.ONE,PolynomialHash.phi(huge,BigInteger.ZERO,p));
+                                            ^
+  symbol:   method phi(BigInteger,BigInteger,BigInteger)
+  location: class PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\05-geometric-accumulator-red\snapshot\test\hashrope\PolynomialHashTest.java:36: error: cannot find symbol
+        eq(BigInteger.valueOf(13),PolynomialHash.phi(BigInteger.valueOf(3),BigInteger.valueOf(3)));
+                                                ^
+  symbol:   method phi(BigInteger,BigInteger)
+  location: class PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\05-geometric-accumulator-red\snapshot\test\hashrope\PolynomialHashTest.java:37: error: cannot find symbol
+        eq(BigInteger.ONE,PolynomialHash.phi(BigInteger.valueOf(-1),BigInteger.valueOf(3),BigInteger.valueOf(31)));
+                                        ^
+  symbol:   method phi(BigInteger,BigInteger,BigInteger)
+  location: class PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\05-geometric-accumulator-red\snapshot\test\hashrope\PolynomialHashTest.java:38: error: cannot find symbol
+        eq(BigInteger.valueOf(4),PolynomialHash.phi(BigInteger.valueOf(-2),BigInteger.valueOf(3),BigInteger.valueOf(31)));
+                                               ^
+  symbol:   method phi(BigInteger,BigInteger,BigInteger)
+  location: class PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\05-geometric-accumulator-red\snapshot\test\hashrope\PolynomialHashTest.java:39: error: cannot find symbol
+        eq(BigInteger.valueOf(13),PolynomialHash.phi(BigInteger.valueOf(-3),BigInteger.valueOf(3),BigInteger.valueOf(31)));
+                                                ^
+  symbol:   method phi(BigInteger,BigInteger,BigInteger)
+  location: class PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\05-geometric-accumulator-red\snapshot\test\hashrope\PolynomialHashTest.java:40: error: cannot find symbol
+        eq(BigInteger.valueOf(28),PolynomialHash.phi(BigInteger.valueOf(-7),BigInteger.valueOf(3),BigInteger.valueOf(31)));
+                                                ^
+  symbol:   method phi(BigInteger,BigInteger,BigInteger)
+  location: class PolynomialHash
+8 errors

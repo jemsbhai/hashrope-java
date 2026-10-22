@@ -1,0 +1,9 @@
+.\arithmetic-work\src\hashrope\PolynomialHash.java:61: warning: no main description
+    /** @return the configured modulus */
+        ^
+.\arithmetic-work\src\hashrope\PolynomialHash.java:63: warning: no main description
+    /** @return the configured base */
+        ^
+error: warnings found and -Werror specified
+1 error
+2 warnings

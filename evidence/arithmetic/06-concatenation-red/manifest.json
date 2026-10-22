@@ -1,0 +1,19 @@
+{
+  "cycle": "06-concatenation",
+  "phase": "red",
+  "startedUtc": "2026-10-22T21:06:21.8448125Z",
+  "finishedUtc": "2026-10-22T21:06:22.3796399Z",
+  "compileExit": 1,
+  "testExit": null,
+  "passed": false,
+  "sourceHashes": [
+    {
+      "path": "snapshot\\src\\hashrope\\PolynomialHash.java",
+      "sha256": "7b2a1e518f8394a894e352104bceb8e7af3a1d5693119c3eb8c0587a7bbe4673"
+    },
+    {
+      "path": "snapshot\\test\\hashrope\\PolynomialHashTest.java",
+      "sha256": "36249aef76682db4cc9e4e7c970304391af6da09b1d51d647042e080d9c19434"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "fixture_sha256": {
+    "errors.tsv": "02bb1dbd7781b9a6af566124da04f6cca6b26808a77e66416f2da912ecc19290",
+    "golden.tsv": "a0c18d9a5ea1ab06179e8818a0166d06974c1ba6be55d349604ae16bb28365da"
+  },
+  "generator": "tools/generate_fixtures.py",
+  "python_release": "0.2.2",
+  "random_seed": 5206534214300684357,
+  "record_counts": {
+    "concatHash": 268,
+    "error": 93,
+    "hash": 236,
+    "mod": 212,
+    "mul": 288,
+    "overlapHash": 276,
+    "phi": 468,
+    "power": 72,
+    "repeatHash": 272,
+    "rope": 276,
+    "sliding": 616,
+    "split": 2319,
+    "substr": 5148
+  },
+  "registry": "https://pypi.org/pypi/hashrope/json",
+  "schema_version": 1,
+  "sdist_sha256": "881b367afc38b5d32609d3d604e4a19ce27e4eaeb3078e54948bdad69e54b499",
+  "source_sha256": {
+    "hashrope/__init__.py": "93b9edb670de17512f4ce847f245360ca3ece7979b2f2bd5d50f892d180d5880",
+    "hashrope/polynomial_hash.py": "5b8e4fae590ae0e262fdaed01dd4ce30566a62f4cd26b2eac635c8dd121d8c37",
+    "hashrope/rope.py": "55127ade6945778f0073e5d78ae8ae00c1a73d829ecb665bb1d1265b528415a4",
+    "hashrope/sliding.py": "5682a99b1bf297b52acc230a81068c1a2f0f96dd25e84b9b32a1eee1328eff9f"
+  },
+  "total_records": 10544,
+  "wheel_filename": "hashrope-0.2.2-py3-none-any.whl",
+  "wheel_sha256": "710112e3aa14a991918a15331c1f418ce9d1c9d93c34a9da09e22be33c68a2d2",
+  "wheel_url": "https://files.pythonhosted.org/packages/38/48/6a779bd0ae7decefff20e58999cb4ab78866eda6f6884874deb5dd149ab6/hashrope-0.2.2-py3-none-any.whl"
+}

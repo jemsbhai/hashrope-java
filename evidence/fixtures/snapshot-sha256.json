@@ -1,0 +1,9 @@
+{
+  "snapshots/green/tests/test_generate_fixtures.py": "79e407e2ad0d383978b8aad63ac2bab9d6afe823a0c7a6575ceff519b9df7bc9",
+  "snapshots/green/tools/generate_fixtures.py": "f3b58027a9736a36a4d567880f6d0f97c9e9190921e13fc874b85535d6c2d093",
+  "snapshots/red/tests/test_generate_fixtures.py": "ed64a76b9c25e2a0074f759fb41e6b1e0ae34cb55cd85dd434ce6d324fe2ce9b",
+  "snapshots/signed-green/tests/test_generate_fixtures.py": "7e0347f330ade829e69b8be2f3d90093e81935c0b6cb998c58f8300bb80949dd",
+  "snapshots/signed-green/tools/generate_fixtures.py": "1de9fee159c7ae3dc8a347b2994865b5f8e27c886275bbdb99cb5ede7414cc3c",
+  "snapshots/signed-red/tests/test_generate_fixtures.py": "7e0347f330ade829e69b8be2f3d90093e81935c0b6cb998c58f8300bb80949dd",
+  "snapshots/signed-red/tools/generate_fixtures.py": "f3b58027a9736a36a4d567880f6d0f97c9e9190921e13fc874b85535d6c2d093"
+}

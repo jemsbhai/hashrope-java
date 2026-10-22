@@ -1,0 +1,41 @@
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\01-defaults-bytes-red\snapshot\test\hashrope\PolynomialHashTest.java:18: error: cannot find symbol
+        PolynomialHash h = new PolynomialHash();
+        ^
+  symbol:   class PolynomialHash
+  location: class PolynomialHashTest
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\01-defaults-bytes-red\snapshot\test\hashrope\PolynomialHashTest.java:18: error: cannot find symbol
+        PolynomialHash h = new PolynomialHash();
+                               ^
+  symbol:   class PolynomialHash
+  location: class PolynomialHashTest
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\01-defaults-bytes-red\snapshot\test\hashrope\PolynomialHashTest.java:21: error: cannot find symbol
+        eq(BigInteger.ONE.shiftLeft(127).subtract(BigInteger.ONE), PolynomialHash.MERSENNE_127);
+                                                                   ^
+  symbol:   variable PolynomialHash
+  location: class PolynomialHashTest
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\01-defaults-bytes-red\snapshot\test\hashrope\PolynomialHashTest.java:27: error: cannot find symbol
+        PolynomialHash small = new PolynomialHash(31, 3);
+        ^
+  symbol:   class PolynomialHash
+  location: class PolynomialHashTest
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\01-defaults-bytes-red\snapshot\test\hashrope\PolynomialHashTest.java:27: error: cannot find symbol
+        PolynomialHash small = new PolynomialHash(31, 3);
+                                   ^
+  symbol:   class PolynomialHash
+  location: class PolynomialHashTest
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\01-defaults-bytes-red\snapshot\test\hashrope\PolynomialHashTest.java:31: error: cannot find symbol
+        fails(IllegalArgumentException.class, "Base must be in [2, p-1], got 1", () -> new PolynomialHash(31,1));
+                                                                                           ^
+  symbol:   class PolynomialHash
+  location: class PolynomialHashTest
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\01-defaults-bytes-red\snapshot\test\hashrope\PolynomialHashTest.java:32: error: cannot find symbol
+        fails(IllegalArgumentException.class, "Base must be in [2, p-1], got 31", () -> new PolynomialHash(31,31));
+                                                                                            ^
+  symbol:   class PolynomialHash
+  location: class PolynomialHashTest
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\01-defaults-bytes-red\snapshot\test\hashrope\PolynomialHashTest.java:33: error: cannot find symbol
+        fails(IllegalArgumentException.class, "Base must be in [2, p-1], got -9", () -> new PolynomialHash(31,-9));
+                                                                                            ^
+  symbol:   class PolynomialHash
+  location: class PolynomialHashTest
+8 errors

@@ -1,0 +1,26 @@
+01-state-green: expected exit 0; observed exit 0
+01-state-red: expected exit 1; observed exit 1
+02-public-state-green: expected exit 0; observed exit 0
+02-public-state-red: expected exit 1; observed exit 1
+03-literals-green: expected exit 0; observed exit 0
+03-literals-red: expected exit 1; observed exit 1
+04-eviction-green: expected exit 0; observed exit 0
+04-eviction-red: expected exit 1; observed exit 1
+05-copy-green: expected exit 0; observed exit 0
+05-copy-red: expected exit 1; observed exit 1
+06-overlap-green: expected exit 0; observed exit 0
+06-overlap-red: expected exit 1; observed exit 1
+07-errors-green: expected exit 0; observed exit 0
+07-errors-red: expected exit 1; observed exit 1
+08-constructors-green: expected exit 0; observed exit 0
+08-constructors-red: expected exit 1; observed exit 1
+09-subclass-green: expected exit 0; observed exit 0
+09-subclass-red: expected exit 1; observed exit 1
+10-final-refactor: expected exit 0; observed exit 0
+11-memory-doc-refactor: expected exit 0; observed exit 0
+12-current-hash-order-green: expected exit 0; observed exit 0
+12-current-hash-order-red: expected exit 1; observed exit 1
+13-append-order-green: expected exit 0; observed exit 0
+13-append-order-red: expected exit 1; observed exit 1
+14-callback-refactor-refactor: expected exit 0; observed exit 0
+Replay outputs: C:\Users\User\AppData\Local\Temp\hashrope-sliding-replay-27ab85a580fc4e6ca782edaec7481926

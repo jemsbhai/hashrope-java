@@ -1,0 +1,89 @@
+{
+  "python": "3.10.9 (tags/v3.10.9:1dd9be6, Dec  6 2022, 20:01:21) [MSC v.1934 64 bit (AMD64)]",
+  "pytest_version": "9.1.1",
+  "wheel_sha256": "710112e3aa14a991918a15331c1f418ce9d1c9d93c34a9da09e22be33c68a2d2",
+  "sdist_sha256": "881b367afc38b5d32609d3d604e4a19ce27e4eaeb3078e54948bdad69e54b499",
+  "reference_module_file": "C:\\Users\\User\\Documents\\Codex\\2026-10-22\\task\\upstream\\hashrope-0.2.2-py3-none-any.whl\\hashrope\\__init__.py",
+  "reference_version": "0.2.2",
+  "command": [
+    "C:\\Python310\\python.exe",
+    "-B",
+    ".\\reference-suite-work\\run_reference_suite.py",
+    "--wheel",
+    ".\\upstream\\hashrope-0.2.2-py3-none-any.whl",
+    "--sdist",
+    ".\\upstream\\hashrope-0.2.2.tar.gz",
+    "--metadata",
+    ".\\pypi-hashrope.json",
+    "--output",
+    ".\\reference-suite-work\\run-001"
+  ],
+  "pytest_args": [
+    "C:\\Users\\User\\Documents\\Codex\\2026-10-22\\task\\reference-suite-work\\run-001\\published-tests\\tests",
+    "-c",
+    "C:\\Users\\User\\Documents\\Codex\\2026-10-22\\task\\reference-suite-work\\run-001\\pytest.ini",
+    "-p",
+    "no:cacheprovider",
+    "--import-mode=importlib",
+    "--junitxml",
+    "C:\\Users\\User\\Documents\\Codex\\2026-10-22\\task\\reference-suite-work\\run-001\\pytest-results.xml",
+    "-q"
+  ],
+  "pytest_plugin_autoload": false,
+  "pytest_cache_provider": false,
+  "write_bytecode": false,
+  "source_test_sha256": {
+    "hashrope-0.2.2/tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "hashrope-0.2.2/tests/conftest.py": "4dae80447acc18919a4e54e2895a32885043b106ccc27d450b8867b7d2f1d25e",
+    "hashrope-0.2.2/tests/test_balance_bugs.py": "f0f9a468b6a0e9eff61291b8b3c4fc23bf3b23f1f76572f89b6a7e78042daa11",
+    "hashrope-0.2.2/tests/test_balance_comprehensive.py": "fa13006fae124b8940fe9db5a4acf88d4eb13557902ba0bbf4ab117c5a1cb84d",
+    "hashrope-0.2.2/tests/test_polynomial_hash.py": "9d55e809acb33c693768b4b665545d13d78ea9c07f44742300ae0d8e0a6da9f7",
+    "hashrope-0.2.2/tests/test_rope.py": "701fc1f673ea1440b4a282c7f6b695406403dcb49e712fb5330ddf709f92d4c6",
+    "hashrope-0.2.2/tests/test_sliding.py": "bb2b52151cd86586897aed9441fa9566162e8bea07f2ccabd31d5e84385325e3",
+    "hashrope-0.2.2/tests/test_substr_hash_theorem9.py": "438470e6e34ba4e2eb2d49f014b40d3372c01e09476feb86d38b9992a28e37cc"
+  },
+  "source_archive_members": [
+    "hashrope-0.2.2/CHANGELOG.md",
+    "hashrope-0.2.2/hashrope/__init__.py",
+    "hashrope-0.2.2/hashrope/polynomial_hash.py",
+    "hashrope-0.2.2/hashrope/rope.py",
+    "hashrope-0.2.2/hashrope/sliding.py",
+    "hashrope-0.2.2/scripts/verify_release.py",
+    "hashrope-0.2.2/tests/__init__.py",
+    "hashrope-0.2.2/tests/conftest.py",
+    "hashrope-0.2.2/tests/test_balance_bugs.py",
+    "hashrope-0.2.2/tests/test_balance_comprehensive.py",
+    "hashrope-0.2.2/tests/test_polynomial_hash.py",
+    "hashrope-0.2.2/tests/test_rope.py",
+    "hashrope-0.2.2/tests/test_sliding.py",
+    "hashrope-0.2.2/tests/test_substr_hash_theorem9.py",
+    "hashrope-0.2.2/.gitignore",
+    "hashrope-0.2.2/LICENSE",
+    "hashrope-0.2.2/README.md",
+    "hashrope-0.2.2/pyproject.toml",
+    "hashrope-0.2.2/PKG-INFO"
+  ],
+  "registry_url": "https://pypi.org/pypi/hashrope/json",
+  "registry_snapshot_sha256": "da07130aa0af48b75b99975340220d3b294e59e62578135ba73452fa2eb665f0",
+  "registry_info_version": "0.2.2",
+  "registry_release_keys": [
+    "0.1.0",
+    "0.2.0",
+    "0.2.1",
+    "0.2.2"
+  ],
+  "stable_non_yanked_releases": [
+    "0.1.0",
+    "0.2.0",
+    "0.2.1",
+    "0.2.2"
+  ],
+  "latest_stable": "0.2.2",
+  "pytest_exit_code": 0,
+  "hashrope_module_origins_after_tests": {
+    "hashrope.polynomial_hash": "C:\\Users\\User\\Documents\\Codex\\2026-10-22\\task\\upstream\\hashrope-0.2.2-py3-none-any.whl\\hashrope\\polynomial_hash.py",
+    "hashrope.rope": "C:\\Users\\User\\Documents\\Codex\\2026-10-22\\task\\upstream\\hashrope-0.2.2-py3-none-any.whl\\hashrope\\rope.py",
+    "hashrope.sliding": "C:\\Users\\User\\Documents\\Codex\\2026-10-22\\task\\upstream\\hashrope-0.2.2-py3-none-any.whl\\hashrope\\sliding.py",
+    "hashrope": "C:\\Users\\User\\Documents\\Codex\\2026-10-22\\task\\upstream\\hashrope-0.2.2-py3-none-any.whl\\hashrope\\__init__.py"
+  }
+}

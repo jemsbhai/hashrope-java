@@ -1,0 +1,16 @@
+test_pinned_generation_is_deterministic_and_complete (test_generate_fixtures.FixtureGeneratorTest) ... ok
+test_rejects_unpinned_artifact (test_generate_fixtures.FixtureGeneratorTest) ... ok
+test_signed_edge_cases_and_empty_repeat_identities_are_represented (test_generate_fixtures.FixtureGeneratorTest) ... FAIL
+
+======================================================================
+FAIL: test_signed_edge_cases_and_empty_repeat_identities_are_represented (test_generate_fixtures.FixtureGeneratorTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\User\Documents\Codex\2026-10-22\task\fixtures-work\tests\test_generate_fixtures.py", line 53, in test_signed_edge_cases_and_empty_repeat_identities_are_represented
+    self.assertTrue(any(row[0] == "phi" and int(row[5]) < 0 for row in rows))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 3 tests in 2.163s
+
+FAILED (failures=1)

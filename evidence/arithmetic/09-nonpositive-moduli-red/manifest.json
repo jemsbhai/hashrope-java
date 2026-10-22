@@ -1,0 +1,19 @@
+{
+  "cycle": "09-nonpositive-moduli",
+  "phase": "red",
+  "startedUtc": "2026-10-22T21:08:23.3419391Z",
+  "finishedUtc": "2026-10-22T21:08:24.1421835Z",
+  "compileExit": 0,
+  "testExit": 1,
+  "passed": false,
+  "sourceHashes": [
+    {
+      "sha256": "83c8d335793a320d5d20a0078ceafa0a3558136599be153a45bc56b8483489ad",
+      "path": "snapshot\\src\\hashrope\\PolynomialHash.java"
+    },
+    {
+      "sha256": "5ae06841c607cccec5562adb8211f420d2a9cab4a8f089e108e68dd836543d98",
+      "path": "snapshot\\test\\hashrope\\PolynomialHashTest.java"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{"offset": 0, "length": 0, "result": {"pos": 3, "prefix": 0, "window": "616263", "hash": 1694847}}
+{"offset": 0, "length": 1, "result": {"error": "ZeroDivisionError", "message": "integer division or modulo by zero", "pos": 3, "window": "616263"}}
+{"offset": -1, "length": 3, "result": {"pos": 6, "prefix": 0, "window": "616263", "hash": 1694847}}
+{"offset": -1, "length": -2, "result": {"pos": 1, "prefix": 0, "window": "616263", "hash": 1694847}}
+{"offset": -2, "length": -1, "result": {"pos": 2, "prefix": 0, "window": "616263", "hash": 1694847}}
+{"offset": 2, "length": -1, "result": {"pos": 2, "prefix": 0, "window": "616263", "hash": 1694847}}
+{"offset": 4, "length": 0, "result": {"error": "ValueError", "message": "Invalid copy: offset 4 exceeds decoded length 3", "pos": 3, "window": "616263"}}
+{"offset": 1, "length": 0, "result": {"pos": 3, "prefix": 0, "window": "616263", "hash": 1694847}}
+{"appendNone": "no-op", "pos": 0}

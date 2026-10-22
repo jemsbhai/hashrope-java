@@ -1,0 +1,56 @@
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\04-powers-red\snapshot\test\hashrope\PolynomialHashTest.java:23: error: cannot find symbol
+        eq(BigInteger.ONE,h.power(0));
+                           ^
+  symbol:   method power(int)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\04-powers-red\snapshot\test\hashrope\PolynomialHashTest.java:24: error: cannot find symbol
+        eq(h.base(),h.power(1));
+                     ^
+  symbol:   method power(int)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\04-powers-red\snapshot\test\hashrope\PolynomialHashTest.java:25: error: cannot find symbol
+        eq(BigInteger.valueOf(17161),h.power(2));
+                                      ^
+  symbol:   method power(int)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\04-powers-red\snapshot\test\hashrope\PolynomialHashTest.java:27: error: cannot find symbol
+        eq(h.base().modPow(huge,h.prime()),h.power(huge));
+                                            ^
+  symbol:   method power(BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\04-powers-red\snapshot\test\hashrope\PolynomialHashTest.java:28: error: cannot find symbol
+        eq(h.power(huge),h.power(huge));
+            ^
+  symbol:   method power(BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\04-powers-red\snapshot\test\hashrope\PolynomialHashTest.java:28: error: cannot find symbol
+        eq(h.power(huge),h.power(huge));
+                          ^
+  symbol:   method power(BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\04-powers-red\snapshot\test\hashrope\PolynomialHashTest.java:29: error: cannot find symbol
+        eq(h.base().modInverse(h.prime()),h.power(-1));
+                                           ^
+  symbol:   method power(int)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\04-powers-red\snapshot\test\hashrope\PolynomialHashTest.java:30: error: cannot find symbol
+        eq(BigInteger.ONE,h.power(-21).multiply(h.power(21)).mod(h.prime()));
+                           ^
+  symbol:   method power(int)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\04-powers-red\snapshot\test\hashrope\PolynomialHashTest.java:30: error: cannot find symbol
+        eq(BigInteger.ONE,h.power(-21).multiply(h.power(21)).mod(h.prime()));
+                                                 ^
+  symbol:   method power(int)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\04-powers-red\snapshot\test\hashrope\PolynomialHashTest.java:31: error: cannot find symbol
+        eq(h.base().modInverse(h.prime()).modPow(huge,h.prime()),h.power(huge.negate()));
+                                                                  ^
+  symbol:   method power(BigInteger)
+  location: variable h of type PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\04-powers-red\snapshot\test\hashrope\PolynomialHashTest.java:32: error: cannot find symbol
+        fails(IllegalArgumentException.class,"base is not invertible for the given modulus",()->new PolynomialHash(15,3).power(-1));
+                                                                                                                        ^
+  symbol:   method power(int)
+  location: class PolynomialHash
+11 errors

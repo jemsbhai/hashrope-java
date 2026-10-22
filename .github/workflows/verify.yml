@@ -1,0 +1,19 @@
+name: Verify
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  java:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: ['17', '24']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ matrix.java }}
+          cache: maven
+      - run: mvn -B -ntp -s tools/isolated-settings.xml -gs tools/isolated-settings.xml -f java/pom.xml clean install
+      - run: mvn -B -ntp -s tools/isolated-settings.xml -gs tools/isolated-settings.xml -f consumer-smoke/pom.xml clean verify

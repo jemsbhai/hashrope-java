@@ -1,0 +1,26 @@
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\02-folding-products-red\snapshot\test\hashrope\PolynomialHashTest.java:23: error: cannot find symbol
+                eq(a.mod(p), PolynomialHash.mersenneMod(a,p));
+                                           ^
+  symbol:   method mersenneMod(BigInteger,BigInteger)
+  location: class PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\02-folding-products-red\snapshot\test\hashrope\PolynomialHashTest.java:28: error: cannot find symbol
+                eq(a.mod(p),PolynomialHash.mersenneMod(a,p));
+                                          ^
+  symbol:   method mersenneMod(BigInteger,BigInteger)
+  location: class PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\02-folding-products-red\snapshot\test\hashrope\PolynomialHashTest.java:29: error: cannot find symbol
+                eq(a.multiply(b).mod(p),PolynomialHash.mersenneMul(a,b,p));
+                                                      ^
+  symbol:   method mersenneMul(BigInteger,BigInteger,BigInteger)
+  location: class PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\02-folding-products-red\snapshot\test\hashrope\PolynomialHashTest.java:32: error: cannot find symbol
+        eq(BigInteger.ONE,PolynomialHash.mersenneMod(PolynomialHash.MERSENNE_61.add(BigInteger.ONE)));
+                                        ^
+  symbol:   method mersenneMod(BigInteger)
+  location: class PolynomialHash
+C:\Users\User\Documents\Codex\2026-10-22\task\arithmetic-work\evidence\02-folding-products-red\snapshot\test\hashrope\PolynomialHashTest.java:33: error: cannot find symbol
+        eq(BigInteger.valueOf(6),PolynomialHash.mersenneMul(BigInteger.TWO,BigInteger.valueOf(3)));
+                                               ^
+  symbol:   method mersenneMul(BigInteger,BigInteger)
+  location: class PolynomialHash
+5 errors

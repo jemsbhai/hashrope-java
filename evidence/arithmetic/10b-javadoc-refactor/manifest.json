@@ -1,0 +1,19 @@
+{
+  "cycle": "10b-javadoc",
+  "phase": "refactor",
+  "startedUtc": "2026-10-22T21:09:43.3971573Z",
+  "finishedUtc": "2026-10-22T21:09:44.1514197Z",
+  "compileExit": 0,
+  "testExit": 0,
+  "passed": true,
+  "sourceHashes": [
+    {
+      "sha256": "f9025d62e413cb253ac55bde7c28ef262d8dfd3201060201c220867b9820f8ae",
+      "path": "snapshot\\src\\hashrope\\PolynomialHash.java"
+    },
+    {
+      "sha256": "7b645ba0bd825485d74030625c15734eb437c63325ba64a5cea643018a5ab2b5",
+      "path": "snapshot\\test\\hashrope\\PolynomialHashTest.java"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "snapshots": [
+    {
+      "snapshot": "01-leaf-green",
+      "expected_exit": 0,
+      "exit": 0,
+      "matched": true
+    },
+    {
+      "snapshot": "01-leaf-red",
+      "expected_exit": 1,
+      "exit": 1,
+      "matched": true
+    },
+    {
+      "snapshot": "02-nodes-green",
+      "expected_exit": 0,
+      "exit": 0,
+      "matched": true
+    },
+    {
+      "snapshot": "02-nodes-red",
+      "expected_exit": 1,
+      "exit": 1,
+      "matched": true
+    },
+    {
+      "snapshot": "03-concat-split-green",
+      "expected_exit": 0,
+      "exit": 0,
+      "matched": true
+    },
+    {
+      "snapshot": "03-concat-split-red",
+      "expected_exit": 1,
+      "exit": 1,
+      "matched": true
+    },
+    {
+      "snapshot": "04-balance-api-red",
+      "expected_exit": 1,
+      "exit": 1,
+      "matched": true
+    },
+    {
+      "snapshot": "04-balance-behavior-red",
+      "expected_exit": 1,
+      "exit": 1,
+      "matched": true
+    },
+    {
+      "snapshot": "04-balance-green",
+      "expected_exit": 0,
+      "exit": 0,
+      "matched": true
+    },
+    {
+      "snapshot": "05-substring-green",
+      "expected_exit": 0,
+      "exit": 0,
+      "matched": true
+    },
+    {
+      "snapshot": "05-substring-red",
+      "expected_exit": 1,
+      "exit": 1,
+      "matched": true
+    },
+    {
+      "snapshot": "06-api-green",
+      "expected_exit": 0,
+      "exit": 0,
+      "matched": true
+    },
+    {
+      "snapshot": "06-api-red",
+      "expected_exit": 1,
+      "exit": 1,
+      "matched": true
+    },
+    {
+      "snapshot": "07-core-refactor-refactor",
+      "expected_exit": 0,
+      "exit": 0,
+      "matched": true
+    },
+    {
+      "snapshot": "08-subclass-dispatch-green",
+      "expected_exit": 0,
+      "exit": 0,
+      "matched": true
+    },
+    {
+      "snapshot": "08-subclass-dispatch-red",
+      "expected_exit": 1,
+      "exit": 1,
+      "matched": true
+    }
+  ],
+  "matched": true
+}

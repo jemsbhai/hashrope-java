@@ -1,0 +1,3 @@
+04-eviction-red: expected exit 1; observed exit 1
+10-final-refactor: expected exit 0; observed exit 0
+Replay outputs: C:\Users\User\AppData\Local\Temp\hashrope-sliding-replay-dc7e0eb851c84360988d629561b9f27a

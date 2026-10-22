@@ -1,0 +1,19 @@
+{
+  "cycle": "05-geometric-accumulator",
+  "phase": "green",
+  "startedUtc": "2026-10-22T21:06:02.3992702Z",
+  "finishedUtc": "2026-10-22T21:06:03.0926137Z",
+  "compileExit": 0,
+  "testExit": 0,
+  "passed": true,
+  "sourceHashes": [
+    {
+      "sha256": "7b2a1e518f8394a894e352104bceb8e7af3a1d5693119c3eb8c0587a7bbe4673",
+      "path": "snapshot\\src\\hashrope\\PolynomialHash.java"
+    },
+    {
+      "sha256": "25c653436c5aadc19f1fd43263cd491063af47ce73ee62230c43fd13e9df8b03",
+      "path": "snapshot\\test\\hashrope\\PolynomialHashTest.java"
+    }
+  ]
+}

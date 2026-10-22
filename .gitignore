@@ -1,0 +1,12 @@
+**/target/
+**/__pycache__/
+*.pyc
+.m2/
+.oracle/
+
+*.class
+# Detailed inventory of unrelated original user work stays local.
+evidence/original-preservation-baseline.json
+evidence/original-preservation-detail-local.json
+evidence/original-head-before.txt
+evidence/original-status-before.txt

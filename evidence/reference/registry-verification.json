@@ -1,0 +1,18 @@
+{
+  "checked_at_utc": "2026-10-22T21:20:46.137975+00:00",
+  "registry_url": "https://pypi.org/pypi/hashrope/json",
+  "snapshot_sha256": "da07130aa0af48b75b99975340220d3b294e59e62578135ba73452fa2eb665f0",
+  "info_version": "0.2.2",
+  "release_keys": [
+    "0.1.0",
+    "0.2.0",
+    "0.2.1",
+    "0.2.2"
+  ],
+  "latest_stable": "0.2.2",
+  "current_artifact_sha256": {
+    "hashrope-0.2.2-py3-none-any.whl": "710112e3aa14a991918a15331c1f418ce9d1c9d93c34a9da09e22be33c68a2d2",
+    "hashrope-0.2.2.tar.gz": "881b367afc38b5d32609d3d604e4a19ce27e4eaeb3078e54948bdad69e54b499"
+  },
+  "all_current_artifacts_not_yanked": true
+}

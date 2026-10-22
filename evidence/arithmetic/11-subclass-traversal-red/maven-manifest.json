@@ -1,0 +1,47 @@
+{
+  "cycle": "11-subclass-traversal",
+  "phase": "red",
+  "runner": "maven",
+  "startedUtc": "2026-10-22T21:19:15.6539296Z",
+  "finishedUtc": "2026-10-22T21:19:17.8748647Z",
+  "exitCode": 1,
+  "test": "SubstringTraversalTest",
+  "sourceHashes": [
+    {
+      "sha256": "2b0fe348ed0d25b5a895882c3a6ca80ebff1d92278aefcc617a6b8478bd11ad9",
+      "path": "snapshot\\src\\main\\java\\hashrope\\Hashrope.java"
+    },
+    {
+      "sha256": "83b95d5eade3701669a71bea1ab3af47f95c70dbd997de985e292e110b0bd73b",
+      "path": "snapshot\\src\\main\\java\\hashrope\\Internal.java"
+    },
+    {
+      "sha256": "8d4a3a0935f281f553383c084d91d24e31b3d47efa8efc8a640db328f0f1402e",
+      "path": "snapshot\\src\\main\\java\\hashrope\\Leaf.java"
+    },
+    {
+      "sha256": "f6ff745e7be0a0c34ec4c0b3fa0b9811d7106702df0d4b098250c8d184cc4cfb",
+      "path": "snapshot\\src\\main\\java\\hashrope\\Node.java"
+    },
+    {
+      "sha256": "b74b216f8f144602f6f91cddbec69f3ce3f84333d911c178bcd112eb281f045f",
+      "path": "snapshot\\src\\main\\java\\hashrope\\package-info.java"
+    },
+    {
+      "sha256": "90de313886e2081ed01a473fb10b7cfceccfcfe62e4917e406fc84323e823e41",
+      "path": "snapshot\\src\\main\\java\\hashrope\\PolynomialHash.java"
+    },
+    {
+      "sha256": "1ae564f2db048930838bd6c945a49c5b0e0a8aa4163f0c9bd48b13c35ee1ec16",
+      "path": "snapshot\\src\\main\\java\\hashrope\\RepeatNode.java"
+    },
+    {
+      "sha256": "655c30c1fb41c120a7fe7d5ad5ee4850b1ed166cc26a5c9a3426bbb120341151",
+      "path": "snapshot\\src\\main\\java\\hashrope\\Rope.java"
+    },
+    {
+      "sha256": "c1d001979f6411ccd9a3726b68257d5d448877f424de17be7b27a69d0ab55503",
+      "path": "snapshot\\src\\test\\java\\hashrope\\SubstringTraversalTest.java"
+    }
+  ]
+}

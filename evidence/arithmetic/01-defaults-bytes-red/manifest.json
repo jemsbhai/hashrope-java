@@ -1,0 +1,15 @@
+{
+  "cycle": "01-defaults-bytes",
+  "phase": "red",
+  "startedUtc": "2026-10-22T21:02:54.7579896Z",
+  "finishedUtc": "2026-10-22T21:02:55.2386076Z",
+  "compileExit": 1,
+  "testExit": null,
+  "passed": false,
+  "sourceHashes": [
+    {
+      "sha256": "c4054c31416fdbaf5ae5155eb772c3aecb759f1fae81eec2e89ca6de107420cd",
+      "path": "snapshot\\test\\hashrope\\PolynomialHashTest.java"
+    }
+  ]
+}

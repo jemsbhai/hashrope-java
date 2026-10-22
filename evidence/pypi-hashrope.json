@@ -1,0 +1,315 @@
+{
+  "info": {
+    "author": null,
+    "author_email": "Muntaser Syed <muntaser@ieee.org>",
+    "bugtrack_url": null,
+    "classifiers": [
+      "Development Status :: 3 - Alpha",
+      "Intended Audience :: Developers",
+      "Intended Audience :: Science/Research",
+      "License :: OSI Approved :: MIT License",
+      "Programming Language :: Python :: 3",
+      "Programming Language :: Python :: 3.10",
+      "Programming Language :: Python :: 3.11",
+      "Programming Language :: Python :: 3.12",
+      "Programming Language :: Python :: 3.13",
+      "Topic :: Scientific/Engineering",
+      "Topic :: Software Development :: Libraries",
+      "Typing :: Typed"
+    ],
+    "description": "# hashrope\n\nA BB[2/7] weight-balanced binary tree augmented with polynomial hash metadata at every node.\n\n[![PyPI version](https://img.shields.io/pypi/v/hashrope)](https://pypi.org/project/hashrope/)\n[![Python 3.10+](https://img.shields.io/pypi/pyversions/hashrope)](https://pypi.org/project/hashrope/)\n[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)\n[![Tests](https://img.shields.io/badge/tests-141%20passing-brightgreen)](https://github.com/jemsbhai/hashrope)\n\n**Zero dependencies. Pure Python. Python 3.10+.**\n\n## What it does\n\nhashrope is a rope data structure where every node carries a polynomial hash. This enables:\n\n- **O(k log w) concat and split** with strict BB[2/7] rebalancing via Adams-style balanced join\n- **O(k log q) repetition encoding** via RepeatNode -- represents \"repeat this subtree q times\" without materializing the data\n- **O(k log w) substring hashing** without allocating new nodes\n- **O(1) whole-sequence hash** at any point during streaming ingestion\n- **Bounded-memory sliding window** that evicts old data while maintaining a running hash of everything seen\n\nAll arithmetic uses Mersenne prime modular reduction (bit-shift, no division).\n\n## Install\n\n```\npip install hashrope\n```\n\n## Quick start\n\n```python\nfrom hashrope import PolynomialHash, Leaf, rope_concat, rope_split, rope_substr_hash, rope_hash\n\nh = PolynomialHash()\n\n# Build a rope\na = Leaf(b\"hello \", h)\nb = Leaf(b\"world\", h)\nab = rope_concat(a, b, h)\n\n# Whole-string hash matches direct computation\nassert rope_hash(ab) == h.hash(b\"hello world\")\n\n# Split at any byte position\nleft, right = rope_split(ab, 6, h)\n\n# Substring hash without allocation\nsub_h = rope_substr_hash(ab, 0, 5, h)\nassert sub_h == h.hash(b\"hello\")\n```\n\n### RepeatNode\n\nEncode repetitions in O(log q) time and O(1) space:\n\n```python\nfrom hashrope import PolynomialHash, Leaf, rope_repeat, rope_hash\n\nh = PolynomialHash()\npattern = Leaf(b\"ab\", h)\nrepeated = rope_repeat(pattern, 1000, h)  # \"ab\" x 1000\n\n# Hash computed in O(log 1000), not O(2000)\nassert rope_hash(repeated) == h.hash(b\"ab\" * 1000)\n```\n\n### SlidingWindow\n\nBounded-memory streaming hash with copy-from-window support:\n\n```python\nfrom hashrope import PolynomialHash, SlidingWindow\n\nh = PolynomialHash()\nsw = SlidingWindow(d_max=1024, m_max=256)\n\n# Stream data in\nsw.append_bytes(b\"hello \")\nsw.append_bytes(b\"world\")\n\n# Hash of everything seen so far\nassert sw.current_hash() == h.hash(b\"hello world\")\n\n# Copy-from-window (like LZ77 back-references)\nsw.append_copy(offset=5, length=5)  # copies \"world\" again\nassert sw.final_hash() == h.hash(b\"hello worldworld\")\n```\n\n## API reference\n\n### Polynomial hash\n\n| Function / Class | Description |\n|---|---|\n| `PolynomialHash(prime, base)` | Hash function over Z/pZ. Default: p = 2^61 - 1, base = 131 |\n| `PolynomialHash.hash(data)` | H(data) with +1 byte offset to prevent zero collisions |\n| `PolynomialHash.hash_concat(h_a, len_b, h_b)` | H(A \\|\\| B) from H(A), \\|B\\|, H(B) in O(1) |\n| `PolynomialHash.hash_repeat(h_s, d, q)` | H(S^q) from H(S) and \\|S\\| in O(log q) |\n| `PolynomialHash.hash_overlap(h_p, d, l, h_prefix)` | H(P^q \\|\\| P[0..r-1]) for overlapping references |\n| `phi(q, alpha, p)` | Geometric accumulator: sum of alpha^i for i in [0, q) in O(log q) |\n| `mersenne_mod(a, p)` | Bit-shift reduction mod Mersenne prime |\n| `mersenne_mul(a, b, p)` | Modular multiply via mersenne_mod |\n| `MERSENNE_61` | 2^61 - 1 (default prime) |\n| `MERSENNE_127` | 2^127 - 1 (high-security prime) |\n\n### Rope nodes\n\n| Class | Description |\n|---|---|\n| `Leaf(data, h)` | Immutable leaf storing a byte sequence. Weight = 1 |\n| `Internal(left, right, h)` | Internal node. Hash = H(left) \\* x^len(right) + H(right) |\n| `RepeatNode(child, reps, h)` | Represents child^reps. Hash via geometric accumulator |\n\n### Rope operations\n\n| Function | Time | Description |\n|---|---|---|\n| `rope_concat(left, right, h)` | O(k \\|h_L - h_R\\|) | Concatenate with Adams-style balanced join and BB[2/7] rebalancing |\n| `rope_split(node, pos, h)` | O(k log w) | Split at byte position |\n| `rope_repeat(node, q, h)` | O(k log q) | Create RepeatNode |\n| `rope_substr_hash(node, start, length, h)` | O(k log w) | Substring hash without allocation |\n| `rope_len(node)` | O(1) | Total byte length |\n| `rope_hash(node)` | O(1) | Hash of represented string |\n| `rope_from_bytes(data, h)` | O(n) | Create Leaf from bytes |\n| `rope_to_bytes(node)` | O(n) | Reconstruct bytes (for testing) |\n| `validate_rope(node)` | O(w) | Assert all 9 invariants hold |\n\n### SlidingWindow\n\n| Method | Description |\n|---|---|\n| `SlidingWindow(d_max, m_max, prime, base)` | Create window. W = d_max + m_max |\n| `.append_bytes(data)` | Append literal bytes |\n| `.append_copy(offset, length)` | Copy from window (handles overlapping) |\n| `.current_hash()` | H(everything seen) in O(1) |\n| `.final_hash()` | Same as current_hash (alias) |\n| `.window_len` | Current window size in bytes |\n| `.pos` | Total bytes ingested |\n\n## Mathematical foundation\n\nThe data structure and its correctness proofs come from the compressed-domain hashing framework (24 theorems, 14 lemmas, 5 corollaries). Key results used by hashrope:\n\n| Result | Statement |\n|---|---|\n| Theorem 1 (Concatenation) | H(A \\|\\| B) = H(A) * x^{\\|B\\|} + H(B) |\n| Theorem 2 (Repetition) | H(S^q) = H(S) * Phi(q, x^d) |\n| Theorem 3 (Phi computation) | Phi(q, alpha) computable in O(log q) without modular inverse |\n| Theorem 6 (Join) | Adams-style balanced join with BB[2/7] rebalancing |\n| Theorem 7 (Split) | Split in O(k log w) with RepeatNode splittability |\n| Theorem 8 (Repeat) | RepeatNode in O(k log q), O(1) space |\n| Theorem 9 (SubstrHash) | Allocation-free substring hashing in O(k log w) |\n| Theorem 11 (Sliding window) | Bounded-memory streaming with eviction |\n\n## Changelog\n\nSee [CHANGELOG.md](CHANGELOG.md) for version history and details on the v0.2.1 balance bugfix.\n\n## Provenance\n\nExtracted from [UHC](https://github.com/jemsbhai/uhc) (Unified Hash-Compression Engine). The rope and polynomial hash modules are verbatim copies with import paths updated. The sliding window is adapted from UHC's SlidingRopeState with the LZ77 dependency removed.\n\n## License\n\nMIT\n",
+    "description_content_type": "text/markdown",
+    "docs_url": null,
+    "download_url": null,
+    "downloads": {
+      "last_day": -1,
+      "last_month": -1,
+      "last_week": -1
+    },
+    "dynamic": null,
+    "home_page": null,
+    "keywords": "balanced-tree, content-addressing, data-structure, hash, mersenne-prime, polynomial-hash, rope",
+    "license": "MIT",
+    "license_expression": null,
+    "license_files": [
+      "LICENSE"
+    ],
+    "maintainer": null,
+    "maintainer_email": null,
+    "name": "hashrope",
+    "package_url": "https://pypi.org/project/hashrope/",
+    "platform": null,
+    "project_url": "https://pypi.org/project/hashrope/",
+    "project_urls": {
+      "Homepage": "https://github.com/jemsbhai/hashrope",
+      "Issues": "https://github.com/jemsbhai/hashrope/issues",
+      "Repository": "https://github.com/jemsbhai/hashrope"
+    },
+    "provides_extra": [
+      "dev"
+    ],
+    "release_url": "https://pypi.org/project/hashrope/0.2.2/",
+    "requires_dist": [
+      "pytest-cov>=4.0; extra == \"dev\"",
+      "pytest>=7.0; extra == \"dev\""
+    ],
+    "requires_python": ">=3.10",
+    "summary": "Hash rope: a BB[2/7] balanced binary tree with polynomial hash metadata for O(log n) concat, split, substring hashing, and O(log q) repetition encoding.",
+    "version": "0.2.2",
+    "yanked": false,
+    "yanked_reason": null
+  },
+  "last_serial": 37906281,
+  "ownership": {
+    "organization": null,
+    "roles": [
+      {
+        "role": "Owner",
+        "user": "jemsbhai"
+      }
+    ]
+  },
+  "releases": {
+    "0.1.0": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "80b3139aa6f52c9718a65c8ea6d49240b7e9d6a5f2d93a6a68f08977bdc47455"
+        },
+        "digests": {
+          "blake2b_256": "cd1d447426a416d84a0dc0f87df851a008c1264d3f61d58567940d733da46a9e",
+          "md5": "a1932c18ee8555f6f3f07f481ceb3638",
+          "sha256": "285a55730234eaca8a5661acc065d700400eacba46ec87852785b037f1c5a8f8"
+        },
+        "downloads": -1,
+        "filename": "hashrope-0.1.0-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "a1932c18ee8555f6f3f07f481ceb3638",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.10",
+        "size": 14978,
+        "upload_time": "2026-04-07T16:54:23",
+        "upload_time_iso_8601": "2026-04-07T16:54:23.732926Z",
+        "url": "https://files.pythonhosted.org/packages/cd/1d/447426a416d84a0dc0f87df851a008c1264d3f61d58567940d733da46a9e/hashrope-0.1.0-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "2656cd6917fad19f2bfcc152fe1aecec6f2a62f7015b9b36dc57b4b268501dfc",
+          "md5": "0608ede05a4e863e757edb23afa424b5",
+          "sha256": "b1d981af78ecbfa1980c6554b70a916e83e2feb43b17dd308e2861cd32586b0b"
+        },
+        "downloads": -1,
+        "filename": "hashrope-0.1.0.tar.gz",
+        "has_sig": false,
+        "md5_digest": "0608ede05a4e863e757edb23afa424b5",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.10",
+        "size": 17524,
+        "upload_time": "2026-04-07T16:54:24",
+        "upload_time_iso_8601": "2026-04-07T16:54:24.895109Z",
+        "url": "https://files.pythonhosted.org/packages/26/56/cd6917fad19f2bfcc152fe1aecec6f2a62f7015b9b36dc57b4b268501dfc/hashrope-0.1.0.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.2.0": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "e139ddae550d0e29d12c83c220535fa7546c49fb891726dc1b5d2191c2d1b8d5"
+        },
+        "digests": {
+          "blake2b_256": "59cb41ab3237c867c64a6060f6c77e51ba6b2c2e4dcf729f082340ad1212b9be",
+          "md5": "4c502b4f122397cc6c0601fb5d68ad4d",
+          "sha256": "0047617c8732c859845e8e62b6a2c0a37c1f875bcc60c0063ed68522ad5a1a58"
+        },
+        "downloads": -1,
+        "filename": "hashrope-0.2.0-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "4c502b4f122397cc6c0601fb5d68ad4d",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.10",
+        "size": 14990,
+        "upload_time": "2026-04-07T19:24:35",
+        "upload_time_iso_8601": "2026-04-07T19:24:35.071825Z",
+        "url": "https://files.pythonhosted.org/packages/59/cb/41ab3237c867c64a6060f6c77e51ba6b2c2e4dcf729f082340ad1212b9be/hashrope-0.2.0-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "b818765275977a06da05f00121604c07b27f40b0ccd57b6cb9443c2cb8b500e0",
+          "md5": "2c57236f1bc7f24ea8dc5f47b029b28e",
+          "sha256": "ce268c68a01ce25e124ca45e7420edb00bd33d33892fd976081afc3837ff62ff"
+        },
+        "downloads": -1,
+        "filename": "hashrope-0.2.0.tar.gz",
+        "has_sig": false,
+        "md5_digest": "2c57236f1bc7f24ea8dc5f47b029b28e",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.10",
+        "size": 17932,
+        "upload_time": "2026-04-07T19:24:36",
+        "upload_time_iso_8601": "2026-04-07T19:24:36.052624Z",
+        "url": "https://files.pythonhosted.org/packages/b8/18/765275977a06da05f00121604c07b27f40b0ccd57b6cb9443c2cb8b500e0/hashrope-0.2.0.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.2.1": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "493c13d37f4b96e81baccad60341e9296c4da36767e8f2c0f4dbcbdcad945433"
+        },
+        "digests": {
+          "blake2b_256": "47f3fdf15092ec65098bd8054adec6b95c4a7c7804490636fc4ec640da9d4007",
+          "md5": "9c8394e42f8e701460ef1902524df0c8",
+          "sha256": "a737ce9ce83ea8452e2cd0e22651ba7f0113339c9d2dbae97283255b9a862300"
+        },
+        "downloads": -1,
+        "filename": "hashrope-0.2.1-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "9c8394e42f8e701460ef1902524df0c8",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.10",
+        "size": 15414,
+        "upload_time": "2026-04-09T19:45:33",
+        "upload_time_iso_8601": "2026-04-09T19:45:33.488908Z",
+        "url": "https://files.pythonhosted.org/packages/47/f3/fdf15092ec65098bd8054adec6b95c4a7c7804490636fc4ec640da9d4007/hashrope-0.2.1-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "90b640f8f9854b29bea97dc2a173d10fed0364f02b426095d2a0d5e11928fb66",
+          "md5": "ef1c5025a2931d1f2a05542a2556e129",
+          "sha256": "3d3b2f4a3bd1c025f8334f4f443fabd25c78f44f1e663f788544bd3f0a8240e8"
+        },
+        "downloads": -1,
+        "filename": "hashrope-0.2.1.tar.gz",
+        "has_sig": false,
+        "md5_digest": "ef1c5025a2931d1f2a05542a2556e129",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.10",
+        "size": 23890,
+        "upload_time": "2026-04-09T19:45:34",
+        "upload_time_iso_8601": "2026-04-09T19:45:34.363165Z",
+        "url": "https://files.pythonhosted.org/packages/90/b6/40f8f9854b29bea97dc2a173d10fed0364f02b426095d2a0d5e11928fb66/hashrope-0.2.1.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ],
+    "0.2.2": [
+      {
+        "comment_text": null,
+        "core-metadata": {
+          "sha256": "b3e831289474a8f4af64c518c11b177d6a6bd7f293e1de13ab234761c83b6146"
+        },
+        "digests": {
+          "blake2b_256": "38486a779bd0ae7decefff20e58999cb4ab78866eda6f6884874deb5dd149ab6",
+          "md5": "315d7ce71c11b44692bd9e121da006e7",
+          "sha256": "710112e3aa14a991918a15331c1f418ce9d1c9d93c34a9da09e22be33c68a2d2"
+        },
+        "downloads": -1,
+        "filename": "hashrope-0.2.2-py3-none-any.whl",
+        "has_sig": false,
+        "md5_digest": "315d7ce71c11b44692bd9e121da006e7",
+        "packagetype": "bdist_wheel",
+        "python_version": "py3",
+        "requires_python": ">=3.10",
+        "size": 15579,
+        "upload_time": "2026-06-10T19:33:12",
+        "upload_time_iso_8601": "2026-06-10T19:33:12.148529Z",
+        "url": "https://files.pythonhosted.org/packages/38/48/6a779bd0ae7decefff20e58999cb4ab78866eda6f6884874deb5dd149ab6/hashrope-0.2.2-py3-none-any.whl",
+        "yanked": false,
+        "yanked_reason": null
+      },
+      {
+        "comment_text": null,
+        "core-metadata": false,
+        "digests": {
+          "blake2b_256": "9552d8073f3d00eb2682e8192353949addab2049972be78ebff01780da51f8be",
+          "md5": "8711ce132f175d9368e84169e7c867e9",
+          "sha256": "881b367afc38b5d32609d3d604e4a19ce27e4eaeb3078e54948bdad69e54b499"
+        },
+        "downloads": -1,
+        "filename": "hashrope-0.2.2.tar.gz",
+        "has_sig": false,
+        "md5_digest": "8711ce132f175d9368e84169e7c867e9",
+        "packagetype": "sdist",
+        "python_version": "source",
+        "requires_python": ">=3.10",
+        "size": 27634,
+        "upload_time": "2026-06-10T19:33:13",
+        "upload_time_iso_8601": "2026-06-10T19:33:13.08718Z",
+        "url": "https://files.pythonhosted.org/packages/95/52/d8073f3d00eb2682e8192353949addab2049972be78ebff01780da51f8be/hashrope-0.2.2.tar.gz",
+        "yanked": false,
+        "yanked_reason": null
+      }
+    ]
+  },
+  "urls": [
+    {
+      "comment_text": null,
+      "core-metadata": {
+        "sha256": "b3e831289474a8f4af64c518c11b177d6a6bd7f293e1de13ab234761c83b6146"
+      },
+      "digests": {
+        "blake2b_256": "38486a779bd0ae7decefff20e58999cb4ab78866eda6f6884874deb5dd149ab6",
+        "md5": "315d7ce71c11b44692bd9e121da006e7",
+        "sha256": "710112e3aa14a991918a15331c1f418ce9d1c9d93c34a9da09e22be33c68a2d2"
+      },
+      "downloads": -1,
+      "filename": "hashrope-0.2.2-py3-none-any.whl",
+      "has_sig": false,
+      "md5_digest": "315d7ce71c11b44692bd9e121da006e7",
+      "packagetype": "bdist_wheel",
+      "python_version": "py3",
+      "requires_python": ">=3.10",
+      "size": 15579,
+      "upload_time": "2026-06-10T19:33:12",
+      "upload_time_iso_8601": "2026-06-10T19:33:12.148529Z",
+      "url": "https://files.pythonhosted.org/packages/38/48/6a779bd0ae7decefff20e58999cb4ab78866eda6f6884874deb5dd149ab6/hashrope-0.2.2-py3-none-any.whl",
+      "yanked": false,
+      "yanked_reason": null
+    },
+    {
+      "comment_text": null,
+      "core-metadata": false,
+      "digests": {
+        "blake2b_256": "9552d8073f3d00eb2682e8192353949addab2049972be78ebff01780da51f8be",
+        "md5": "8711ce132f175d9368e84169e7c867e9",
+        "sha256": "881b367afc38b5d32609d3d604e4a19ce27e4eaeb3078e54948bdad69e54b499"
+      },
+      "downloads": -1,
+      "filename": "hashrope-0.2.2.tar.gz",
+      "has_sig": false,
+      "md5_digest": "8711ce132f175d9368e84169e7c867e9",
+      "packagetype": "sdist",
+      "python_version": "source",
+      "requires_python": ">=3.10",
+      "size": 27634,
+      "upload_time": "2026-06-10T19:33:13",
+      "upload_time_iso_8601": "2026-06-10T19:33:13.08718Z",
+      "url": "https://files.pythonhosted.org/packages/95/52/d8073f3d00eb2682e8192353949addab2049972be78ebff01780da51f8be/hashrope-0.2.2.tar.gz",
+      "yanked": false,
+      "yanked_reason": null
+    }
+  ],
+  "vulnerabilities": []
+}
