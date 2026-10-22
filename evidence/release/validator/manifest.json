@@ -1,0 +1,53 @@
+{
+  "snapshots": [
+    {
+      "name": "01-contract-red",
+      "exit_code": 1,
+      "expected_marker": "FileNotFoundError",
+      "command": "python -B -m unittest discover -s tests -p test_verify_central_bundle.py -v",
+      "sha256": {
+        "tests/test_verify_central_bundle.py": "3d8d8929418009d8839169a39bb5f8c5e88b1b17320c24dda67bdd834ea669c2"
+      }
+    },
+    {
+      "name": "01-contract-green",
+      "exit_code": 0,
+      "expected_marker": "Ran 12 tests",
+      "command": "python -B -m unittest discover -s tests -p test_verify_central_bundle.py -v",
+      "sha256": {
+        "tests/test_verify_central_bundle.py": "3d8d8929418009d8839169a39bb5f8c5e88b1b17320c24dda67bdd834ea669c2",
+        "tools/verify_central_bundle.py": "03bdd3f908c17765f803a7b2fa25087fe9b475f51661131db090cadaa3062074"
+      }
+    },
+    {
+      "name": "02-signatures-red",
+      "exit_code": 1,
+      "expected_marker": "AttributeError",
+      "command": "python -B -m unittest discover -s tests -p test_verify_central_bundle.py -v",
+      "sha256": {
+        "tests/test_verify_central_bundle.py": "44cad8b3c9dbeb0469aa74e96958c1b8d087c9d796b858477152282ee360bfc3",
+        "tools/verify_central_bundle.py": "03bdd3f908c17765f803a7b2fa25087fe9b475f51661131db090cadaa3062074"
+      }
+    },
+    {
+      "name": "02-signatures-green",
+      "exit_code": 0,
+      "expected_marker": "Ran 22 tests",
+      "command": "python -B -m unittest discover -s tests -p test_verify_central_bundle.py -v",
+      "sha256": {
+        "tests/test_verify_central_bundle.py": "44cad8b3c9dbeb0469aa74e96958c1b8d087c9d796b858477152282ee360bfc3",
+        "tools/verify_central_bundle.py": "06e5b61814c29d21e1359a6409584f40ded75667429f0705760d849ce7d14fb8"
+      }
+    },
+    {
+      "name": "03-resource-refactor",
+      "exit_code": 0,
+      "expected_marker": "Ran 22 tests",
+      "command": "python -B -m unittest discover -s tests -p test_verify_central_bundle.py -v",
+      "sha256": {
+        "tests/test_verify_central_bundle.py": "44cad8b3c9dbeb0469aa74e96958c1b8d087c9d796b858477152282ee360bfc3",
+        "tools/verify_central_bundle.py": "69e03ed781475f4057362582229ded558994619f2e4276794019400422327b20"
+      }
+    }
+  ]
+}

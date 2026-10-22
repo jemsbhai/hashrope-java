@@ -1,0 +1,35 @@
+{
+  "snapshots": [
+    {
+      "snapshot": "01-contract-red",
+      "expected": 1,
+      "actual": 1,
+      "matched": true
+    },
+    {
+      "snapshot": "01-contract-green",
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    {
+      "snapshot": "02-signatures-red",
+      "expected": 1,
+      "actual": 1,
+      "matched": true
+    },
+    {
+      "snapshot": "02-signatures-green",
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    },
+    {
+      "snapshot": "03-resource-refactor",
+      "expected": 0,
+      "actual": 0,
+      "matched": true
+    }
+  ],
+  "matched": true
+}

@@ -1,0 +1,36 @@
+{
+  "coordinates": "io.github.jemsbhai:hashrope:0.2.2",
+  "bundle_sha256": "adfa7e1690709c1a583199f5e13a84f8abc5f239ca547989c1cd741ce2831ff8",
+  "entry_count": 24,
+  "artifacts": [
+    {
+      "name": "hashrope-0.2.2.pom",
+      "bytes": 5542,
+      "sha256": "f232a3b9a23d08faa0a8e4c01d1a1f092d0fb3e89437f374ca0c5d4b0e1d44e6",
+      "signer_primary_fingerprint": "3C8AD6A286A2FB052BF081B29D6C450FD82C949C",
+      "signature_verified": true
+    },
+    {
+      "name": "hashrope-0.2.2.jar",
+      "bytes": 20703,
+      "sha256": "90d3b990dddaf59a5cf23a34fa0afb318017d252219ffd99bbeb9761f558934d",
+      "signer_primary_fingerprint": "3C8AD6A286A2FB052BF081B29D6C450FD82C949C",
+      "signature_verified": true
+    },
+    {
+      "name": "hashrope-0.2.2-sources.jar",
+      "bytes": 16626,
+      "sha256": "16eba7c033fb74c4c8e8ad906a58462e4f265c14fc966a57e6cc8e8ee98428cb",
+      "signer_primary_fingerprint": "3C8AD6A286A2FB052BF081B29D6C450FD82C949C",
+      "signature_verified": true
+    },
+    {
+      "name": "hashrope-0.2.2-javadoc.jar",
+      "bytes": 149547,
+      "sha256": "f165cac5acf2364e4dbc3a89c44a917a25bbba77a3b7413ed1c6daebfdc67d44",
+      "signer_primary_fingerprint": "3C8AD6A286A2FB052BF081B29D6C450FD82C949C",
+      "signature_verified": true
+    }
+  ],
+  "verified": true
+}

@@ -1,0 +1,16 @@
+test_archives_carry_exact_project_license (__main__.ReleasePackagingTest) ... test_normal_build_does_not_require_signing_or_publishing_credentials (__main__.ReleasePackagingTest) ... ok
+test_pom_has_complete_public_metadata_without_runtime_dependencies (__main__.ReleasePackagingTest) ... ok
+test_release_profile_supports_maven_310_and_offline_review (__main__.ReleasePackagingTest) ... ok
+
+======================================================================
+FAIL: test_archives_carry_exact_project_license (__main__.ReleasePackagingTest) (classifier='-javadoc')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\data\code\claudecode\hashrope-java\tests\test_release_packaging.py", line 16, in test_archives_carry_exact_project_license
+    self.assertIn('META-INF/LICENSE', jar.namelist(), 'Distribution must carry the MIT notice')
+AssertionError: 'META-INF/LICENSE' not found in ['META-INF/', 'META-INF/MANIFEST.MF', 'hashrope/', 'hashrope/class-use/', 'legal/', 'resource-files/', 'script-files/', 'allclasses-index.html', 'allpackages-index.html', 'constant-values.html', 'element-list', 'hashrope/Hashrope.html', 'hashrope/Internal.html', 'hashrope/Leaf.html', 'hashrope/Node.html', 'hashrope/PolynomialHash.html', 'hashrope/RepeatNode.html', 'hashrope/Rope.Split.html', 'hashrope/Rope.html', 'hashrope/SlidingWindow.html', 'hashrope/class-use/Hashrope.html', 'hashrope/class-use/Internal.html', 'hashrope/class-use/Leaf.html', 'hashrope/class-use/Node.html', 'hashrope/class-use/PolynomialHash.html', 'hashrope/class-use/RepeatNode.html', 'hashrope/class-use/Rope.Split.html', 'hashrope/class-use/Rope.html', 'hashrope/class-use/SlidingWindow.html', 'hashrope/package-summary.html', 'hashrope/package-tree.html', 'hashrope/package-use.html', 'help-doc.html', 'index-all.html', 'index.html', 'legal/COPYRIGHT', 'legal/LICENSE', 'legal/dejavufonts.md', 'legal/jquery.md', 'legal/jqueryUI.md', 'member-search-index.js', 'module-search-index.js', 'overview-tree.html', 'package-search-index.js', 'resource-files/copy.svg', 'resource-files/glass.png', 'resource-files/jquery-ui.min.css', 'resource-files/link.svg', 'resource-files/stylesheet.css', 'resource-files/x.png', 'script-files/jquery-3.7.1.min.js', 'script-files/jquery-ui.min.js', 'script-files/script.js', 'script-files/search-page.js', 'script-files/search.js', 'search.html', 'tag-search-index.js', 'type-search-index.js'] : Distribution must carry the MIT notice
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.253s
+
+FAILED (failures=1)

@@ -1,0 +1,7 @@
+{
+  "bundle_sha256": "adfa7e1690709c1a583199f5e13a84f8abc5f239ca547989c1cd741ce2831ff8",
+  "pom_matches_source_bytes": true,
+  "pom_bytes": 5542,
+  "java_source_files_matched": 9,
+  "real_gpg_rejected_tampered_pom_with_recomputed_checksums": true
+}

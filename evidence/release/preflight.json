@@ -1,0 +1,25 @@
+{
+  "checked_at_utc": "2026-10-22T21:52:35.709862+00:00",
+  "coordinates": "io.github.jemsbhai:hashrope:0.2.2",
+  "public_version_absent": true,
+  "checks": [
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom",
+      "http_status": 404
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/maven-metadata.xml",
+      "http_status": 404
+    }
+  ],
+  "public_key_url": "https://keys.openpgp.org/vks/v1/by-fingerprint/3C8AD6A286A2FB052BF081B29D6C450FD82C949C",
+  "public_key_sha256": "996e493f90442a7df228fc8f7db3859c497bad04ebd52fe9e29d52de3a58743c",
+  "publisher_plugin": "org.sonatype.central:central-publishing-maven-plugin:0.12.0",
+  "maven": "3.10.0",
+  "jdk": "24.0.1",
+  "authentication": "Existing signed-in Central Portal browser session; namespace io.github.jemsbhai displays Verified; no new token or Maven credential configuration",
+  "sidebar_association": {
+    "succeeded": false,
+    "reason": "The task's source project could not be safely determined."
+  }
+}

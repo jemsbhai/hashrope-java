@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>io.github.jemsbhai</groupId><artifactId>hashrope</artifactId><version>0.2.2</version>
+  <name>Hashrope</name><description>Immutable polynomial hash ropes with Python hashrope 0.2.2 parity.</description>
+  <url>https://github.com/jemsbhai/hashrope-java</url>
+  <licenses><license><name>MIT</name><url>https://opensource.org/licenses/MIT</url></license></licenses>
+  <developers><developer><id>jemsbhai</id><name>Muntaser Syed</name></developer></developers>
+  <scm><connection>scm:git:https://github.com/jemsbhai/hashrope-java.git</connection><developerConnection>scm:git:ssh://git@github.com/jemsbhai/hashrope-java.git</developerConnection><url>https://github.com/jemsbhai/hashrope-java</url></scm>
+  <properties><maven.compiler.release>17</maven.compiler.release><project.build.sourceEncoding>UTF-8</project.build.sourceEncoding><project.build.outputTimestamp>2026-10-22T00:00:00Z</project.build.outputTimestamp></properties>
+  <dependencies><dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><version>5.11.4</version><scope>test</scope></dependency></dependencies>
+  <build><plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId><artifactId>maven-resources-plugin</artifactId><version>3.5.0</version>
+      <executions><execution><id>javadoc-license</id><phase>prepare-package</phase><goals><goal>copy-resources</goal></goals>
+        <configuration><outputDirectory>${project.build.directory}/reports/apidocs</outputDirectory>
+          <resources><resource><directory>src/main/resources</directory><filtering>false</filtering><includes><include>META-INF/LICENSE</include></includes></resource></resources>
+        </configuration>
+      </execution></executions>
+    </plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.14.1</version></plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.4</version><configuration><useModulePath>false</useModulePath></configuration></plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-source-plugin</artifactId><version>3.3.1</version><executions><execution><id>sources</id><goals><goal>jar-no-fork</goal></goals></execution></executions></plugin>
+    <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-javadoc-plugin</artifactId><version>3.11.3</version><configuration><doclint>all</doclint></configuration><executions><execution><id>javadoc</id><goals><goal>jar</goal></goals></execution></executions></plugin>
+  </plugins></build>
+  <profiles>
+    <profile>
+      <id>central-release</id>
+      <properties>
+        <!-- Bundle creation is safe by default; upload requires an explicit override. -->
+        <central.skipUpload>true</central.skipUpload>
+      </properties>
+      <build><plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-gpg-plugin</artifactId><version>3.2.8</version>
+          <configuration>
+            <bestPractices>true</bestPractices>
+            <keyname>3C8AD6A286A2FB052BF081B29D6C450FD82C949C</keyname>
+            <useAgent>true</useAgent>
+          </configuration>
+          <executions><execution><id>sign-release</id><phase>verify</phase><goals><goal>sign</goal></goals></execution></executions>
+        </plugin>
+        <plugin>
+          <groupId>org.sonatype.central</groupId>
+          <artifactId>central-publishing-maven-plugin</artifactId><version>0.12.0</version>
+          <extensions>true</extensions>
+          <configuration>
+            <publishingServerId>central</publishingServerId>
+            <skipUpload>${central.skipUpload}</skipUpload>
+            <checksums>all</checksums>
+            <autoPublish>false</autoPublish>
+            <waitUntil>validated</waitUntil>
+            <ignorePublishedComponents>false</ignorePublishedComponents>
+          </configuration>
+        </plugin>
+      </plugins></build>
+    </profile>
+  </profiles>
+</project>

@@ -1,0 +1,23 @@
+test_verify_central_bundle (unittest.loader._FailedTest) ... ERROR
+
+======================================================================
+ERROR: test_verify_central_bundle (unittest.loader._FailedTest)
+----------------------------------------------------------------------
+ImportError: Failed to import test module: test_verify_central_bundle
+Traceback (most recent call last):
+  File "C:\Python310\lib\unittest\loader.py", line 436, in _find_test_path
+    module = self._get_module_from_name(name)
+  File "C:\Python310\lib\unittest\loader.py", line 377, in _get_module_from_name
+    __import__(name)
+  File "E:\data\code\claudecode\hashrope-java\tests\test_verify_central_bundle.py", line 14, in <module>
+    SPEC.loader.exec_module(VERIFIER)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1016, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\data\\code\\claudecode\\hashrope-java\\tools\\verify_central_bundle.py'
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (errors=1)
