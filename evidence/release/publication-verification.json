@@ -1,0 +1,29 @@
+{
+  "verified_utc": "2026-10-23T15:22:12.454455+00:00",
+  "coordinates": "io.github.jemsbhai:hashrope:0.2.2",
+  "source_commit": "e111f3e773db114b6932692f52dfb7f433e7d7be",
+  "public_release_verified": true,
+  "public_artifact_url": "https://central.sonatype.com/artifact/io.github.jemsbhai/hashrope/0.2.2",
+  "public_artifact_page_http_status": 200,
+  "public_artifact_page_title": "Maven Central: io.github.jemsbhai:hashrope:0.2.2",
+  "public_repository_base": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/",
+  "prepared_bundle_sha256": "adfa7e1690709c1a583199f5e13a84f8abc5f239ca547989c1cd741ce2831ff8",
+  "public_files_verified": 24,
+  "byte_identical_to_bundle": true,
+  "signatures_verified": 4,
+  "clean_central_consumer_passed": true,
+  "existing_deployment": {
+    "id": "a9e34487-d27f-4fc8-9f43-62d61156c668",
+    "name": "hashrope-0.2.2-e111f3e",
+    "last_directly_observed_portal_state": "PUBLISHING",
+    "last_direct_observation_date": "2026-10-22",
+    "current_portal_state": null,
+    "portal_recheck_limitation": "Authenticated browser tools were unavailable after the environment reconnected. Public artifacts and consumption were verified directly."
+  },
+  "duplicate_deployment_created": false,
+  "credentials_configured": false,
+  "original_preservation_report": "original-preservation-published.json",
+  "artifact_comparison_report": "public-artifact-comparison.json",
+  "signature_report": "public-bundle-verification.json",
+  "consumer_report": "central-consumer-verification.json"
+}

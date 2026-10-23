@@ -1,0 +1,316 @@
+{
+  "coordinates": "io.github.jemsbhai:hashrope:0.2.2",
+  "source_commit": "e111f3e773db114b6932692f52dfb7f433e7d7be",
+  "started_utc": "2026-10-23T15:18:11.432020+00:00",
+  "completed_utc": "2026-10-23T15:18:15.195889+00:00",
+  "prepared_bundle_sha256": "adfa7e1690709c1a583199f5e13a84f8abc5f239ca547989c1cd741ce2831ff8",
+  "public_repository_base": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/",
+  "public_entry_count": 24,
+  "all_24_files_byte_identical": true,
+  "files": [
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-javadoc.jar",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-javadoc.jar",
+      "http_status": 200,
+      "bytes": 149547,
+      "sha256": "f165cac5acf2364e4dbc3a89c44a917a25bbba77a3b7413ed1c6daebfdc67d44",
+      "prepared_sha256": "f165cac5acf2364e4dbc3a89c44a917a25bbba77a3b7413ed1c6daebfdc67d44",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:11.822914+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-javadoc.jar.asc",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-javadoc.jar.asc",
+      "http_status": 200,
+      "bytes": 887,
+      "sha256": "ad99493d56a50380f06b9a94fa83421f2d344e633a775713cff4e3437030a7de",
+      "prepared_sha256": "ad99493d56a50380f06b9a94fa83421f2d344e633a775713cff4e3437030a7de",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:11.855586+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-javadoc.jar.md5",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-javadoc.jar.md5",
+      "http_status": 200,
+      "bytes": 32,
+      "sha256": "229b97bbc22c41e11c530a7a8e4fc4c2e2ee78959590dd0860867df4ee91ad66",
+      "prepared_sha256": "229b97bbc22c41e11c530a7a8e4fc4c2e2ee78959590dd0860867df4ee91ad66",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:11.657394+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-javadoc.jar.sha1",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-javadoc.jar.sha1",
+      "http_status": 200,
+      "bytes": 40,
+      "sha256": "d9c9ad850c9e6c34d441b753399777b9b1f89ab7725ee66cd83548525212be35",
+      "prepared_sha256": "d9c9ad850c9e6c34d441b753399777b9b1f89ab7725ee66cd83548525212be35",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:11.668775+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-javadoc.jar.sha256",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-javadoc.jar.sha256",
+      "http_status": 200,
+      "bytes": 64,
+      "sha256": "7cae46baccde760cbc1bf3e7c4db15b6e03f65b6604c2adb970a20e4f01c8bf4",
+      "prepared_sha256": "7cae46baccde760cbc1bf3e7c4db15b6e03f65b6604c2adb970a20e4f01c8bf4",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:11.880819+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-javadoc.jar.sha512",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-javadoc.jar.sha512",
+      "http_status": 200,
+      "bytes": 128,
+      "sha256": "b3518ce788efe23e487256ec80e13734c30c79ae6e787e6d07b0b06c7f384c1e",
+      "prepared_sha256": "b3518ce788efe23e487256ec80e13734c30c79ae6e787e6d07b0b06c7f384c1e",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.051280+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-sources.jar",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-sources.jar",
+      "http_status": 200,
+      "bytes": 16626,
+      "sha256": "16eba7c033fb74c4c8e8ad906a58462e4f265c14fc966a57e6cc8e8ee98428cb",
+      "prepared_sha256": "16eba7c033fb74c4c8e8ad906a58462e4f265c14fc966a57e6cc8e8ee98428cb",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.076133+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-sources.jar.asc",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-sources.jar.asc",
+      "http_status": 200,
+      "bytes": 887,
+      "sha256": "f42692f2979a0cc72c62c03ac3fb12ab024c2230b458750b164f519d0114f791",
+      "prepared_sha256": "f42692f2979a0cc72c62c03ac3fb12ab024c2230b458750b164f519d0114f791",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.136407+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-sources.jar.md5",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-sources.jar.md5",
+      "http_status": 200,
+      "bytes": 32,
+      "sha256": "d2125f23c6482067353e551687f3712b7b384229c4bd618199826d4da1ed3c7f",
+      "prepared_sha256": "d2125f23c6482067353e551687f3712b7b384229c4bd618199826d4da1ed3c7f",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.076133+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-sources.jar.sha1",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-sources.jar.sha1",
+      "http_status": 200,
+      "bytes": 40,
+      "sha256": "d29420fffd2a30507ebbcdc227284a4d9fa36598d62b3960ee622a3ce82d9cab",
+      "prepared_sha256": "d29420fffd2a30507ebbcdc227284a4d9fa36598d62b3960ee622a3ce82d9cab",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.183959+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-sources.jar.sha256",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-sources.jar.sha256",
+      "http_status": 200,
+      "bytes": 64,
+      "sha256": "cf99152660cb4860a26e7c888dceea15a7bbfc7930eb4247b4d84deb8ce1fa4d",
+      "prepared_sha256": "cf99152660cb4860a26e7c888dceea15a7bbfc7930eb4247b4d84deb8ce1fa4d",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.352246+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-sources.jar.sha512",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2-sources.jar.sha512",
+      "http_status": 200,
+      "bytes": 128,
+      "sha256": "67bcfc8948ba325361c0ec5d2398336dab73f7f785d73b3b7eb1bad8a2a414a3",
+      "prepared_sha256": "67bcfc8948ba325361c0ec5d2398336dab73f7f785d73b3b7eb1bad8a2a414a3",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.364204+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar",
+      "http_status": 200,
+      "bytes": 20703,
+      "sha256": "90d3b990dddaf59a5cf23a34fa0afb318017d252219ffd99bbeb9761f558934d",
+      "prepared_sha256": "90d3b990dddaf59a5cf23a34fa0afb318017d252219ffd99bbeb9761f558934d",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.238964+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar.asc",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar.asc",
+      "http_status": 200,
+      "bytes": 887,
+      "sha256": "1aa087c14fc1b84426aa9935d91106b189077041fb0f428c9a283f9781993115",
+      "prepared_sha256": "1aa087c14fc1b84426aa9935d91106b189077041fb0f428c9a283f9781993115",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.497245+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar.md5",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar.md5",
+      "http_status": 200,
+      "bytes": 32,
+      "sha256": "b55b9400c3bf3029228975a8a586d0a60abc2ebf3a60e4009c912320a60ba0bb",
+      "prepared_sha256": "b55b9400c3bf3029228975a8a586d0a60abc2ebf3a60e4009c912320a60ba0bb",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.409830+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar.sha1",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar.sha1",
+      "http_status": 200,
+      "bytes": 40,
+      "sha256": "6c226c461dc6a825b7fb4dc9fa733c567b9e69cfa2dc96b8c5b1243493d36b4b",
+      "prepared_sha256": "6c226c461dc6a825b7fb4dc9fa733c567b9e69cfa2dc96b8c5b1243493d36b4b",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.480956+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar.sha256",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar.sha256",
+      "http_status": 200,
+      "bytes": 64,
+      "sha256": "0b4c5c47b4f212e94fb5742b5a4ae675b0b31a45b963a0f0cf624420f5e90a66",
+      "prepared_sha256": "0b4c5c47b4f212e94fb5742b5a4ae675b0b31a45b963a0f0cf624420f5e90a66",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.746432+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar.sha512",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar.sha512",
+      "http_status": 200,
+      "bytes": 128,
+      "sha256": "ed79745d0513dd255efbfe4c27ab2c853cb84142144265b31534965aa8845a21",
+      "prepared_sha256": "ed79745d0513dd255efbfe4c27ab2c853cb84142144265b31534965aa8845a21",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.755511+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom",
+      "http_status": 200,
+      "bytes": 5542,
+      "sha256": "f232a3b9a23d08faa0a8e4c01d1a1f092d0fb3e89437f374ca0c5d4b0e1d44e6",
+      "prepared_sha256": "f232a3b9a23d08faa0a8e4c01d1a1f092d0fb3e89437f374ca0c5d4b0e1d44e6",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.571860+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom.asc",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom.asc",
+      "http_status": 200,
+      "bytes": 887,
+      "sha256": "d3bcadc2654054742bf62ff3bad94c8ec30e038c7930565d8478e61bf6addc4d",
+      "prepared_sha256": "d3bcadc2654054742bf62ff3bad94c8ec30e038c7930565d8478e61bf6addc4d",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.835971+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom.md5",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom.md5",
+      "http_status": 200,
+      "bytes": 32,
+      "sha256": "88a5b0096a31af8b3d29d9592cad53dab015d6009f199d23c94fe031ee8d0ca2",
+      "prepared_sha256": "88a5b0096a31af8b3d29d9592cad53dab015d6009f199d23c94fe031ee8d0ca2",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:12.863469+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom.sha1",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom.sha1",
+      "http_status": 200,
+      "bytes": 40,
+      "sha256": "fb392ee25133bdd8173d7cd7dfbaeb43ed144331d8933c383e6cd88753bdf10e",
+      "prepared_sha256": "fb392ee25133bdd8173d7cd7dfbaeb43ed144331d8933c383e6cd88753bdf10e",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:13.027190+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom.sha256",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom.sha256",
+      "http_status": 200,
+      "bytes": 64,
+      "sha256": "2621101530ae8c01c2a946e4757c91d7554861e43277d1c00851d72735104d24",
+      "prepared_sha256": "2621101530ae8c01c2a946e4757c91d7554861e43277d1c00851d72735104d24",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:13.034443+00:00"
+    },
+    {
+      "entry": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom.sha512",
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom.sha512",
+      "http_status": 200,
+      "bytes": 128,
+      "sha256": "9c122eae8b6a2646a9507db00b27dc7ab56fa0384a56bd5e48d888cc02b5569d",
+      "prepared_sha256": "9c122eae8b6a2646a9507db00b27dc7ab56fa0384a56bd5e48d888cc02b5569d",
+      "byte_identical_to_prepared": true,
+      "retrieved_utc": "2026-10-23T15:18:13.162408+00:00"
+    }
+  ],
+  "public_key": {
+    "url": "https://keys.openpgp.org/vks/v1/by-fingerprint/3C8AD6A286A2FB052BF081B29D6C450FD82C949C",
+    "http_status": 200,
+    "sha256": "996e493f90442a7df228fc8f7db3859c497bad04ebd52fe9e29d52de3a58743c",
+    "matches_prepared_public_key": true
+  },
+  "source_files": [
+    {
+      "path": "java/src/main/java/hashrope/Hashrope.java",
+      "sha256": "2b0fe348ed0d25b5a895882c3a6ca80ebff1d92278aefcc617a6b8478bd11ad9",
+      "matches_release_commit": true,
+      "matches_working_file": true
+    },
+    {
+      "path": "java/src/main/java/hashrope/Internal.java",
+      "sha256": "83b95d5eade3701669a71bea1ab3af47f95c70dbd997de985e292e110b0bd73b",
+      "matches_release_commit": true,
+      "matches_working_file": true
+    },
+    {
+      "path": "java/src/main/java/hashrope/Leaf.java",
+      "sha256": "bed5b891c2fd7eb37adc426f8e9f145d027ec4b349e0e198e0ecadccb0125830",
+      "matches_release_commit": true,
+      "matches_working_file": true
+    },
+    {
+      "path": "java/src/main/java/hashrope/Node.java",
+      "sha256": "f6ff745e7be0a0c34ec4c0b3fa0b9811d7106702df0d4b098250c8d184cc4cfb",
+      "matches_release_commit": true,
+      "matches_working_file": true
+    },
+    {
+      "path": "java/src/main/java/hashrope/PolynomialHash.java",
+      "sha256": "33dcce631f089daf4381ae5c8d1b096ef872fe64aba139e2c319fd7636d079fb",
+      "matches_release_commit": true,
+      "matches_working_file": true
+    },
+    {
+      "path": "java/src/main/java/hashrope/RepeatNode.java",
+      "sha256": "23132fa0397d31b90b9dca0314cca65989380e024513cf9599446c351bf7f538",
+      "matches_release_commit": true,
+      "matches_working_file": true
+    },
+    {
+      "path": "java/src/main/java/hashrope/Rope.java",
+      "sha256": "68b26728735d66f3822864d51f91bbf64c9d769bb365b033010980a0e6c475b9",
+      "matches_release_commit": true,
+      "matches_working_file": true
+    },
+    {
+      "path": "java/src/main/java/hashrope/SlidingWindow.java",
+      "sha256": "0ca5beac5065fe3e96536d7e0d117f73004738234e66f39bb1c0ec84556d8bfe",
+      "matches_release_commit": true,
+      "matches_working_file": true
+    },
+    {
+      "path": "java/src/main/java/hashrope/package-info.java",
+      "sha256": "b74b216f8f144602f6f91cddbec69f3ce3f84333d911c178bcd112eb281f045f",
+      "matches_release_commit": true,
+      "matches_working_file": true
+    }
+  ],
+  "all_9_sources_match_release_commit": true,
+  "bundle_validator_exit_code": 0
+}

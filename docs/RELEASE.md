@@ -2,6 +2,26 @@
 
 Coordinates: `io.github.jemsbhai:hashrope:0.2.2`. This procedure applies only to the separate Java repository. The original Python checkout remains read-only.
 
+## Verified public release
+
+Version **0.2.2** is [available on Maven Central](https://central.sonatype.com/artifact/io.github.jemsbhai/hashrope/0.2.2), independently verified on **2026-10-23**. Release source: [`e111f3e773db114b6932692f52dfb7f433e7d7be`](https://github.com/jemsbhai/hashrope-java/commit/e111f3e773db114b6932692f52dfb7f433e7d7be). Later documentation commits do not change these immutable artifacts. Do not upload this version again.
+
+- All **24 public files** returned HTTP 200 and are byte-for-byte identical to the prepared bundle: POM, main/sources/Javadoc JARs, four signatures and 16 checksums. All nine Java source files match the release commit. See [artifact comparison](../evidence/release/public-artifact-comparison.json).
+- All **four signatures** verify with the freshly retrieved public key, fingerprint `3C8AD6A286A2FB052BF081B29D6C450FD82C949C`. See [signature and artifact validation](../evidence/release/public-bundle-verification.json). The downloaded files were zipped for verification; that ZIP has different container metadata, but every published file matches the original signed bundle.
+- The separate consumer passed **2 tests, zero failures/errors/skips**, using a newly created empty cache, JDK 24.0.1 and Maven 3.10.0. A credentials-free mirror routed every Maven repository to public Central. Every cached artifact has Central provenance; the consumed library POM/JAR match the bundle. No library installation or staging repository was used. See [consumer report](../evidence/release/central-consumer-verification.json) and [build log](../evidence/release/central-only-consumer.log).
+- Prior release validation passed **10,608 library tests** and **29 Python tooling tests**; the release source passed [Java 17 and 24 CI](https://github.com/jemsbhai/hashrope-java/actions/runs/39860890842). This follow-up changed only documentation and evidence.
+- The original checkout and its nested repository remain unchanged: **748 files, six Git metadata files, HEADs, branches and statuses**. See [preservation summary](../evidence/release/original-preservation-published.json).
+
+The user published the existing deployment `a9e34487-d27f-4fc8-9f43-62d61156c668` (`hashrope-0.2.2-e111f3e`). Its last directly observed Portal badge was `PUBLISHING` on 2026-10-22. Authenticated browser tools were unavailable after reconnection, so the final Portal badge was not re-read. Public release availability, exact artifact contents and consumer resolution were verified directly. No duplicate deployment or credential configuration was created. The [publication record](../evidence/release/publication-verification.json) preserves this distinction.
+
+To repeat the public consumer check, substitute a directory that does not yet exist:
+
+```text
+mvn -B -ntp -s evidence/release/central-only-settings.xml -gs tools/isolated-settings.xml -Dmaven.repo.local=<NEW_EMPTY_DIRECTORY> -f consumer-smoke/pom.xml clean verify
+```
+
+The Codex `hashrope` sidebar project now exists. Task association was attempted through the supported tool, which reported that the task's source project could not be safely determined; association remains unconfirmed. No internal application database was modified.
+
 ## Build and inspect
 
 The opt-in `central-release` profile uses Central Portal publisher **0.12.0**, which explicitly fixes Maven 3.10.0 bookkeeping files in deployment bundles. GPG plugin **3.2.8** signs the POM and all three JARs with the existing key; `bestPractices=true` rejects unsafe passphrase configuration. [Sonatype compatibility notes](https://central.sonatype.org/publish/publish-portal-maven/#0120-13-oct-2026), [Apache GPG documentation](https://maven.apache.org/plugins/maven-gpg-plugin/sign-mojo.html).
@@ -26,6 +46,6 @@ Check the public Maven repository for the exact version immediately before uploa
 
 ## Verify public consumption
 
-Build `consumer-smoke/pom.xml` using empty user/global settings and a new, empty local Maven repository. Do not install this library there or add staging repositories. Run `clean verify`, inspect `_remote.repositories` for Central provenance, and compare the downloaded POM/main JAR to the inspected signed bundle. Also retrieve and verify the public sources/Javadoc/signatures/checksums. Record the exact source commit, deployment state, public URL and consumer results in `evidence/release/`.
+Build `consumer-smoke/pom.xml` using the supplied Central-only user settings, empty global settings and a new, empty local Maven repository. Do not install this library there or add staging repositories. Run `clean verify`, inspect `_remote.repositories` for Central provenance, and compare the downloaded POM/main JAR to the inspected signed bundle. Also retrieve and verify the public sources/Javadoc/signatures/checksums. Record the exact source commit, deployment state, public URL and consumer results in `evidence/release/`.
 
 The initial implementation evidence in `docs/VERIFICATION.md` remains historical. Current release results are recorded separately; upload or local installation alone is never reported as publication success.

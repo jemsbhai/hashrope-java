@@ -28,11 +28,7 @@ java/target/hashrope-0.2.2-sources.jar
 java/target/hashrope-0.2.2-javadoc.jar
 ```
 
-This repository has not been published to Maven Central by this task. To use the coordinates in another local Maven project, install locally:
-
-```text
-mvn -s tools/isolated-settings.xml -gs tools/isolated-settings.xml -f java/pom.xml install
-```
+Available on [Maven Central](https://central.sonatype.com/artifact/io.github.jemsbhai/hashrope/0.2.2). Add this dependency to a Maven project:
 
 ```xml
 <dependency>
@@ -42,7 +38,7 @@ mvn -s tools/isolated-settings.xml -gs tools/isolated-settings.xml -f java/pom.x
 </dependency>
 ```
 
-**Final verification:** 10,608 library JUnit tests and 2 independent consumer tests passed, with no failures, errors or skips. The suite includes all 10,544 Python oracle records and 3,868 arithmetic assertions. Main, sources and Javadoc JARs were built and inspected; strict compiler/Javadoc checks and all five examples passed. See [the verification report](docs/VERIFICATION.md) and [reproducible TDD evidence](docs/TDD.md).
+**Final verification:** 10,608 library JUnit tests and 2 independent consumer tests passed, with no failures, errors or skips. The suite includes all 10,544 Python oracle records and 3,868 arithmetic assertions. Main, sources and Javadoc JARs were built and inspected; strict compiler/Javadoc checks and all five examples passed. A fresh-cache, Central-only consumer also passed both tests; all 24 public release files match the signed bundle. See [public release verification](docs/RELEASE.md#verified-public-release), [the implementation verification report](docs/VERIFICATION.md) and [reproducible TDD evidence](docs/TDD.md).
 
 ## Bytes, concatenation and splits
 

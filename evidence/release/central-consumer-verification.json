@@ -1,0 +1,788 @@
+{
+  "verified_utc": "2026-10-23T15:22:12.454455+00:00",
+  "coordinates": "io.github.jemsbhai:hashrope:0.2.2",
+  "source_commit": "e111f3e773db114b6932692f52dfb7f433e7d7be",
+  "java": "24.0.1",
+  "maven": "3.10.0",
+  "compiler_release": 17,
+  "cache_path": "C:\\Users\\User\\Documents\\Codex\\2026-10-22\\task\\central-only-consumer-20261023",
+  "cache_did_not_exist_before_run": true,
+  "library_install_performed": false,
+  "staging_repositories_used": false,
+  "all_repositories_mirrored_to": "https://repo.maven.apache.org/maven2",
+  "settings_snapshot": "central-only-settings.xml",
+  "global_settings": "../../tools/isolated-settings.xml",
+  "command": "mvn -B -ntp -s evidence/release/central-only-settings.xml -gs tools/isolated-settings.xml -Dmaven.repo.local=<NEW_EMPTY_DIRECTORY> -f consumer-smoke/pom.xml clean verify",
+  "build_exit_code": 0,
+  "tests": {
+    "tests": 2,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "library_artifacts": [
+    {
+      "name": "hashrope-0.2.2.pom",
+      "sha256": "f232a3b9a23d08faa0a8e4c01d1a1f092d0fb3e89437f374ca0c5d4b0e1d44e6",
+      "matches_prepared_bundle": true
+    },
+    {
+      "name": "hashrope-0.2.2.jar",
+      "sha256": "90d3b990dddaf59a5cf23a34fa0afb318017d252219ffd99bbeb9761f558934d",
+      "matches_prepared_bundle": true
+    }
+  ],
+  "artifact_provenance_count": 186,
+  "artifact_provenance": [
+    {
+      "artifact": "com/github/luben/zstd-jni/1.5.7-9/zstd-jni-1.5.7-9.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "com/github/luben/zstd-jni/1.5.7-9/zstd-jni-1.5.7-9.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "com/thoughtworks/qdox/qdox/2.2.0/qdox-2.2.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "com/thoughtworks/qdox/qdox/2.2.0/qdox-2.2.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "commons-codec/commons-codec/1.19.0/commons-codec-1.19.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "commons-io/commons-io/2.11.0/commons-io-2.11.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "commons-io/commons-io/2.11.0/commons-io-2.11.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "commons-io/commons-io/2.19.0/commons-io-2.19.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "commons-io/commons-io/2.20.0/commons-io-2.20.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "commons-io/commons-io/2.22.0/commons-io-2.22.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "commons-io/commons-io/2.22.0/commons-io-2.22.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "io/github/jemsbhai/hashrope/0.2.2/hashrope-0.2.2.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "javax/inject/javax.inject/1/javax.inject-1.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "javax/inject/javax.inject/1/javax.inject-1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/apache/13/apache-13.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/apache/21/apache-21.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/apache/23/apache-23.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/apache/29/apache-29.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/apache/32/apache-32.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/apache/33/apache-33.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/apache/34/apache-34.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/apache/35/apache-35.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/apache/37/apache-37.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/apache/39/apache-39.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/commons/commons-compress/1.28.0/commons-compress-1.28.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/commons/commons-lang3/3.18.0/commons-lang3-3.18.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/commons/commons-parent/52/commons-parent-52.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/commons/commons-parent/81/commons-parent-81.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/commons/commons-parent/85/commons-parent-85.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/commons/commons-parent/98/commons-parent-98.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/maven-archiver/3.6.6/maven-archiver-3.6.6.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/maven-archiver/3.6.6/maven-archiver-3.6.6.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/maven-parent/23/maven-parent-23.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/maven-parent/33/maven-parent-33.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/maven-parent/39/maven-parent-39.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/maven-parent/42/maven-parent-42.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/maven-parent/44/maven-parent-44.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/maven-parent/45/maven-parent-45.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/maven-parent/47/maven-parent-47.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/maven-parent/49/maven-parent-49.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-clean-plugin/3.5.0/maven-clean-plugin-3.5.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-clean-plugin/3.5.0/maven-clean-plugin-3.5.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-compiler-plugin/3.14.1/maven-compiler-plugin-3.14.1.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-compiler-plugin/3.14.1/maven-compiler-plugin-3.14.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-jar-plugin/3.5.1/maven-jar-plugin-3.5.1.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-jar-plugin/3.5.1/maven-jar-plugin-3.5.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-plugins/44/maven-plugins-44.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-plugins/45/maven-plugins-45.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-plugins/47/maven-plugins-47.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-plugins/49/maven-plugins-49.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-resources-plugin/3.5.0/maven-resources-plugin-3.5.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-resources-plugin/3.5.0/maven-resources-plugin-3.5.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-surefire-plugin/3.5.4/maven-surefire-plugin-3.5.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/plugins/maven-surefire-plugin/3.5.4/maven-surefire-plugin-3.5.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/resolver/maven-resolver/1.4.1/maven-resolver-1.4.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/resolver/maven-resolver-api/1.4.1/maven-resolver-api-1.4.1.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/resolver/maven-resolver-api/1.4.1/maven-resolver-api-1.4.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/resolver/maven-resolver-util/1.4.1/maven-resolver-util-1.4.1.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/resolver/maven-resolver-util/1.4.1/maven-resolver-util-1.4.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/file-management/3.2.0/file-management-3.2.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/file-management/3.2.0/file-management-3.2.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-common-artifact-filters/3.4.0/maven-common-artifact-filters-3.4.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-common-artifact-filters/3.4.0/maven-common-artifact-filters-3.4.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-filtering/3.5.0/maven-filtering-3.5.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-filtering/3.5.0/maven-filtering-3.5.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-shared-components/39/maven-shared-components-39.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-shared-components/42/maven-shared-components-42.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-shared-components/44/maven-shared-components-44.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-shared-components/45/maven-shared-components-45.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-shared-components/47/maven-shared-components-47.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/shared/maven-shared-utils/3.4.2/maven-shared-utils-3.4.2.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/common-java5/3.5.4/common-java5-3.5.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/common-java5/3.5.4/common-java5-3.5.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/maven-surefire-common/3.5.4/maven-surefire-common-3.5.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/maven-surefire-common/3.5.4/maven-surefire-common-3.5.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire/3.5.4/surefire-3.5.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-api/3.5.4/surefire-api-3.5.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-api/3.5.4/surefire-api-3.5.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-booter/3.5.4/surefire-booter-3.5.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-booter/3.5.4/surefire-booter-3.5.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-extensions-api/3.5.4/surefire-extensions-api-3.5.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-extensions-api/3.5.4/surefire-extensions-api-3.5.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-extensions-spi/3.5.4/surefire-extensions-spi-3.5.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-extensions-spi/3.5.4/surefire-extensions-spi-3.5.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-junit-platform/3.5.4/surefire-junit-platform-3.5.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-junit-platform/3.5.4/surefire-junit-platform-3.5.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-logger-api/3.5.4/surefire-logger-api-3.5.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-logger-api/3.5.4/surefire-logger-api-3.5.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-providers/3.5.4/surefire-providers-3.5.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-shared-utils/3.5.4/surefire-shared-utils-3.5.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apache/maven/surefire/surefire-shared-utils/3.5.4/surefire-shared-utils-3.5.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus/13/plexus-13.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus/17/plexus-17.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus/18/plexus-18.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus/19/plexus-19.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus/20/plexus-20.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus/24/plexus-24.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus/25/plexus-25.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-archiver/4.10.4/plexus-archiver-4.10.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-archiver/4.12.0/plexus-archiver-4.12.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-archiver/4.12.0/plexus-archiver-4.12.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-build-api/1.2.0/plexus-build-api-1.2.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-build-api/1.2.0/plexus-build-api-1.2.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-compiler/2.15.0/plexus-compiler-2.15.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-compiler-api/2.15.0/plexus-compiler-api-2.15.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-compiler-api/2.15.0/plexus-compiler-api-2.15.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-compiler-javac/2.15.0/plexus-compiler-javac-2.15.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-compiler-javac/2.15.0/plexus-compiler-javac-2.15.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-compiler-manager/2.15.0/plexus-compiler-manager-2.15.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-compiler-manager/2.15.0/plexus-compiler-manager-2.15.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-compilers/2.15.0/plexus-compilers-2.15.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-interpolation/1.29/plexus-interpolation-1.29.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-interpolation/1.29/plexus-interpolation-1.29.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-io/3.6.0/plexus-io-3.6.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-io/3.6.0/plexus-io-3.6.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-java/1.5.0/plexus-java-1.5.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-java/1.5.0/plexus-java-1.5.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-languages/1.5.0/plexus-languages-1.5.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-utils/3.6.0/plexus-utils-3.6.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-utils/3.6.0/plexus-utils-3.6.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-utils/4.0.2/plexus-utils-4.0.2.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-utils/4.0.2/plexus-utils-4.0.2.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-utils/4.0.3/plexus-utils-4.0.3.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-xml/3.0.1/plexus-xml-3.0.1.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/codehaus/plexus/plexus-xml/3.0.1/plexus-xml-3.0.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M4/org.eclipse.sisu.plexus-0.9.0.M4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M4/org.eclipse.sisu.plexus-0.9.0.M4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/eclipse/sisu/sisu-inject/0.9.0.M4/sisu-inject-0.9.0.M4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/junit-bom/5.11.1/junit-bom-5.11.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/junit-bom/5.11.4/junit-bom-5.11.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/junit-bom/5.12.1/junit-bom-5.12.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/junit-bom/5.12.2/junit-bom-5.12.2.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/junit-bom/5.13.1/junit-bom-5.13.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/junit-bom/5.13.4/junit-bom-5.13.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/junit-bom/5.14.1/junit-bom-5.14.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/junit-bom/5.14.2/junit-bom-5.14.2.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/junit-bom/5.14.4/junit-bom-5.14.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/junit-bom/5.7.2/junit-bom-5.7.2.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/junit-bom/5.9.3/junit-bom-5.9.3.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/jupiter/junit-jupiter/5.11.4/junit-jupiter-5.11.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/jupiter/junit-jupiter/5.11.4/junit-jupiter-5.11.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/jupiter/junit-jupiter-api/5.11.4/junit-jupiter-api-5.11.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/jupiter/junit-jupiter-api/5.11.4/junit-jupiter-api-5.11.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/jupiter/junit-jupiter-engine/5.11.4/junit-jupiter-engine-5.11.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/jupiter/junit-jupiter-engine/5.11.4/junit-jupiter-engine-5.11.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/jupiter/junit-jupiter-params/5.11.4/junit-jupiter-params-5.11.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/jupiter/junit-jupiter-params/5.11.4/junit-jupiter-params-5.11.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/platform/junit-platform-commons/1.11.4/junit-platform-commons-1.11.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/platform/junit-platform-commons/1.11.4/junit-platform-commons-1.11.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/platform/junit-platform-commons/1.12.1/junit-platform-commons-1.12.1.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/platform/junit-platform-commons/1.12.1/junit-platform-commons-1.12.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/platform/junit-platform-engine/1.11.4/junit-platform-engine-1.11.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/platform/junit-platform-engine/1.11.4/junit-platform-engine-1.11.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/platform/junit-platform-engine/1.12.1/junit-platform-engine-1.12.1.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/platform/junit-platform-engine/1.12.1/junit-platform-engine-1.12.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/platform/junit-platform-launcher/1.11.4/junit-platform-launcher-1.11.4.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/platform/junit-platform-launcher/1.11.4/junit-platform-launcher-1.11.4.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/platform/junit-platform-launcher/1.12.1/junit-platform-launcher-1.12.1.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/junit/platform/junit-platform-launcher/1.12.1/junit-platform-launcher-1.12.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/ow2/asm/asm/9.8/asm-9.8.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/ow2/asm/asm/9.8/asm-9.8.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/ow2/ow2/1.5.1/ow2-1.5.1.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/slf4j/slf4j-api/1.7.36/slf4j-api-1.7.36.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/slf4j/slf4j-parent/1.7.36/slf4j-parent-1.7.36.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/sonatype/forge/forge-parent/5/forge-parent-5.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/sonatype/oss/oss-parent/9/oss-parent-9.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/sonatype/plexus/plexus-build-api/0.0.7/plexus-build-api-0.0.7.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/sonatype/spice/spice-parent/15/spice-parent-15.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/tukaani/xz/1.12/xz-1.12.jar",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    },
+    {
+      "artifact": "org/tukaani/xz/1.12/xz-1.12.pom",
+      "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7"
+    }
+  ],
+  "log": "central-only-consumer.log",
+  "earlier_default_settings_run": {
+    "log": "central-consumer.log",
+    "tests_passed": 2,
+    "note": "All artifact provenance was Central; a second run explicitly mirrored all repositories to Central to also constrain plugin-prefix metadata."
+  }
+}

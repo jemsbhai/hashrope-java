@@ -1,4 +1,6 @@
-# Final verification
+# Initial implementation verification
+
+This report records the initial 2026-10-22 implementation handoff before release preparation and publication. Its local artifact hashes and delivery statements are historical. The subsequent signed release and public Central consumer verification are recorded in [RELEASE.md](RELEASE.md#verified-public-release).
 
 Completed locally on 2026-10-22 in `E:/data/code/claudecode/hashrope-java`, using JDK 24.0.1, Maven 3.10.0 and Java release 17. The Java package is `hashrope`; coordinates are `io.github.jemsbhai:hashrope:0.2.2`. The authenticated GitHub account was verified as `jemsbhai`, consistent with the supplied namespace. No Maven Central publication or namespace claim was attempted.
 
