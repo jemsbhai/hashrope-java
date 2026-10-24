@@ -1,0 +1,236 @@
+{
+  "provenance": {
+    "baseline_ref": "e59124050388fe70097b5a46f9679356677c7fa0",
+    "java": "java version \"24.0.1\" 2025-04-15\nJava(TM) SE Runtime Environment (build 24.0.1+9-30)\nJava HotSpot(TM) 64-Bit Server VM (build 24.0.1+9-30, mixed mode, sharing)\n",
+    "harness_sha256": "2ffa1008ddb3b8055184df2e9424348b18d567c98c6b074a7310b65906e4c0e7",
+    "driver_sha256": "ff395f18c20ad3230a668ebf8fd34c5cbf336e41ef231ed6e5b5f8dcf7bbcc25",
+    "sources": {
+      "baseline": {
+        "java/src/main/java/hashrope/Hashrope.java": "2b0fe348ed0d25b5a895882c3a6ca80ebff1d92278aefcc617a6b8478bd11ad9",
+        "java/src/main/java/hashrope/Internal.java": "83b95d5eade3701669a71bea1ab3af47f95c70dbd997de985e292e110b0bd73b",
+        "java/src/main/java/hashrope/Leaf.java": "bed5b891c2fd7eb37adc426f8e9f145d027ec4b349e0e198e0ecadccb0125830",
+        "java/src/main/java/hashrope/Node.java": "f6ff745e7be0a0c34ec4c0b3fa0b9811d7106702df0d4b098250c8d184cc4cfb",
+        "java/src/main/java/hashrope/PolynomialHash.java": "33dcce631f089daf4381ae5c8d1b096ef872fe64aba139e2c319fd7636d079fb",
+        "java/src/main/java/hashrope/RepeatNode.java": "23132fa0397d31b90b9dca0314cca65989380e024513cf9599446c351bf7f538",
+        "java/src/main/java/hashrope/Rope.java": "68b26728735d66f3822864d51f91bbf64c9d769bb365b033010980a0e6c475b9",
+        "java/src/main/java/hashrope/SlidingWindow.java": "0ca5beac5065fe3e96536d7e0d117f73004738234e66f39bb1c0ec84556d8bfe",
+        "java/src/main/java/hashrope/package-info.java": "b74b216f8f144602f6f91cddbec69f3ce3f84333d911c178bcd112eb281f045f"
+      },
+      "current": {
+        "java/src/main/java/hashrope/ExactComparison.java": "3883a6820b514f0f1f28f38393009f52ef9614cfe6f4d1bbdf40e16180a2ce3e",
+        "java/src/main/java/hashrope/HashProfile.java": "a70e150391824f3ffa5025561b3cdadf7300cfc34cfa10586472d4dad9c2ecf2",
+        "java/src/main/java/hashrope/Hashrope.java": "c7544b8ee6b70a5870cce0d42c7add1fe5c93a4070b4fd76dc049fef350a2746",
+        "java/src/main/java/hashrope/Internal.java": "9448bbf00337fd095b3e11358119635e44a5b5ad52eae1170725aa7f9549a73c",
+        "java/src/main/java/hashrope/Leaf.java": "9b0e5956a97c541f9a5a076bc9805afa23a940f9a9895afb5f322c25e2a48106",
+        "java/src/main/java/hashrope/Node.java": "8b9b6d409d8a552df2b03aed71860514124e97ee70df3e0cd0a60a3d692f3f7c",
+        "java/src/main/java/hashrope/package-info.java": "6fccee0f880e505184132fafe0427867cf5f694771db44c4d3ce83488cf04e46",
+        "java/src/main/java/hashrope/PolynomialHash.java": "f937f2768883b6abeb17ad14d94ff3c2f249a44f7e18551fcc013354ee5233fe",
+        "java/src/main/java/hashrope/RepeatNode.java": "200c1a7287022027a67984510cf36b0781943831e79f6c9c0f29dbeb874632ce",
+        "java/src/main/java/hashrope/Rope.java": "d87112329c99a622303092ca06ac1b9ec66ffefcae72fe635e37804a54ef0638",
+        "java/src/main/java/hashrope/SlidingWindow.java": "8ba0ea7c6ca8c72fb210c5fdcd9d94c516a3f23806d7a89088a293726b44b554"
+      }
+    },
+    "jvm_flags": [
+      "-Xms128m",
+      "-Xmx128m",
+      "-XX:+UseSerialGC"
+    ],
+    "note": "Six alternating fresh-process pairs, same fixed repetitions, seven timed samples; medians and current/baseline ratios. No exact-API speed claim."
+  },
+  "workers": [
+    {
+      "pair": 0,
+      "arm": "baseline",
+      "file": "pair0-baseline.tsv",
+      "sha256": "f060974071bef847866c634ad744b97410f5056c242dc1d3297f22513a15c694",
+      "median_us": {
+        "hash_4k": 237.884375,
+        "construct_4k": 212.41875,
+        "split_rejoin_4k": 219.084375,
+        "sliding_256": 115.80625
+      }
+    },
+    {
+      "pair": 0,
+      "arm": "current",
+      "file": "pair0-current.tsv",
+      "sha256": "bbe83de1a10fe37ca95eb49aeb1115390f8522a2b8c5dd711c2658fc533577d6",
+      "median_us": {
+        "hash_4k": 240.1875,
+        "construct_4k": 215.3625,
+        "split_rejoin_4k": 223.175,
+        "sliding_256": 112.075
+      }
+    },
+    {
+      "pair": 1,
+      "arm": "current",
+      "file": "pair1-current.tsv",
+      "sha256": "faf3d66dabe2eb066a09a1c4a597a6b00dd7105b4888f3fa40d651604276168c",
+      "median_us": {
+        "construct_4k": 228.384375,
+        "split_rejoin_4k": 215.840625,
+        "sliding_256": 94.3,
+        "hash_4k": 233.253125
+      }
+    },
+    {
+      "pair": 1,
+      "arm": "baseline",
+      "file": "pair1-baseline.tsv",
+      "sha256": "bb40d67cf6a8f9e880a1732eb473f968ef126bad5ec8894f2b29a24c40e0491b",
+      "median_us": {
+        "construct_4k": 224.234375,
+        "split_rejoin_4k": 218.446875,
+        "sliding_256": 126.40625,
+        "hash_4k": 233.1875
+      }
+    },
+    {
+      "pair": 2,
+      "arm": "baseline",
+      "file": "pair2-baseline.tsv",
+      "sha256": "69be5e6c8f7cc3ffe85264435eda47ffe06d3422120a963c03c902b8bd385570",
+      "median_us": {
+        "split_rejoin_4k": 227.503125,
+        "sliding_256": 96.3625,
+        "hash_4k": 244.878125,
+        "construct_4k": 229.36875
+      }
+    },
+    {
+      "pair": 2,
+      "arm": "current",
+      "file": "pair2-current.tsv",
+      "sha256": "4466d1b11171862d1ce0f6e070d95ae1e25cfd250d81f388985997a30a3329e4",
+      "median_us": {
+        "split_rejoin_4k": 257.503125,
+        "sliding_256": 89.36875,
+        "hash_4k": 230.88125,
+        "construct_4k": 208.515625
+      }
+    },
+    {
+      "pair": 3,
+      "arm": "current",
+      "file": "pair3-current.tsv",
+      "sha256": "5da36642b79c7b930837556c7354ba153216d133c096459e50ab661bb4f8c7e3",
+      "median_us": {
+        "sliding_256": 108.44375,
+        "hash_4k": 253.5375,
+        "construct_4k": 224.190625,
+        "split_rejoin_4k": 222.415625
+      }
+    },
+    {
+      "pair": 3,
+      "arm": "baseline",
+      "file": "pair3-baseline.tsv",
+      "sha256": "707527d9dc770601fe82ee6554be980f1a4442f2ef5e147e8fa735427f7409e6",
+      "median_us": {
+        "sliding_256": 94.875,
+        "hash_4k": 240.95,
+        "construct_4k": 223.225,
+        "split_rejoin_4k": 220.559375
+      }
+    },
+    {
+      "pair": 4,
+      "arm": "baseline",
+      "file": "pair4-baseline.tsv",
+      "sha256": "26f0ca84481e417bed4ddbacbd6d4352d0a9acf4b9550702d8d345cf48a74ad1",
+      "median_us": {
+        "hash_4k": 241.890625,
+        "construct_4k": 228.925,
+        "split_rejoin_4k": 228.046875,
+        "sliding_256": 147.9125
+      }
+    },
+    {
+      "pair": 4,
+      "arm": "current",
+      "file": "pair4-current.tsv",
+      "sha256": "11035916f0d0d92efc0f63e77573608ff7dd0c3227d2a17281f6915ff9592933",
+      "median_us": {
+        "hash_4k": 231.38125,
+        "construct_4k": 218.0375,
+        "split_rejoin_4k": 230.403125,
+        "sliding_256": 97.50625
+      }
+    },
+    {
+      "pair": 5,
+      "arm": "current",
+      "file": "pair5-current.tsv",
+      "sha256": "9c6ed8870b8d31d273dae9fdc4681b3728350cd4809554c893e1e14fb3d67899",
+      "median_us": {
+        "construct_4k": 272.103125,
+        "split_rejoin_4k": 238.86875,
+        "sliding_256": 130.64375,
+        "hash_4k": 238.50625
+      }
+    },
+    {
+      "pair": 5,
+      "arm": "baseline",
+      "file": "pair5-baseline.tsv",
+      "sha256": "ce1f4b7cb20033780395ced39f75aae31461a214240610563e99cc84a03e40a0",
+      "median_us": {
+        "construct_4k": 240.634375,
+        "split_rejoin_4k": 237.403125,
+        "sliding_256": 103.7875,
+        "hash_4k": 235.046875
+      }
+    }
+  ],
+  "summary": {
+    "hash_4k": {
+      "baseline_median_us": 239.4171875,
+      "current_median_us": 235.8796875,
+      "paired_current_over_baseline": [
+        1.0096816993549913,
+        1.000281425891182,
+        0.9428414645040262,
+        1.0522411288649098,
+        0.9565531942380983,
+        1.0147178089476834
+      ]
+    },
+    "construct_4k": {
+      "baseline_median_us": 226.5796875,
+      "current_median_us": 221.1140625,
+      "paired_current_over_baseline": [
+        1.0138582399152618,
+        1.0185074210856386,
+        0.9090847162048012,
+        1.0043257923619666,
+        0.9524407557060172,
+        1.1307741256834147
+      ]
+    },
+    "split_rejoin_4k": {
+      "baseline_median_us": 224.03125,
+      "current_median_us": 226.7890625,
+      "paired_current_over_baseline": [
+        1.018671459340722,
+        0.9880691815801896,
+        1.1318663205175754,
+        1.0084161011065615,
+        1.010332305584104,
+        1.0061735707986152
+      ]
+    },
+    "sliding_256": {
+      "baseline_median_us": 109.796875,
+      "current_median_us": 102.975,
+      "paired_current_over_baseline": [
+        0.9677802363862054,
+        0.7460074165636588,
+        0.9274224931897783,
+        1.1430171277997365,
+        0.6592157525564101,
+        1.2587618932915816
+      ]
+    }
+  }
+}

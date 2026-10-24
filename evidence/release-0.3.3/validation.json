@@ -1,0 +1,71 @@
+{
+  "baseline_commit": "e59124050388fe70097b5a46f9679356677c7fa0",
+  "release": "0.3.3",
+  "library": {
+    "tests": 10618,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "consumer": {
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "artifacts": {
+    "java\\target\\hashrope-0.3.3-javadoc.jar": {
+      "sha256": "435866c59d96a68752f0181fa4e371ad41b84812b80a76bbe3f5f0d3f560c3c1",
+      "bytes": 157687
+    },
+    "java\\target\\hashrope-0.3.3-sources.jar": {
+      "sha256": "ee5fefdf7a5967eaa8cee10b9719d28e7abaf1246b1626854ace8798b35e5361",
+      "bytes": 20463
+    },
+    "java\\target\\hashrope-0.3.3.jar": {
+      "sha256": "400ac31dea8d445251998ca76147679ab459c54d1b24f104c4fb092070d14696",
+      "bytes": 30667
+    }
+  },
+  "tested_sources": {
+    "java/src/main/java/hashrope/ExactComparison.java": "3883a6820b514f0f1f28f38393009f52ef9614cfe6f4d1bbdf40e16180a2ce3e",
+    "java/src/main/java/hashrope/HashProfile.java": "a70e150391824f3ffa5025561b3cdadf7300cfc34cfa10586472d4dad9c2ecf2",
+    "java/src/main/java/hashrope/Hashrope.java": "c7544b8ee6b70a5870cce0d42c7add1fe5c93a4070b4fd76dc049fef350a2746",
+    "java/src/main/java/hashrope/Internal.java": "9448bbf00337fd095b3e11358119635e44a5b5ad52eae1170725aa7f9549a73c",
+    "java/src/main/java/hashrope/Leaf.java": "9b0e5956a97c541f9a5a076bc9805afa23a940f9a9895afb5f322c25e2a48106",
+    "java/src/main/java/hashrope/Node.java": "8b9b6d409d8a552df2b03aed71860514124e97ee70df3e0cd0a60a3d692f3f7c",
+    "java/src/main/java/hashrope/package-info.java": "6fccee0f880e505184132fafe0427867cf5f694771db44c4d3ce83488cf04e46",
+    "java/src/main/java/hashrope/PolynomialHash.java": "f937f2768883b6abeb17ad14d94ff3c2f249a44f7e18551fcc013354ee5233fe",
+    "java/src/main/java/hashrope/RepeatNode.java": "200c1a7287022027a67984510cf36b0781943831e79f6c9c0f29dbeb874632ce",
+    "java/src/main/java/hashrope/Rope.java": "d87112329c99a622303092ca06ac1b9ec66ffefcae72fe635e37804a54ef0638",
+    "java/src/main/java/hashrope/SlidingWindow.java": "8ba0ea7c6ca8c72fb210c5fdcd9d94c516a3f23806d7a89088a293726b44b554",
+    "java/src/main/resources/META-INF/LICENSE": "1bcc51d764dbde88194eccf368431d3906337396694af2076e24e6d1b3c86290",
+    "java/src/test/java/hashrope/ApiTest.java": "9eaf4c9d9e51f1573d49cd5cab04624b7c5a033dc724ea6ea6008854ee6df187",
+    "java/src/test/java/hashrope/DifferentialTest.java": "e8add75e86149facdb79873037182c3a82e70f13dafbe8258e5e8386d6776a84",
+    "java/src/test/java/hashrope/ExactComparisonTest.java": "17962bb303fc86e9e9755ff2ba9fc5119842d2c16c144035dab8dd6fae2935ec",
+    "java/src/test/java/hashrope/PolynomialHashDispatchTest.java": "54486453825d9e961261bc4e72375795b83642904bce456410b46ccf952b8646",
+    "java/src/test/java/hashrope/PolynomialHashTest.java": "7b645ba0bd825485d74030625c15734eb437c63325ba64a5cea643018a5ab2b5",
+    "java/src/test/java/hashrope/PropertyTest.java": "10438ea3a12a88a437565d36e136ee6fa9320fef0458426ad72e2055a92cbd01",
+    "java/src/test/java/hashrope/RopeTest.java": "282646db2ba473e45b4f3ecd7babaede76a696ebe981437617b3d23d9f95ed54",
+    "java/src/test/java/hashrope/SlidingWindowTest.java": "dd16f32d524dc082252a108c6577101fc2688d65ba32d0263bd07c1b4bf58c30",
+    "java/src/test/java/hashrope/SubclassParityTest.java": "156541510c99e9730735bacf9e8bda6439fc412771e8f6f300b2ca3b0f51773c",
+    "java/src/test/java/hashrope/SubstringTraversalTest.java": "c1d001979f6411ccd9a3726b68257d5d448877f424de17be7b27a69d0ab55503",
+    "java/src/test/resources/fixtures/errors.tsv": "02bb1dbd7781b9a6af566124da04f6cca6b26808a77e66416f2da912ecc19290",
+    "java/src/test/resources/fixtures/golden.tsv": "a0c18d9a5ea1ab06179e8818a0166d06974c1ba6be55d349604ae16bb28365da",
+    "java/src/test/resources/fixtures/manifest.json": "8d86c8448c6b451a8f945dbf82e016b42557020b7aa21ccd6526accba873109f",
+    "java/src/test/resources/fixtures/SCHEMA.md": "bf767c96e3acee5834f7a7112cdc9980506add7a2f987ea831c0a664875884b8",
+    "java/pom.xml": "202d315605031d1e74c578f18bcad57d43d7d66402e443298c3ec596096dcc3e"
+  },
+  "fixture_diff": [],
+  "status": "Locally built, tested, signed and verified; upload/publication separate",
+  "signed_bundle": {
+    "sha256": "2566cbcbb7aec38a9f7f9d5c351187dba02efcfd9345c03bb985bbce5282fb01",
+    "entries": 24,
+    "verification_report": "bundle-verification.json",
+    "signing_build_log": "bundle-build-pinentry.log",
+    "artifact_bytes_match_tested_jars": true,
+    "sources_jar_matches_working_sources": true,
+    "tested_source_hashes_rechecked": true,
+    "upload_skipped": true
+  }
+}

@@ -1,9 +1,9 @@
 # Hashrope for Java
 
-A persistent byte rope with a polynomial hash at every node, compressed repetition and a streaming sliding window. This is a Java port of the published [Python Hashrope 0.2.2](https://pypi.org/project/hashrope/0.2.2/) release, with fixtures generated from its SHA256-pinned wheel.
+A persistent byte rope with a polynomial hash at every node, compressed repetition and a streaming sliding window. Release 0.3.3 adds exact content equality/LCP and immutable hash-profile guards. Existing numeric behavior remains checked against the SHA256-pinned Python Hashrope 0.2.2 wheel.
 
 - Java package: `hashrope`
-- Maven coordinates: `io.github.jemsbhai:hashrope:0.2.2`
+- Maven coordinates: `io.github.jemsbhai:hashrope:0.3.3`
 - Source/build directory: [`java/`](java/)
 - Java baseline: compiled with `--release 17`; implementation build environment: JDK 24.0.1 and Maven 3.10.0
 - No runtime dependencies; JUnit is used only for tests
@@ -23,22 +23,40 @@ mvn -s tools/isolated-settings.xml -gs tools/isolated-settings.xml -f java/pom.x
 The supplied empty user and global Maven settings avoid consulting saved publishing configuration. The build creates:
 
 ```text
-java/target/hashrope-0.2.2.jar
-java/target/hashrope-0.2.2-sources.jar
-java/target/hashrope-0.2.2-javadoc.jar
+java/target/hashrope-0.3.3.jar
+java/target/hashrope-0.3.3-sources.jar
+java/target/hashrope-0.3.3-javadoc.jar
 ```
 
-Available on [Maven Central](https://central.sonatype.com/artifact/io.github.jemsbhai/hashrope/0.2.2). Add this dependency to a Maven project:
+Release coordinates (publication status is recorded separately in [release verification](docs/RELEASE-0.3.3.md)):
 
 ```xml
 <dependency>
   <groupId>io.github.jemsbhai</groupId>
   <artifactId>hashrope</artifactId>
-  <version>0.2.2</version>
+  <version>0.3.3</version>
 </dependency>
 ```
 
-**Final verification:** 10,608 library JUnit tests and 2 independent consumer tests passed, with no failures, errors or skips. The suite includes all 10,544 Python oracle records and 3,868 arithmetic assertions. Main, sources and Javadoc JARs were built and inspected; strict compiler/Javadoc checks and all five examples passed. A fresh-cache, Central-only consumer also passed both tests; all 24 public release files match the signed bundle. See [public release verification](docs/RELEASE.md#verified-public-release), [the implementation verification report](docs/VERIFICATION.md) and [reproducible TDD evidence](docs/TDD.md).
+**Release verification:** [0.3.3 validation and compatibility changes](docs/RELEASE-0.3.3.md). Historical 0.2.2 publication and its original 10,608-test result remain documented in [the prior release report](docs/RELEASE.md).
+
+## Exact equality and common prefixes
+
+```java
+import hashrope.*;
+import java.math.BigInteger;
+
+PolynomialHash h = new PolynomialHash();
+Node a = Rope.fromBytes(new byte[] {0, (byte)131}, h);
+Node b = Rope.fromBytes(new byte[] {1, 0}, h);
+// These two fingerprints collide under the default profile.
+boolean sameBytes = Rope.equal(a, b); // false
+BigInteger prefixLength = Rope.lcp(a, b); // zero
+boolean sameRange = Rope.rangeEqual(a, 0, b, 0, 2); // false
+```
+
+Exact methods compare actual bytes, skip shared immutable ranges, and prove repeated spans from finite periodic witnesses. They use a heap traversal stack and a per-call cache for shared graphs, without splitting, flattening or hashing. Independent equal inputs may require reading their full content; there is no general logarithmic bound. Range methods reject negative and out-of-bounds coordinates, even for empty ranges. Comparisons can cross fingerprint profiles; hash-bearing edits require matching profiles. `Node.equals` remains structural.
+
 
 ## Bytes, concatenation and splits
 
@@ -139,7 +157,7 @@ PolynomialHash h127 = new PolynomialHash(
     PolynomialHash.MERSENNE_127, BigInteger.valueOf(257));
 ```
 
-Use one consistent prime/base context for all nodes and operations. The constructor checks the base interval but does not validate primality or Mersenne form, matching the Python release. Positive non-Mersenne moduli retain the reference's folding behavior, which need not equal ordinary modulo arithmetic.
+Use one consistent prime/base context for hash-bearing edits. `HashProfile`, `PolynomialHash.profile()` and `Node.profile()` expose immutable provenance; incompatible composition and stream profile replacement are rejected. The constructor checks the base interval but does not validate primality or Mersenne form, matching the Python release. Positive non-Mersenne moduli retain the reference's folding behavior, which need not equal ordinary modulo arithmetic.
 
 ## Reproduce the Python fixtures
 

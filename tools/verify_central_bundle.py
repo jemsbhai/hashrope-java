@@ -13,12 +13,12 @@ import re
 import subprocess
 import tempfile
 
-COORDINATES = 'io.github.jemsbhai:hashrope:0.2.2'
-PREFIX = 'io/github/jemsbhai/hashrope/0.2.2/'
-BASE = 'hashrope-0.2.2'
+COORDINATES = 'io.github.jemsbhai:hashrope:0.3.3'
+PREFIX = 'io/github/jemsbhai/hashrope/0.3.3/'
+BASE = 'hashrope-0.3.3'
 ARTIFACTS = (BASE+'.pom', BASE+'.jar', BASE+'-sources.jar', BASE+'-javadoc.jar')
 ALGORITHMS = ('md5', 'sha1', 'sha256', 'sha512')
-API = ('Hashrope', 'Node', 'Leaf', 'Internal', 'RepeatNode', 'Rope', 'SlidingWindow', 'PolynomialHash')
+API = ('Hashrope', 'Node', 'Leaf', 'Internal', 'RepeatNode', 'Rope', 'SlidingWindow', 'PolynomialHash', 'HashProfile')
 NS = {'m': 'http://maven.apache.org/POM/4.0.0'}
 MAX_BYTES = 64 * 1024 * 1024
 

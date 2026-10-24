@@ -48,7 +48,7 @@ class SlidingWindowTest {
     }
 
     @Test void publicStateAssignmentsRemainObservableLikePythonSlots() {
-        SlidingWindow window = new SlidingWindow();
+        SlidingWindow window = new SlidingWindow(32768, 258, PolynomialHash.MERSENNE_127, n(257));
         PolynomialHash replacement = new PolynomialHash(PolynomialHash.MERSENNE_127, n(257));
         window.h = replacement;
         window.dMax = n(9);

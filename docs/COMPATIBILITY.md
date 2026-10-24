@@ -1,8 +1,8 @@
-# Compatibility with Python Hashrope 0.2.2
+# Compatibility: Java 0.3.3 and pinned numerical fixtures
 
-This port targets the published Python distribution **Hashrope 0.2.2**, with Java package `hashrope` and Maven coordinates `io.github.jemsbhai:hashrope:0.2.2`. It translates Python names to Java conventions and preserves the release's numerical, persistent-rope and streaming behavior, including the observed malformed-range and negative-copy behavior described below. The [parity matrix](PARITY-MATRIX.md) maps each public API to its Java counterpart and verification.
+This port targets the published Python distribution **Hashrope 0.2.2**, with Java package `hashrope` and Maven coordinates `io.github.jemsbhai:hashrope:0.3.3`. It translates Python names to Java conventions and preserves the release's numerical, persistent-rope and streaming behavior, including the observed malformed-range and negative-copy behavior described below. The [parity matrix](PARITY-MATRIX.md) maps each public API to its Java counterpart and verification.
 
-**Final verification:** all 10,608 library JUnit tests and both independent consumer tests passed. Exact counts, artifact inspection, oracle regeneration and TDD replay evidence are in [VERIFICATION.md](VERIFICATION.md).
+**Historical 0.2.2 verification:** all 10,608 library JUnit tests and both independent consumer tests passed. Current 0.3.3 validation and deliberate safety changes are in [RELEASE-0.3.3.md](RELEASE-0.3.3.md). Exact counts, artifact inspection, oracle regeneration and TDD replay evidence are in [VERIFICATION.md](VERIFICATION.md).
 
 ## Pinned reference
 
@@ -31,7 +31,7 @@ Node `equals` is structural, matching the dataclass comparison: node type, bytes
 
 ## Hash parameters and arithmetic
 
-The default is `MERSENNE_61 = 2^61-1`, base 131. `MERSENNE_127 = 2^127-1` is also exported by `PolynomialHash`. There is no separate profile abstraction: choose an explicit prime/base pair. Construction checks only `2 <= base < prime`, as Python does. It does not prove primality or check the Mersenne shape.
+The default is `MERSENNE_61 = 2^61-1`, base 131. `MERSENNE_127 = 2^127-1` is also exported by `PolynomialHash`. `HashProfile` records the immutable prime/base pair and is exposed by nodes and hashers. Construction checks only `2 <= base < prime`, as Python does. It does not prove primality or check the Mersenne shape.
 
 For a positive Mersenne modulus and nonnegative operands, folding computes the mathematical remainder. The implementation also preserves the release's folding behavior for positive non-Mersenne moduli and negative inputs. In those domains, the result need not equal `BigInteger.mod`, and the polynomial-hash algebraic guarantees need not hold. Negative `phi` counts retain Python's bit-scanning behavior; they do not represent a mathematical negative-length geometric sum.
 
@@ -39,7 +39,7 @@ For a positive Mersenne modulus and nonnegative operands, folding computes the m
 
 **Deliberate arithmetic deviation:** `mersenneMod` and `mersenneMul` reject nonpositive moduli with `IllegalArgumentException`. The corresponding Python folding loop can fail to terminate. `phi(0, alpha, p)` still returns zero and `phi(1, alpha, p)` still returns one before any modulus check; other counts reject nonpositive moduli. The fixture generator does not run nonterminating Python cases.
 
-Use the same hasher parameters for every node and operation in a rope. Nodes do not record their originating context, and mixed contexts are not rejected, matching Python. `validate` does not detect a context mismatch. A PolynomialHash caches powers for its lifetime; the cache grows with distinct requested exponents. The base Java implementation's cache supports concurrent access, while a SlidingWindow instance remains mutable and not thread-safe.
+Use the same hasher parameters for every hash-bearing node and operation in a rope. Version 0.3.3 records each node's immutable profile and rejects incompatible concat, repeat, split and substring-hash operations, including identity/empty query shortcuts. `validate(node,h)` also checks that profile; `validate(node)` checks structure without a supplied context. Matching parameters from separate hasher instances remain compatible. A PolynomialHash caches powers for its lifetime; the cache grows with distinct requested exponents. The base Java implementation's cache supports concurrent access, while a SlidingWindow instance remains mutable and not thread-safe.
 
 PolynomialHash and SlidingWindow are extensible Java classes. Overridable hasher methods can be used to instrument hashing/traversal or customize behavior; `SlidingWindow.finalHash()` dispatches to an overridden `currentHash()`, as Python's `self.current_hash()` does. Subclasses are responsible for maintaining their own invariants and concurrency guarantees. The immutable node classes remain final and their union sealed; arbitrary Python-style node subclassing and runtime monkeypatching are not reproduced.
 
@@ -67,7 +67,7 @@ For example, a leaf containing `ababab` queried at start 6, length 1 hashes the 
 
 ### Validator semantics
 
-`Rope.validate` checks the Python structural invariants: leaf length/weight; internal length, weight and BB[2/7] balance; repeat length, weight and repetition minimum; and child invariants. It throws `AssertionError` explicitly, independent of the JVM `-ea` flag. The optional hasher argument is accepted and ignored, as in the reference. The validator does not recompute stored hashes or verify matching parameter contexts. The test suite performs independent hash checks in addition to calling this compatibility validator.
+`Rope.validate` checks the Python structural invariants: leaf length/weight; internal length, weight and BB[2/7] balance; repeat length, weight and repetition minimum; and child invariants. It throws `AssertionError` explicitly, independent of the JVM `-ea` flag. The optional hasher argument checks the node profile when supplied. The validator does not recompute stored hashes. The test suite performs independent hash checks in addition to calling this compatibility validator.
 
 ## SlidingWindow behavior
 
@@ -77,7 +77,7 @@ Defaults are `dMax=32768`, `mMax=258`; `W=dMax+mMax`. Positive capacities are re
 
 Eviction occurs only when the current window length is **greater than** W. At exactly W bytes, nothing is evicted. On eviction, the prefix hash absorbs the entire removed prefix and exactly dMax bytes remain. dMax and mMax do not impose per-operation limits: an offset greater than dMax is allowed while its source remains in the current window, and a copy longer than mMax is allowed before subsequent eviction. A single literal append can likewise exceed W.
 
-The assignable Python slots are preserved as public mutable Java fields: `h`, `dMax`, `mMax`, `W`, `hPrefix`, `lPrefix`, `rWindow`, `pos`. Accessor methods expose the same current values, with `capacity()` for W and `window()` for rWindow. Direct assignment does not enforce consistency or automatically recompute other fields. The returned window root is an immutable snapshot.
+The assignable Python slots are preserved as public mutable Java fields: `h`, `dMax`, `mMax`, `W`, `hPrefix`, `lPrefix`, `rWindow`, `pos`. Accessor methods expose the same current values, with `capacity()` for W and `window()` for rWindow. Direct assignment does not automatically recompute other fields. Hash-bearing stream operations reject a hasher whose immutable profile differs from the constructor profile, and reject a window root from an incompatible profile. Replacing the hasher with the same parameters remains supported, including subclass callbacks. The returned window root is an immutable snapshot.
 
 Negative copy offsets and lengths retain the observed reference behavior. They can make `pos` disagree with represented data; for example, after `abc`, copying offset 1 with length -1 reduces pos to two while retaining three bytes. These inputs are supported as compatibility quirks, not valid decoded-stream operations. Direct field mutations can likewise invalidate the stream invariant. Under valid operations, `pos-lPrefix == windowLen`, retained length is at most W, and `currentHash` equals the hash of all decoded bytes.
 
@@ -99,7 +99,7 @@ Negative copy offsets and lengths retain the observed reference behavior. They c
 | Python `Node` Optional union | Sealed Node interface plus null |
 | Python dynamic input types/custom monkeypatching | Statically typed signatures and sealed/final node types; runtime monkeypatching not reproduced |
 
-The byte[] API excludes Python's accidental acceptance of arbitrary integer sequences, booleans in integer positions, empty strings and other duck-typed objects. It does not reinterpret these as different bytes. Private Python internals (`_power_cache`, `_join`, `_balance`, etc.) and mutation through reflection or `object.__setattr__` are not public port APIs. Runtime-specific repr, object hashes, serialization, memory errors and recursion limits are language adaptations, not byte/hash numerical promises. `Hashrope.VERSION` exposes the pinned version `"0.2.2"`; `Rope.ALPHA_NUM` and `Rope.ALPHA_DEN` expose the balance constants 2 and 7.
+The byte[] API excludes Python's accidental acceptance of arbitrary integer sequences, booleans in integer positions, empty strings and other duck-typed objects. It does not reinterpret these as different bytes. Private Python internals (`_power_cache`, `_join`, `_balance`, etc.) and mutation through reflection or `object.__setattr__` are not public port APIs. Runtime-specific repr, object hashes, serialization, memory errors and recursion limits are language adaptations, not byte/hash numerical promises. `Hashrope.VERSION` exposes the Java release version `"0.3.3"`; `Rope.ALPHA_NUM` and `Rope.ALPHA_DEN` expose the balance constants 2 and 7.
 
 ## Complexity and practical memory
 
@@ -119,3 +119,9 @@ The committed fixtures contain 10,451 result records and 93 error records from t
 Strict TDD evidence records failing test runs, minimal implementations, passing runs and refactor reruns. A separate consumer smoke project exercises the packaged artifact. Main, sources and Javadoc JARs are built locally; this task does not publish to Maven Central or create a release tag.
 
 The original `hashrope` checkout is read-only. Preservation evidence records tracked-file hashes, HEAD, index/config hashes and existing nested-repository dirtiness before and after work. Fixture generation, builds and caches occur outside it. The independent sibling `hashrope-java` repository contains the port in `java/`.
+
+## Exact comparison additions in 0.3.3
+
+`Rope.equal` and `Rope.lcp` compare actual bytes across any profiles; `Rope.rangeEqual` and `Rope.rangeLcp` add checked BigInteger or long range coordinates. Null is an empty rope. Negative or out-of-bounds ranges raise IllegalArgumentException before identity shortcuts. Existing Node.equals/hashCode remain structural and exclude the new profile metadata.
+
+Exact traversal uses an explicit heap stack, identity-based range keys, proven-equal memoization for DAGs, native leaf-range comparison, and Fine-Wilf periodic witnesses. Structurally identical self-concat chains also expose periods. These shortcuts do not read fingerprints or allocate replacement rope nodes. Independent equal bytes may require a full scan; auxiliary storage follows visited proof ranges, and BigInteger arithmetic scales with bit width. Exact traversal is stack-safe; the historical edit/materialization/structural-inspection operations retain their documented recursion limits. No cross-language runtime-speed parity is claimed.

@@ -7,6 +7,7 @@ import java.util.Objects;
 public final class RepeatNode implements Node {
     private final Node child;
     private final BigInteger reps,len,weight,hashVal;
+    private final HashProfile profile;
     /** Creates a repetition.
      *
      * @param child nonempty child
@@ -19,6 +20,7 @@ public final class RepeatNode implements Node {
     public RepeatNode(Node child, BigInteger reps, PolynomialHash h){
         if(reps.compareTo(BigInteger.TWO)<0) throw new IllegalArgumentException("RepeatNode reps must be >= 2, got "+reps);
         this.child=Objects.requireNonNull(child,"child"); this.reps=reps;
+        HashProfile.require(child, h); profile = h.profile();
         len=child.len().multiply(reps); weight=child.weight().multiply(reps);
         BigInteger power=h.power(child.len());
         BigInteger phi=PolynomialHash.phi(reps,power,h.prime());
@@ -40,6 +42,7 @@ public final class RepeatNode implements Node {
     @Override public BigInteger len(){return len;}
     @Override public BigInteger weight(){return weight;}
     @Override public BigInteger hashVal(){return hashVal;}
+    @Override public HashProfile profile(){return profile;}
     @Override public boolean equals(Object o){return o instanceof RepeatNode n && child.equals(n.child)&&reps.equals(n.reps)&&hashVal.equals(n.hashVal);}
     @Override public int hashCode(){return Objects.hash(child,reps,hashVal);}
     @Override public String toString(){return "RepeatNode[reps="+reps+", len="+len+", hashVal="+hashVal+"]";}

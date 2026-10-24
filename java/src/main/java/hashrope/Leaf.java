@@ -8,6 +8,7 @@ import java.util.Objects;
 public final class Leaf implements Node {
     private final byte[] data;
     private final BigInteger hashVal;
+    private final HashProfile profile;
 
     /** Creates a leaf with the default polynomial hash.
      *
@@ -26,6 +27,7 @@ public final class Leaf implements Node {
         Objects.requireNonNull(data, "data");
         if (data.length == 0) throw new IllegalArgumentException("Leaf cannot be empty");
         this.data = data.clone();
+        this.profile = h.profile();
         this.hashVal = h.hash(data);
     }
 
@@ -33,6 +35,11 @@ public final class Leaf implements Node {
      * @return copied bytes */
     public byte[] data() { return data.clone(); }
     int byteLength() { return data.length; }
+    int commonPrefix(int start, Leaf other, int otherStart, int length) {
+        int mismatch = Arrays.mismatch(data, start, start + length,
+                other.data, otherStart, otherStart + length);
+        return mismatch < 0 ? length : mismatch;
+    }
     byte[] slice(int start,int end) { return Arrays.copyOfRange(data,start,end); }
     void copyTo(byte[] destination,int offset) { System.arraycopy(data,0,destination,offset,data.length); }
     /** Returns the byte length.
@@ -44,6 +51,7 @@ public final class Leaf implements Node {
     /** Returns the stored hash.
      * @return polynomial hash */
     public BigInteger hashVal() { return hashVal; }
+    @Override public HashProfile profile() { return profile; }
     @Override public boolean equals(Object other) {
         return other instanceof Leaf l && Arrays.equals(data,l.data) && hashVal.equals(l.hashVal);
     }

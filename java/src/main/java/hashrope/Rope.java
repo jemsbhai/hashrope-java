@@ -21,6 +21,86 @@ public final class Rope {
      * @return hash
      */
     public static BigInteger hash(Node node){return node==null?BigInteger.ZERO:node.hashVal();}
+
+    /** Compares actual bytes, independently of fingerprints or tree shape.
+     * Shared ranges and proven periodic spans are skipped without materializing bytes.
+     * Independent equal inputs may require reading their entire content.
+     * @param left nullable root
+     * @param right nullable root, possibly using a different hash profile
+     * @return whether both ropes contain exactly the same bytes
+     */
+    public static boolean equal(Node left, Node right) {
+        return len(left).equals(len(right)) && lcp(left, right).equals(len(left));
+    }
+
+    /** Returns the exact common byte-prefix length without splitting or rehashing.
+     * Uses an explicit traversal stack and a per-call cache of proven equal ranges.
+     * Time depends on visited structure and bytes; independent inputs have no general logarithmic bound.
+     * @param left nullable root
+     * @param right nullable root, possibly using a different hash profile
+     * @return common prefix length in bytes
+     */
+    public static BigInteger lcp(Node left, Node right) {
+        return ExactComparison.lcp(left, BigInteger.ZERO, right, BigInteger.ZERO, len(left).min(len(right)));
+    }
+
+    /** Exactly compares two equal-length byte ranges across any hash profiles.
+     * @param left nullable first root
+     * @param leftStart first byte offset
+     * @param right nullable second root
+     * @param rightStart second byte offset
+     * @param length compared byte count
+     * @return whether the ranges contain the same bytes
+     * @throws IllegalArgumentException for negative or out-of-bounds ranges, even when empty
+     */
+    public static boolean rangeEqual(Node left, BigInteger leftStart, Node right, BigInteger rightStart, BigInteger length) {
+        return rangeLcp(left, leftStart, right, rightStart, length).equals(length);
+    }
+
+    /** Returns the exact common prefix of two byte ranges, relative to their starts.
+     * @param left nullable first root
+     * @param leftStart first byte offset
+     * @param right nullable second root
+     * @param rightStart second byte offset
+     * @param length compared byte count
+     * @return common prefix length
+     * @throws IllegalArgumentException for negative or out-of-bounds ranges, even when empty
+     */
+    public static BigInteger rangeLcp(Node left, BigInteger leftStart, Node right, BigInteger rightStart, BigInteger length) {
+        checkRange(left, leftStart, length);
+        checkRange(right, rightStart, length);
+        return ExactComparison.lcp(left, leftStart, right, rightStart, length);
+    }
+
+    /** Long-coordinate convenience overload for exact range equality.
+     * @param left first root
+     * @param leftStart first offset
+     * @param right second root
+     * @param rightStart second offset
+     * @param length byte count
+     * @return exact equality
+     */
+    public static boolean rangeEqual(Node left, long leftStart, Node right, long rightStart, long length) {
+        return rangeEqual(left, BigInteger.valueOf(leftStart), right, BigInteger.valueOf(rightStart), BigInteger.valueOf(length));
+    }
+
+    /** Long-coordinate convenience overload for exact range prefix comparison.
+     * @param left first root
+     * @param leftStart first offset
+     * @param right second root
+     * @param rightStart second offset
+     * @param length byte count
+     * @return exact common prefix length
+     */
+    public static BigInteger rangeLcp(Node left, long leftStart, Node right, long rightStart, long length) {
+        return rangeLcp(left, BigInteger.valueOf(leftStart), right, BigInteger.valueOf(rightStart), BigInteger.valueOf(length));
+    }
+
+    private static void checkRange(Node node, BigInteger start, BigInteger length) {
+        if (start.signum() < 0 || length.signum() < 0 || start.add(length).compareTo(len(node)) > 0) {
+            throw new IllegalArgumentException("Comparison range is outside the rope");
+        }
+    }
     /** Returns tree height; leaves and the empty rope have height zero.
      *
      * @param node nullable root
@@ -46,6 +126,7 @@ public final class Rope {
      * @return repeated root
      */
     public static Node repeat(Node node,BigInteger count,PolynomialHash h){
+        HashProfile.require(node, h);
         if(count.signum()==0)return null;
         if(count.equals(BigInteger.ONE))return node;
         return new RepeatNode(node,count,h);
@@ -66,6 +147,7 @@ public final class Rope {
      * @return concatenated root
      */
     public static Node concat(Node left,Node right,PolynomialHash h){
+        HashProfile.require(left, h); HashProfile.require(right, h);
         if(left==null)return right;
         if(right==null)return left;
         return join(left,right,h);
@@ -125,6 +207,7 @@ public final class Rope {
      * @return persistent halves
      */
     public static Split split(Node node,BigInteger pos,PolynomialHash h){
+        HashProfile.require(node, h);
         if(node==null)return new Split(null,null);
         if(pos.signum()<=0)return new Split(null,node);
         if(pos.compareTo(node.len())>=0)return new Split(node,null);
@@ -168,6 +251,7 @@ public final class Rope {
      * @return substring hash
      */
     public static BigInteger substrHash(Node node,BigInteger start,BigInteger length,PolynomialHash h){
+        HashProfile.require(node, h);
         if(node==null||length.signum()==0)return BigInteger.ZERO;
         return hashRange(node,start,length,h);
     }
@@ -229,13 +313,14 @@ public final class Rope {
      * @throws AssertionError if an invariant fails, independent of the JVM assertion flag
      */
     public static void validate(Node node){validate(node,null);}
-    /** Checks structural invariants; the hash argument is intentionally unused.
+    /** Checks structural invariants and, when supplied, matching hash parameters.
      *
      * @param node nullable root
-     * @param h optional hash context, unused for compatibility
+     * @param h optional hash context
      * @throws AssertionError if an invariant fails
      */
     public static void validate(Node node,PolynomialHash h){
+        if (h != null) HashProfile.require(node, h);
         if(node==null)return;
         if(node instanceof Leaf l){
             check(l.weight().equals(BigInteger.ONE),"Leaf weight must be 1, got "+l.weight());
