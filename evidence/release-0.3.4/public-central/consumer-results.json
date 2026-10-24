@@ -1,0 +1,36 @@
+{
+  "source_files": {
+    "consumer-smoke/pom.xml": "5090f2e7febefbd94c9168476db29c42d01b7b1fd4f3c984a9eaef79b8fe4639",
+    "consumer-smoke/src/main/java/example/HashropeExample.java": "308e40efb5a5bffd11da0cacd54cf60450cbdb76192d3685740e59505b290641",
+    "consumer-smoke/src/test/java/example/ConsumerSmokeTest.java": "2d35cd3aa77166f0afb713098760cc2c15fe325070c2cc9a06cebe3d0091d13c"
+  },
+  "reports": [
+    {
+      "file": "TEST-example.ConsumerSmokeTest.xml",
+      "sha256": "b09cfd9a8c0eb799fadc2ef3866e60dc789d6a1d701a4ffa74ba5e18cd4b8a3c",
+      "counts": {
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "testcases": [
+        {
+          "class": "example.ConsumerSmokeTest",
+          "name": "consumesPublishedCoordinatesWithoutSourceTreeAccess",
+          "time": "0.028"
+        },
+        {
+          "class": "example.ConsumerSmokeTest",
+          "name": "streamingAndIndependentExampleUseTheInstalledJar",
+          "time": "0.003"
+        },
+        {
+          "class": "example.ConsumerSmokeTest",
+          "name": "exactApisAndProfilesAreAvailableFromTheInstalledArtifact",
+          "time": "0.002"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "recorded_at_utc": "2026-10-24T22:00:15.499584+00:00",
+  "coordinates": "io.github.jemsbhai:hashrope:0.3.4",
+  "deployment_id": "52121508-fc68-459e-ac68-1cf275959923",
+  "deployment_name": "hashrope-0.3.4-parity-release",
+  "portal_observed_by_release_coordinator": {
+    "state": "PUBLISHED",
+    "at_utc": "2026-10-24T21:58:38Z",
+    "prior_states": [
+      "VALIDATING",
+      "PUBLISHING"
+    ],
+    "coordinator_submitted_or_resubmitted": false,
+    "publishing_mode": "Unknown; observed state transitions do not identify whether a user click or automatic mode initiated publishing."
+  },
+  "public_availability_verified": true,
+  "public_repository_url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.4/",
+  "reviewed_source_commit": "82e771bdae1f6293f7328bc4ee488e6317abe8c0",
+  "source_pr_merge_commit": "aa0708905ee629654a4d38654146cf3a8b1d7b42",
+  "release_tag": "v0.3.4",
+  "release_tag_commit": "82e771bdae1f6293f7328bc4ee488e6317abe8c0",
+  "tested_source_hashes_unchanged": true,
+  "signed_bundle_bytes": 210486,
+  "signed_bundle_sha256": "9749fc47d485abe39a553cfaa44987c997ba88b87fe5cbba2374ae2dbd54713e",
+  "public_files_identical_to_signed_bundle": 24,
+  "public_signatures_verified": 4,
+  "consumer": {
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "verification_completed_at_utc": "2026-10-24T21:59:22.684871+00:00",
+  "environment": {
+    "java": "Oracle JDK 24.0.1, --release 17",
+    "maven": "3.10.0",
+    "python": "3.12.2",
+    "os": "Windows 11 amd64"
+  },
+  "history_note": "upload-preparation.json is the unchanged pre-upload snapshot. Its source_commit field names the source PR merge; reviewed source and merge are distinguished above. Its false upload/publication fields describe that earlier snapshot, not the final state.",
+  "archive_note": "The reconstructed public ZIP has different ZIP metadata and its own hash. All 24 entry bytes, including signatures and checksum files, are identical to the frozen uploaded bundle.",
+  "evidence_files": {
+    "availability.jsonl": "27f92c50115cc3d92dc678c3fe64a1bf75fc38332b2095700a01376adc1ad5ac",
+    "central-only-settings.xml": "dc989ac2dc8204689488cb62fdc9a272b7eb7a6be8943148a464bf7ec508ac28",
+    "commands.json": "81fce2911030747b7796a64968b7f10c1fb52cb033147cf066cb18b47c4bb6ec",
+    "consumer-results.json": "ca3852fed22c69fcf708c894cc40fa93e680588545f1e11358d882346184071c",
+    "empty-settings.xml": "bc42fef25e3648c6f2c7175567ab79758d878faa347b6972b4170324878aab8e",
+    "execution.log": "73cd279d367b7909d0090061c3b8d5e32943c3c15e6717dc7b4d8f6ffe934114",
+    "maven-0.log": "6428703819c2745601eb62b1dc7ed50386420c11957a92c778fea8c22da7c642",
+    "maven-1.log": "6d0e19039f6a8a0b1a9ed43ba61a259f5837baaea8f5aadb60724e94711b56e0",
+    "maven-2.log": "358abb1fc1c2313444b5ca1dbce03195083ac593f6a9c5abd200fc47645bcb76",
+    "probe_availability.py": "b38f50ace37e9ce9c22efbab14123c57ebc4cdced519d0e1a31676d8607bcc64",
+    "public-artifact-comparison.json": "5b7794fe018875d51f225757595b52f7a0bc666745ea8653efd0a7af28386053",
+    "public-bundle-verification.json": "05a8ca3b0163c48458252323ff8f32fca4202cd4cc0f4421c459fea8ebb37d60",
+    "remote-provenance.json": "fa9fa9cf2d1cfbfd4a2f7e31699f94cfe3151e156ab45bb3155410c4b1ee3e95",
+    "retain_evidence.py": "44b31fbb3bf2cc60d9959bca33f467f2f903d4fd85813cd15930312b5abbe767",
+    "upload-preparation.json": "0d8ac415d7c1ed42f4cbf8c5c8fcff7eb259dfcaa7ce0015f6dc31eb295aaf75",
+    "verification.json": "c4798be60cb5fad03dabf1cfb11b9f01722dbd4a18722607698e3b084f057feb",
+    "verify_public.py": "d421f8d236a953dde2d4b408564978166aaaeedfa8a013911b8ab8cdd22a91a6"
+  }
+}

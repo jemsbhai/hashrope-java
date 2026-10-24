@@ -1,6 +1,6 @@
 # Java 0.3.4 parity-only release
 
-Coordinates: `io.github.jemsbhai:hashrope:0.3.4`, Java 17, with no runtime dependencies. All coordinated release checks passed and the source PR is merged. Publication is still pending the Portal upload; Java 0.3.4 is not yet claimed as publicly available.
+Coordinates: `io.github.jemsbhai:hashrope:0.3.4`, Java 17, with no runtime dependencies. Published on Maven Central on 2026-10-24 and verified from the public repository. All coordinated release checks passed.
 
 ## Scope and compatibility
 
@@ -28,10 +28,12 @@ The `central-release` Maven profile defaults to `central.skipUpload=true`. Its d
 
 The first signing attempt failed with `No pinentry`. The installed pinentry executable and configured path were valid; reloading the existing GPG agent and signing through its normal private prompt resolved it without changing key material or configuration. Both attempt logs remain recorded. No passphrase was captured in commands, source or logs.
 
-## Publication status
+## Publication and public verification
 
-The Java source PR [#2](https://github.com/jemsbhai/hashrope-java/pull/2) merged at `aa0708905ee629654a4d38654146cf3a8b1d7b42`. Both Java 17 and Java 24 [CI jobs passed](https://github.com/jemsbhai/hashrope-java/actions/runs/40133391092); the coordinated release owner confirmed all package gates passed. The signed bundle remains frozen at 210,486 bytes and the SHA-256 above.
+The reviewed source commit is `82e771bdae1f6293f7328bc4ee488e6317abe8c0`, also the unchanged `v0.3.4` tag target. Source PR [#2](https://github.com/jemsbhai/hashrope-java/pull/2) merged at `aa0708905ee629654a4d38654146cf3a8b1d7b42`. Both Java 17 and Java 24 [CI jobs passed](https://github.com/jemsbhai/hashrope-java/actions/runs/40133391092); the coordinated release owner confirmed all package gates passed.
 
-Portal is authenticated, but the supported browser file-chooser API repeatedly timed out before selecting the archive, including after the user enabled file access and a fresh authenticated browser session was opened. The user has been asked only to select the exact local ZIP in the ready Portal form. No Java upload or publication has been submitted. These are browser/tool limitations, not source, package or signature failures; [the preparation record](../evidence/release-0.3.4/public-central/upload-preparation.json) retains each attempt.
+Central deployment `52121508-fc68-459e-ac68-1cf275959923`, named `hashrope-0.3.4-parity-release`, was observed as **PUBLISHED** at 21:58:38 UTC on 2026-10-24. The coordinator observed VALIDATING then PUBLISHING without submitting or resubmitting; the observations do not establish whether a user click or automatic mode initiated publishing. The earlier [file-picker failures and pending snapshot](../evidence/release-0.3.4/public-central/upload-preparation.json) remain unchanged as history. They concern the browser tool, not the package or signatures.
 
-The [public verification driver](../evidence/release-0.3.4/public-central/verify_public.py) is prepared and reviewed but has not run for 0.3.4. After publication, it must verify all 24 public files against the signed bundle, four signatures and three consumer tests in a new Central-only Maven repository before this record can claim public availability.
+The [public verification record](../evidence/release-0.3.4/public-central/README.md) passed at 21:59:22 UTC. All 24 canonical public files are byte-identical to the frozen signed bundle, including checksum and signature files; four detached signatures verify. A new consumer project with an empty Maven cache and credentials-free Central-only settings passed all three tests with no failures, errors or skips. Its resolved POM, main, source and Javadoc artifacts exactly match the signed bundle, and all 230 repository provenance files identify only Central. The public endpoint returned HTTP 200 before the verifier ran.
+
+This evidence update changes no Java runtime source, fixtures, signed artifacts or release tag. The public JAR is the same artifact that passed the local library and installed-JAR gates.
