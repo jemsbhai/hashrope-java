@@ -1,0 +1,69 @@
+{
+  "recorded_at_utc": "2026-10-24T21:28:00.500746+00:00",
+  "coordinates": "io.github.jemsbhai:hashrope:0.3.4",
+  "source_commit": "aa0708905ee629654a4d38654146cf3a8b1d7b42",
+  "bundle_sha256": "9749fc47d485abe39a553cfaa44987c997ba88b87fe5cbba2374ae2dbd54713e",
+  "portal": "https://central.sonatype.com/publishing",
+  "deployment_name": "hashrope-0.3.4-parity-release",
+  "attempts": [
+    {
+      "control": "observed Upload Your File accessibility control",
+      "result": "Timed out after 10000ms waiting for file chooser",
+      "set_files_called": false
+    },
+    {
+      "control": "observed input[type=file] Playwright locator",
+      "result": "Timed out after 10000ms waiting for file chooser",
+      "set_files_called": false
+    },
+    {
+      "control": "observed input[type=file], fresh same-profile browser binding after user permission change",
+      "result": "Timed out after 10000ms waiting for file chooser",
+      "set_files_called": false
+    },
+    {
+      "control": "observed input[type=file], after ordinary Portal reload and fresh upload modal",
+      "result": "Timed out after 10000ms waiting for file chooser",
+      "set_files_called": false
+    },
+    {
+      "control": "documented chooser wait registered in a separate call with a caught rejection and 30000ms timeout",
+      "result": "CUA JavaScript execution timed out and reset its kernel before a separate click could run",
+      "set_files_called": false
+    },
+    {
+      "control": "root fresh authenticated Central tab374588863: documented 10000ms chooser wait then input[type=file] click",
+      "result": "Timed out after 10000ms waiting for file chooser before setFiles",
+      "set_files_called": false,
+      "reported_by": "coordinating release agent"
+    }
+  ],
+  "file_selected": false,
+  "upload_submitted": false,
+  "permission_prompt_pending_with_parent": false,
+  "note": "The browser troubleshooting recommends enabling Allow access to file URLs for the ChatGPT extension. No browser security or permission setting was changed by the agent; no archive was transmitted by these attempts.",
+  "settings_assistance": {
+    "requested_by_user": true,
+    "requested_url": "chrome://extensions/",
+    "result": "Browser URL policy blocked chrome:// navigation; only http/https is allowed and indirect workarounds were prohibited. The user was given manual navigation steps.",
+    "setting_changed_by_agent": false
+  },
+  "user_confirmed_file_access_enabled": true,
+  "latest_observation_utc": "2026-10-24T21:32:03.551022+00:00",
+  "recovery": "Existing Central tab could not be reobserved after reset: Debugger unattached on initial claim and one recovery attempt. No native or policy bypass attempted.",
+  "handoff": "User asked to select only the frozen ZIP using Portal Upload Your File; agent will submit/publish after observing the selected file.",
+  "failure_scope": "Browser/tool file-picker limitation; source/package/signature gates remained passing.",
+  "root_fresh_session": {
+    "tab_id": "374588863",
+    "authenticated": true,
+    "deployment_name": "hashrope-0.3.4-parity-release",
+    "existing_0_3_4_deployment_observed": false,
+    "file_input_empty": true,
+    "handoff_tab_retained": true,
+    "status": "Awaiting user selection of the exact frozen ZIP; no upload submitted"
+  },
+  "bundle_bytes": 210486,
+  "updated_at_utc": "2026-10-24T21:40:15.061042+00:00",
+  "global_release_gate_passed": true,
+  "java_published": false
+}
