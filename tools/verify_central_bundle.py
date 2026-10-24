@@ -13,9 +13,9 @@ import re
 import subprocess
 import tempfile
 
-COORDINATES = 'io.github.jemsbhai:hashrope:0.3.3'
-PREFIX = 'io/github/jemsbhai/hashrope/0.3.3/'
-BASE = 'hashrope-0.3.3'
+COORDINATES = 'io.github.jemsbhai:hashrope:0.3.4'
+PREFIX = 'io/github/jemsbhai/hashrope/0.3.4/'
+BASE = 'hashrope-0.3.4'
 ARTIFACTS = (BASE+'.pom', BASE+'.jar', BASE+'-sources.jar', BASE+'-javadoc.jar')
 ALGORITHMS = ('md5', 'sha1', 'sha256', 'sha512')
 API = ('Hashrope', 'Node', 'Leaf', 'Internal', 'RepeatNode', 'Rope', 'SlidingWindow', 'PolynomialHash', 'HashProfile')

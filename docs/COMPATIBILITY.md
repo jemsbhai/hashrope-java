@@ -1,8 +1,8 @@
-# Compatibility: Java 0.3.3 and pinned numerical fixtures
+# Compatibility: Java 0.3.4 and pinned numerical fixtures
 
-This port targets the published Python distribution **Hashrope 0.2.2**, with Java package `hashrope` and Maven coordinates `io.github.jemsbhai:hashrope:0.3.3`. It translates Python names to Java conventions and preserves the release's numerical, persistent-rope and streaming behavior, including the observed malformed-range and negative-copy behavior described below. The [parity matrix](PARITY-MATRIX.md) maps each public API to its Java counterpart and verification.
+This port targets the published Python distribution **Hashrope 0.2.2**, with Java package `hashrope` and Maven coordinates `io.github.jemsbhai:hashrope:0.3.4`. It translates Python names to Java conventions and preserves the release's numerical, persistent-rope and streaming behavior, including the observed malformed-range and negative-copy behavior described below. The [parity matrix](PARITY-MATRIX.md) maps each public API to its Java counterpart and verification.
 
-**Historical 0.2.2 verification:** all 10,608 library JUnit tests and both independent consumer tests passed. Current 0.3.3 validation and deliberate safety changes are in [RELEASE-0.3.3.md](RELEASE-0.3.3.md). Exact counts, artifact inspection, oracle regeneration and TDD replay evidence are in [VERIFICATION.md](VERIFICATION.md).
+**Historical 0.2.2 verification:** all 10,608 library JUnit tests and both independent consumer tests passed. Current parity-only release validation is in [RELEASE-0.3.4.md](RELEASE-0.3.4.md); the deliberate 0.3.3 safety changes remain documented in [RELEASE-0.3.3.md](RELEASE-0.3.3.md). Exact counts, artifact inspection, oracle regeneration and TDD replay evidence are in [VERIFICATION.md](VERIFICATION.md).
 
 ## Pinned reference
 
@@ -99,7 +99,7 @@ Negative copy offsets and lengths retain the observed reference behavior. They c
 | Python `Node` Optional union | Sealed Node interface plus null |
 | Python dynamic input types/custom monkeypatching | Statically typed signatures and sealed/final node types; runtime monkeypatching not reproduced |
 
-The byte[] API excludes Python's accidental acceptance of arbitrary integer sequences, booleans in integer positions, empty strings and other duck-typed objects. It does not reinterpret these as different bytes. Private Python internals (`_power_cache`, `_join`, `_balance`, etc.) and mutation through reflection or `object.__setattr__` are not public port APIs. Runtime-specific repr, object hashes, serialization, memory errors and recursion limits are language adaptations, not byte/hash numerical promises. `Hashrope.VERSION` exposes the Java release version `"0.3.3"`; `Rope.ALPHA_NUM` and `Rope.ALPHA_DEN` expose the balance constants 2 and 7.
+The byte[] API excludes Python's accidental acceptance of arbitrary integer sequences, booleans in integer positions, empty strings and other duck-typed objects. It does not reinterpret these as different bytes. Private Python internals (`_power_cache`, `_join`, `_balance`, etc.) and mutation through reflection or `object.__setattr__` are not public port APIs. Runtime-specific repr, object hashes, serialization, memory errors and recursion limits are language adaptations, not byte/hash numerical promises. `Hashrope.VERSION` exposes the Java release version `"0.3.4"`; `Rope.ALPHA_NUM` and `Rope.ALPHA_DEN` expose the balance constants 2 and 7.
 
 ## Complexity and practical memory
 

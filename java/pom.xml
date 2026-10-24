@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.jemsbhai</groupId>
   <artifactId>hashrope</artifactId>
-  <version>0.3.3</version>
+  <version>0.3.4</version>
   <name>Hashrope</name>
   <description>Immutable polynomial hash ropes with exact byte comparison and compressed repetition.</description>
   <url>https://github.com/jemsbhai/hashrope-java</url>
@@ -27,7 +27,7 @@
   <properties>
     <maven.compiler.release>17</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.build.outputTimestamp>2026-10-22T00:00:00Z</project.build.outputTimestamp>
+    <project.build.outputTimestamp>2026-10-24T00:00:00Z</project.build.outputTimestamp>
   </properties>
   <dependencies>
     <dependency>

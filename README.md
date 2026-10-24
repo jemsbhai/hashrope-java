@@ -1,9 +1,9 @@
 # Hashrope for Java
 
-A persistent byte rope with a polynomial hash at every node, compressed repetition and a streaming sliding window. Release 0.3.3 adds exact content equality/LCP and immutable hash-profile guards. Existing numeric behavior remains checked against the SHA256-pinned Python Hashrope 0.2.2 wheel.
+A persistent byte rope with a polynomial hash at every node, compressed repetition and a streaming sliding window. Release 0.3.4 is a parity-only package release: Java runtime behavior and fingerprints are unchanged from 0.3.3, which added exact content equality/LCP and immutable hash-profile guards. Existing numeric behavior remains checked against the SHA256-pinned Python Hashrope 0.2.2 wheel.
 
 - Java package: `hashrope`
-- Maven coordinates: `io.github.jemsbhai:hashrope:0.3.3`
+- Maven coordinates: `io.github.jemsbhai:hashrope:0.3.4`
 - Source/build directory: [`java/`](java/)
 - Java baseline: compiled with `--release 17`; implementation build environment: JDK 24.0.1 and Maven 3.10.0
 - No runtime dependencies; JUnit is used only for tests
@@ -23,22 +23,22 @@ mvn -s tools/isolated-settings.xml -gs tools/isolated-settings.xml -f java/pom.x
 The supplied empty user and global Maven settings avoid consulting saved publishing configuration. The build creates:
 
 ```text
-java/target/hashrope-0.3.3.jar
-java/target/hashrope-0.3.3-sources.jar
-java/target/hashrope-0.3.3-javadoc.jar
+java/target/hashrope-0.3.4.jar
+java/target/hashrope-0.3.4-sources.jar
+java/target/hashrope-0.3.4-javadoc.jar
 ```
 
-Published Maven Central coordinates ([public artifacts and fresh consumer verified](docs/RELEASE-0.3.3.md)):
+Release coordinates (0.3.4 publication is pending the coordinated release gate):
 
 ```xml
 <dependency>
   <groupId>io.github.jemsbhai</groupId>
   <artifactId>hashrope</artifactId>
-  <version>0.3.3</version>
+  <version>0.3.4</version>
 </dependency>
 ```
 
-**Release verification:** [0.3.3 validation and compatibility changes](docs/RELEASE-0.3.3.md). Historical 0.2.2 publication and its original 10,608-test result remain documented in [the prior release report](docs/RELEASE.md).
+**Release verification:** [0.3.4 parity-only release and validation](docs/RELEASE-0.3.4.md). [Published 0.3.3 validation and compatibility changes](docs/RELEASE-0.3.3.md) remain archived. Historical 0.2.2 publication and its original 10,608-test result remain documented in [the prior release report](docs/RELEASE.md).
 
 ## Exact equality and common prefixes
 

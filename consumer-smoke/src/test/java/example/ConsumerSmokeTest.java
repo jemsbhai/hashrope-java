@@ -18,7 +18,7 @@ class ConsumerSmokeTest {
         assertEquals(new HashProfile(PolynomialHash.MERSENNE_61, BigInteger.valueOf(131)), a.profile());
     }
     @Test void consumesPublishedCoordinatesWithoutSourceTreeAccess() {
-        assertEquals("0.3.3", Hashrope.VERSION);
+        assertEquals("0.3.4", Hashrope.VERSION);
         PolynomialHash h = new PolynomialHash(PolynomialHash.MERSENNE_127, BigInteger.valueOf(131));
         byte[] data = "Aé😀Z".getBytes(StandardCharsets.UTF_8);
         Node root = Rope.fromBytes(data, h);
