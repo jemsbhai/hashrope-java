@@ -1,0 +1,15 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< example:hashrope-consumer-smoke >-------------------
+[INFO] Building hashrope-consumer-smoke 1.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.8.1:get (default-cli) @ hashrope-consumer-smoke ---
+[INFO] Resolving io.github.jemsbhai:hashrope:jar:javadoc:0.3.4
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.190 s
+[INFO] Finished at: 2026-10-24T17:59:16-04:00
+[INFO] ------------------------------------------------------------------------

@@ -1,0 +1,40 @@
+{
+  "verified_at_utc": "2026-10-24T21:59:22.684871+00:00",
+  "coordinates": "io.github.jemsbhai:hashrope:0.3.4",
+  "public_artifacts": 24,
+  "signed_bundle_sha256": "9749fc47d485abe39a553cfaa44987c997ba88b87fe5cbba2374ae2dbd54713e",
+  "script_sha256": "d421f8d236a953dde2d4b408564978166aaaeedfa8a013911b8ab8cdd22a91a6",
+  "public_signatures_verified": true,
+  "fresh_local_repository": "C:\\Users\\User\\.codex\\worktrees\\release-correctness-parity\\hashrope-java\\target\\public-central-0.3.4\\run-0.3.4\\m2",
+  "all_repository_provenance_central_only": true,
+  "repository_provenance_files": 230,
+  "consumer": {
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "maven_resolved_artifacts": [
+    {
+      "name": "hashrope-0.3.4.pom",
+      "sha256": "823a334add35e9d25f2ca176c92ebb9e003fcc61a49b03eb2f978d5b2a41da83",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "name": "hashrope-0.3.4.jar",
+      "sha256": "47c27d04417fe0bf5570cf4c676e1e760862d6007d9158b9da8f089e7a025286",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "name": "hashrope-0.3.4-sources.jar",
+      "sha256": "34040b8381f9d4f2e5d81ee773d2e1b647a19f8f365cbd0a38fa8edc9be6cf06",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "name": "hashrope-0.3.4-javadoc.jar",
+      "sha256": "8ac5af9901db379b5143c3cffca3aca6a48a1573deb0f0f71763efe2fee01790",
+      "identical_to_signed_bundle": true
+    }
+  ],
+  "verified": true
+}

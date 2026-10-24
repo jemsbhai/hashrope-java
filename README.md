@@ -28,7 +28,7 @@ java/target/hashrope-0.3.4-sources.jar
 java/target/hashrope-0.3.4-javadoc.jar
 ```
 
-Release coordinates (0.3.4 publication is pending the coordinated release gate):
+Release coordinates (0.3.4 is published on Maven Central and [publicly verified](evidence/release-0.3.4/public-central/README.md)):
 
 ```xml
 <dependency>

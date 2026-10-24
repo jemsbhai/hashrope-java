@@ -18,3 +18,5 @@ python -B tools/verify_central_bundle.py --bundle java/target/central-publishing
 The first offline signing attempt (`bundle-build.log`) failed because the existing GPG agent could not launch pinentry. The configured executable was present and working. Reloading the agent and using its normal private signing prompt succeeded; `bundle-build-agent-reload.log` records the completed bundle and explicit upload skip. No GPG configuration, key material or passphrase was stored or changed by the repair.
 
 Maven's informational Javadoc warning about the obsolete `-1.1` switch is retained in the logs; Javadoc completed successfully with doclint enabled. The bundle and JAR binaries remain in ignored build directories rather than Git. Do not rebuild or replace the reviewed bundle when coordinating publication; verify its recorded SHA-256 first.
+
+Publication subsequently completed on 2026-10-24. The separate [public Central verification](public-central/README.md) confirms all 24 public files, four signatures and three consumer tests in a new Central-only Maven cache; it retains the unchanged earlier preparation snapshot as history.
