@@ -1,6 +1,6 @@
 # Java 0.3.4 parity-only release
 
-Coordinates: `io.github.jemsbhai:hashrope:0.3.4`, Java 17, with no runtime dependencies. Publication is pending the coordinated release gate.
+Coordinates: `io.github.jemsbhai:hashrope:0.3.4`, Java 17, with no runtime dependencies. All coordinated release checks passed and the source PR is merged. Publication is still pending the Portal upload; Java 0.3.4 is not yet claimed as publicly available.
 
 ## Scope and compatibility
 
@@ -27,3 +27,11 @@ The signed bundle is `java/target/central-publishing/central-bundle.zip`, SHA-25
 The `central-release` Maven profile defaults to `central.skipUpload=true`. Its deploy lifecycle creates a local signed bundle for review; actual upload and publication remain separate coordinated steps.
 
 The first signing attempt failed with `No pinentry`. The installed pinentry executable and configured path were valid; reloading the existing GPG agent and signing through its normal private prompt resolved it without changing key material or configuration. Both attempt logs remain recorded. No passphrase was captured in commands, source or logs.
+
+## Publication status
+
+The Java source PR [#2](https://github.com/jemsbhai/hashrope-java/pull/2) merged at `aa0708905ee629654a4d38654146cf3a8b1d7b42`. Both Java 17 and Java 24 [CI jobs passed](https://github.com/jemsbhai/hashrope-java/actions/runs/40133391092); the coordinated release owner confirmed all package gates passed. The signed bundle remains frozen at 210,486 bytes and the SHA-256 above.
+
+Portal is authenticated, but the supported browser file-chooser API repeatedly timed out before selecting the archive, including after the user enabled file access and a fresh authenticated browser session was opened. The user has been asked only to select the exact local ZIP in the ready Portal form. No Java upload or publication has been submitted. These are browser/tool limitations, not source, package or signature failures; [the preparation record](../evidence/release-0.3.4/public-central/upload-preparation.json) retains each attempt.
+
+The [public verification driver](../evidence/release-0.3.4/public-central/verify_public.py) is prepared and reviewed but has not run for 0.3.4. After publication, it must verify all 24 public files against the signed bundle, four signatures and three consumer tests in a new Central-only Maven repository before this record can claim public availability.

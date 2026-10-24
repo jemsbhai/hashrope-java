@@ -1,0 +1,19 @@
+{
+  "source_commit": "82e771bdae1f6293f7328bc4ee488e6317abe8c0",
+  "workflow": "Verify",
+  "run_id": 40133391092,
+  "url": "https://github.com/jemsbhai/hashrope-java/actions/runs/40133391092",
+  "jobs": [
+    {
+      "name": "java (17)",
+      "id": 120989712782,
+      "conclusion": "success"
+    },
+    {
+      "name": "java (24)",
+      "id": 120989712868,
+      "conclusion": "success"
+    }
+  ],
+  "source_and_artifact_hashes_rechecked": true
+}
