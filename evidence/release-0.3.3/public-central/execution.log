@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\User\.codex\worktrees\release-correctness-parity\hashrope-java\target\public-central-verification\verify_public.py", line 129, in <module>
+    main()
+  File "C:\Users\User\.codex\worktrees\release-correctness-parity\hashrope-java\target\public-central-verification\verify_public.py", line 119, in main
+    assert line.endswith('>central-only='), 'Unexpected repository provenance: '+str(provenance)
+AssertionError: Unexpected repository provenance: C:\Users\User\.codex\worktrees\release-correctness-parity\hashrope-java\target\public-central-verification\run-0.3.3\m2\com\github\cliftonlabs\json-simple\3.0.2\_remote.repositories

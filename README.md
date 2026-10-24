@@ -28,7 +28,7 @@ java/target/hashrope-0.3.3-sources.jar
 java/target/hashrope-0.3.3-javadoc.jar
 ```
 
-Release coordinates (publication status is recorded separately in [release verification](docs/RELEASE-0.3.3.md)):
+Published Maven Central coordinates ([public artifacts and fresh consumer verified](docs/RELEASE-0.3.3.md)):
 
 ```xml
 <dependency>

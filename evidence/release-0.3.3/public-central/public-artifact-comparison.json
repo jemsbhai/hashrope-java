@@ -1,0 +1,174 @@
+{
+  "completed": true,
+  "bundle_sha256": "2566cbcbb7aec38a9f7f9d5c351187dba02efcfd9345c03bb985bbce5282fb01",
+  "files": [
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3-sources.jar.sha1",
+      "http_status": 200,
+      "bytes": 40,
+      "sha256": "b5e277b23cd64a2fed1fd400afb9f42daf5adab4d8029c62ef4e80aae9ad73c5",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3.jar.sha1",
+      "http_status": 200,
+      "bytes": 40,
+      "sha256": "eb8de7159131244e1c694c9af1f8d8f18d27c9d645cb4fdd8a108cb7b07493c6",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3.pom",
+      "http_status": 200,
+      "bytes": 5562,
+      "sha256": "202d315605031d1e74c578f18bcad57d43d7d66402e443298c3ec596096dcc3e",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3.pom.asc",
+      "http_status": 200,
+      "bytes": 887,
+      "sha256": "26e1b2ee72575271b98fe2cf376e603a68c6f803d88b95b548110c39c327c05a",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3-sources.jar.md5",
+      "http_status": 200,
+      "bytes": 32,
+      "sha256": "42a88eb480627031360f5c1a404d4845f1115151e6a2322ef698f2ab48dd539f",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3-sources.jar",
+      "http_status": 200,
+      "bytes": 20463,
+      "sha256": "ee5fefdf7a5967eaa8cee10b9719d28e7abaf1246b1626854ace8798b35e5361",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3-sources.jar.sha256",
+      "http_status": 200,
+      "bytes": 64,
+      "sha256": "021e9cd25622d42df59bfe79083f12eec2276277358971800addf18d7f478952",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3.jar.md5",
+      "http_status": 200,
+      "bytes": 32,
+      "sha256": "6ac3b4d3e1ce83cdeaaaf9cc93428526e99c7695c926302dee5288252f3823c9",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3-sources.jar.asc",
+      "http_status": 200,
+      "bytes": 887,
+      "sha256": "76b71fb34f8ed5e651e787d6240fef8b2fe629f40d0d63507e79e6b12173bdc5",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3.jar.sha256",
+      "http_status": 200,
+      "bytes": 64,
+      "sha256": "98605e05db54272338bcc0989b755b2aaeb48d4b96b42706f9ebf16ae0777616",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3-javadoc.jar.md5",
+      "http_status": 200,
+      "bytes": 32,
+      "sha256": "eb1896dead8dacdd4249bb44a40e9efa01df01519fc2c6e0975738bf3f9e3de2",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3-sources.jar.sha512",
+      "http_status": 200,
+      "bytes": 128,
+      "sha256": "5a46e2615e1286296d05a2c7e272b69c43f3202b0c8c7f5d3b256cbfd2b335cd",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3.pom.sha512",
+      "http_status": 200,
+      "bytes": 128,
+      "sha256": "be3df9f9f57826d73221bd577c84655f7e789d065be02e681bcd0b3f3953682e",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3.jar.sha512",
+      "http_status": 200,
+      "bytes": 128,
+      "sha256": "5daf6ba2e0588e10e4da5075289aa1b44bacfc7bd7ef9e41e47200a54aa066a9",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3-javadoc.jar.sha256",
+      "http_status": 200,
+      "bytes": 64,
+      "sha256": "1b93c99dc6ac6887fe0c0178881dd3c6c590e2e3faa23897e2057be5ac528a57",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3-javadoc.jar",
+      "http_status": 200,
+      "bytes": 157687,
+      "sha256": "435866c59d96a68752f0181fa4e371ad41b84812b80a76bbe3f5f0d3f560c3c1",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3-javadoc.jar.sha512",
+      "http_status": 200,
+      "bytes": 128,
+      "sha256": "5f081e29a8f191dbb80413d9689d363b40b41bc4d2c4c8ac46d13d268b164a2d",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3.pom.sha1",
+      "http_status": 200,
+      "bytes": 40,
+      "sha256": "0361ff6582bff35c073d607268d24bfa5fae55418dd781742acc870114d8c7cd",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3.jar",
+      "http_status": 200,
+      "bytes": 30667,
+      "sha256": "400ac31dea8d445251998ca76147679ab459c54d1b24f104c4fb092070d14696",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3.pom.sha256",
+      "http_status": 200,
+      "bytes": 64,
+      "sha256": "4df309f6d02744a5d7deb3ad81054be7400fa7ec71abbadf3d8f985c03e44cf2",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3-javadoc.jar.asc",
+      "http_status": 200,
+      "bytes": 887,
+      "sha256": "f608929ee40317a7c76cba86ca6bd4e9f4913f13d9afbb505de872564e637782",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3.pom.md5",
+      "http_status": 200,
+      "bytes": 32,
+      "sha256": "fdb021bba806a46fb2e3e26ad69ae2e27c75fef87ce4710edb884aaa33a803ae",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3.jar.asc",
+      "http_status": 200,
+      "bytes": 887,
+      "sha256": "5d3a3e5051f454b1965dbdc17a49ba401c3d8d6ce84a7c6a381ad50cae840022",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/hashrope-0.3.3-javadoc.jar.sha1",
+      "http_status": 200,
+      "bytes": 40,
+      "sha256": "ca9b00d4838cd13474aa9fa1a07bfb343e1ee84c80e22c2f846b26b21dc2406a",
+      "identical_to_signed_bundle": true
+    }
+  ]
+}

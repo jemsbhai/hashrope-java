@@ -1,6 +1,12 @@
 # Java 0.3.3 release validation
 
-This release candidate is built, tested, signed and verified locally; publication is a separate step. Coordinates are `io.github.jemsbhai:hashrope:0.3.3`, compiled for Java 17 with no runtime dependencies.
+Java 0.3.3 is publicly available from Maven Central; its artifacts and a fresh consumer were independently verified on 2026-10-24. Coordinates are `io.github.jemsbhai:hashrope:0.3.3`, compiled for Java 17 with no runtime dependencies.
+
+## Verified public release
+
+All 24 public files returned HTTP 200 and match the signed bundle byte-for-byte. Four signatures verify against the existing public signing fingerprint. A copied consumer project passed all three tests using an empty local repository and credentials-free Central-only settings; the Maven-resolved POM, main, source and Javadoc JARs match the bundle. All 334 repository-provenance entries refer to public Central. See [public verification and raw evidence](../evidence/release-0.3.3/public-central/README.md).
+
+Deployment `3174fc9d-36b2-4dac-a32c-7551f5427aa7` was last observed as PUBLISHING by the publishing agent after user confirmation. The subsequent public-repository checks confirm release availability independently; no later Portal badge is claimed. The original final audit needed a narrowly documented parser correction for Maven 3.10's URL-hash-suffixed repository IDs; successful resolution and consumer results were preserved without rerunning Maven.
 
 ## Changes and compatibility
 
@@ -42,6 +48,6 @@ Build and consumer logs are in `evidence/release-0.3.3/`. The first intermediate
 
 ## Offline signed bundle
 
-The opt-in Central profile created `java/target/central-publishing/central-bundle.zip` with upload skipped. Its SHA-256 is `2566cbcbb7aec38a9f7f9d5c351187dba02efcfd9345c03bb985bbce5282fb01`. The hardened verifier checked all 24 entries, all required checksums and four signatures against public fingerprint `3C8AD6A286A2FB052BF081B29D6C450FD82C949C`. Main, source and Javadoc JAR bytes match the tested artifacts exactly; the source JAR matches the working sources. See [bundle verification](../evidence/release-0.3.3/bundle-verification.json) and [validation provenance](../evidence/release-0.3.3/validation.json). This is local verification, not confirmation of Central publication.
+The opt-in Central profile created `java/target/central-publishing/central-bundle.zip` with upload skipped. Its SHA-256 is `2566cbcbb7aec38a9f7f9d5c351187dba02efcfd9345c03bb985bbce5282fb01`. The hardened verifier checked all 24 entries, all required checksums and four signatures against public fingerprint `3C8AD6A286A2FB052BF081B29D6C450FD82C949C`. Main, source and Javadoc JAR bytes match the tested artifacts exactly; the source JAR matches the working sources. See [bundle verification](../evidence/release-0.3.3/bundle-verification.json) and [validation provenance](../evidence/release-0.3.3/validation.json). The independent public repository checks are recorded above.
 
 The first offline build attempts recorded a PowerShell argument-quoting error and an unavailable pinentry executable. A routine GPG agent path correction allowed the existing key to be unlocked privately; the final build succeeded without changing signing credentials or publishing anything. All attempt logs are retained.

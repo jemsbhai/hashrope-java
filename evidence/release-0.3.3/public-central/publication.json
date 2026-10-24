@@ -1,0 +1,27 @@
+{
+  "coordinates": "io.github.jemsbhai:hashrope:0.3.3",
+  "deployment_id": "3174fc9d-36b2-4dac-a32c-7551f5427aa7",
+  "portal_last_observed_by_parent": "PUBLISHING after explicit user confirmation",
+  "public_availability_verified": true,
+  "public_repository_url": "https://repo.maven.apache.org/maven2/io/github/jemsbhai/hashrope/0.3.3/",
+  "source_commit": "bcb06158a27f6896248e8cacc136b03c78f6d952",
+  "tested_source_hashes_unchanged": true,
+  "java_version": "java version \"24.0.1\" 2025-04-15\nJava(TM) SE Runtime Environment (build 24.0.1+9-30)\nJava HotSpot(TM) 64-Bit Server VM (build 24.0.1+9-30, mixed mode, sharing)\n",
+  "maven_version": "Apache Maven 3.10.0 (c43a36b8d67be7e0805a411bc0898af1a51f5472)\nMaven home: E:\\tools\\apache-maven-3.10.0\nJava version: 24.0.1, vendor: Oracle Corporation, runtime: C:\\Program Files\\Java\\jdk-24\nDefault locale: en_US, platform encoding: UTF-8, time zone: America/New_York\nOS name: \"windows 11\", version: \"10.0\", arch: \"amd64\", family: \"windows\"\n",
+  "evidence_files": {
+    "availability.jsonl": "16217bfe3ccca6adc27a734b28eddbed81cafa29fbbf2f32fb13321c56b3c496",
+    "central-only-settings.xml": "dc989ac2dc8204689488cb62fdc9a272b7eb7a6be8943148a464bf7ec508ac28",
+    "commands.json": "4f1ec244373fb6b645c18e5177fdbb07241c2c5cb11f4f9348899be32714506c",
+    "empty-settings.xml": "bc42fef25e3648c6f2c7175567ab79758d878faa347b6972b4170324878aab8e",
+    "execution.log": "123e044ee6f01b1a2d0ca7a6120d5fb24786b7ac7fe64c2aa24abe5245c56fb9",
+    "finish_audit.py": "97be268a39812b47b33eff7b63380431b5066390c4f19d0cc173168a9cdd2ea4",
+    "maven-0.log": "b85a1c0e19e307edbc96ba87ecc78b239d6343f61f27c793aadfdbedfe3dfd2f",
+    "maven-1.log": "8fe29076f2170b263a0a7648f2dd980dd33b7bc9db0905debe4d54f62cd22bbe",
+    "maven-2.log": "44b21b0eeafece1a76bce67aa92a973fcf19fe858c06e5c91036457f79e8e659",
+    "public-artifact-comparison.json": "3539ce4d75e4a5065c41e454466e91bcaa96ae307e5488cad23e8548af4f649d",
+    "public-bundle-verification.json": "678bd2042f3434d359cfbe9e0b09ae9df48166b075fcea04fe41fda961967ed7",
+    "remote-provenance.json": "3f8805591a509f56c7c6ea88d63624ad11269b57d77c855eb470f2ccdfbe2e5b",
+    "verification.json": "9801b650c064a5adedb01c7a79ef7936eb04c86622b54a07486e50bb1b2edfb5",
+    "verify_public.py": "5eb9ca475f36c1c7325c1a375c1cc911598d43292a3a8c4b7d76a10f4cdad11d"
+  }
+}

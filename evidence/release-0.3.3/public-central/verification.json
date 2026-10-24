@@ -1,0 +1,45 @@
+{
+  "verified_at_utc": "2026-10-24T19:10:53.234310+00:00",
+  "coordinates": "io.github.jemsbhai:hashrope:0.3.3",
+  "signed_bundle_sha256": "2566cbcbb7aec38a9f7f9d5c351187dba02efcfd9345c03bb985bbce5282fb01",
+  "public_artifacts_identical": 24,
+  "public_signatures_verified": 4,
+  "consumer": {
+    "tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "fresh_local_repository": "C:\\Users\\User\\.codex\\worktrees\\release-correctness-parity\\hashrope-java\\target\\public-central-verification\\run-0.3.3\\m2",
+  "credentials_free_central_only_mirror": "https://repo.maven.apache.org/maven2",
+  "repository_id": "central-only-8fac3ebd6edbaca3c794783fa38088af0aa128e7",
+  "repository_url_sha1": "8fac3ebd6edbaca3c794783fa38088af0aa128e7",
+  "repository_provenance_files": 230,
+  "repository_provenance_entries": 334,
+  "maven_resolved_artifacts": [
+    {
+      "name": "hashrope-0.3.3.pom",
+      "sha256": "202d315605031d1e74c578f18bcad57d43d7d66402e443298c3ec596096dcc3e",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "name": "hashrope-0.3.3.jar",
+      "sha256": "400ac31dea8d445251998ca76147679ab459c54d1b24f104c4fb092070d14696",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "name": "hashrope-0.3.3-sources.jar",
+      "sha256": "ee5fefdf7a5967eaa8cee10b9719d28e7abaf1246b1626854ace8798b35e5361",
+      "identical_to_signed_bundle": true
+    },
+    {
+      "name": "hashrope-0.3.3-javadoc.jar",
+      "sha256": "435866c59d96a68752f0181fa4e371ad41b84812b80a76bbe3f5f0d3f560c3c1",
+      "identical_to_signed_bundle": true
+    }
+  ],
+  "original_script_sha256": "5eb9ca475f36c1c7325c1a375c1cc911598d43292a3a8c4b7d76a10f4cdad11d",
+  "post_run_audit_sha256": "97be268a39812b47b33eff7b63380431b5066390c4f19d0cc173168a9cdd2ea4",
+  "parser_correction": "Original final audit expected an unsuffixed repository ID; Maven 3.10 records the ID plus SHA1 of the repository URL. Existing successful resolution was audited against exactly this derived ID, without rerunning Maven or changing its cache.",
+  "verified": true
+}
