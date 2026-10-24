@@ -1,3 +1,5 @@
+> Historical publication record for Java 0.2.2. See [the 0.3.3 release notes](RELEASE-0.3.3.md) for the current candidate and validation.
+
 # Maven Central release procedure
 
 Coordinates: `io.github.jemsbhai:hashrope:0.2.2`. This procedure applies only to the separate Java repository. The original Python checkout remains read-only.

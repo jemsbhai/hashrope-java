@@ -15,4 +15,7 @@ public sealed interface Node permits Leaf, Internal, RepeatNode {
     /** Returns the stored polynomial hash.
      * @return hash value */
     BigInteger hashVal();
+    /** Returns the parameters used to construct this node's fingerprint.
+     * @return immutable fingerprint profile */
+    HashProfile profile();
 }

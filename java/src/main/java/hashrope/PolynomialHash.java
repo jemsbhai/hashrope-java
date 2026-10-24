@@ -30,6 +30,7 @@ public class PolynomialHash {
     public static final BigInteger MERSENNE_127 = BigInteger.ONE.shiftLeft(127).subtract(BigInteger.ONE);
     private final BigInteger prime;
     private final BigInteger base;
+    private final HashProfile profile;
     private final ConcurrentMap<BigInteger,BigInteger> powerCache = new ConcurrentHashMap<>();
 
     /** Creates a hasher with the 61-bit Mersenne prime and base 131. */
@@ -49,6 +50,7 @@ public class PolynomialHash {
         }
         this.prime = prime;
         this.base = base;
+        this.profile = new HashProfile(prime, base);
         powerCache.put(BigInteger.ZERO,BigInteger.ONE);
         powerCache.put(BigInteger.ONE,base);
     }
@@ -74,6 +76,11 @@ public class PolynomialHash {
      * @return the configured base
      */
     public BigInteger base() { return base; }
+
+    /** Returns the immutable constructor parameters, independently of subclass callbacks.
+     * @return fingerprint profile
+     */
+    public final HashProfile profile() { return profile; }
 
     /**
      * Computes and caches the base raised to an arbitrary-precision exponent.

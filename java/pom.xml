@@ -3,9 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>io.github.jemsbhai</groupId>
   <artifactId>hashrope</artifactId>
-  <version>0.2.2</version>
+  <version>0.3.3</version>
   <name>Hashrope</name>
-  <description>Immutable polynomial hash ropes with Python hashrope 0.2.2 parity.</description>
+  <description>Immutable polynomial hash ropes with exact byte comparison and compressed repetition.</description>
   <url>https://github.com/jemsbhai/hashrope-java</url>
   <licenses>
     <license>

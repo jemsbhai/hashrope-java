@@ -133,11 +133,11 @@ class RopeTest {
         }
     }
 
-    @Test void validatorChecksBalanceButDoesNotRehashOrCheckContext() {
+    @Test void validatorChecksBalanceAndProfileWithoutRehashing() {
         PolynomialHash h=new PolynomialHash(); Node a=new Leaf(new byte[]{1},h);
         Rope.validate(null); Rope.validate(a);
-        Node wrongContext=new Internal(a,new Leaf(new byte[]{2},h),new PolynomialHash(n(31),n(2)));
-        Rope.validate(wrongContext,h);
+        assertThrows(IllegalArgumentException.class, () -> new Internal(a,new Leaf(new byte[]{2},h),new PolynomialHash(n(31),n(2))));
+        assertThrows(IllegalArgumentException.class, () -> Rope.validate(a,new PolynomialHash(n(31),n(2))));
         Node tooHeavy=new Internal(Rope.repeat(a,n(10),h),a,h);
         assertEquals("Left child too heavy: 10/11",assertThrows(AssertionError.class,()->Rope.validate(tooHeavy,h)).getMessage());
         Node tooLight=new Internal(a,Rope.repeat(a,n(10),h),h);
@@ -193,7 +193,8 @@ class RopeTest {
 
     @Test void substringFastPathUsesStoredMetadataAndHandlesHugeRepeats() {
         PolynomialHash h=new PolynomialHash();Node a=new Leaf(new byte[]{97,98},h);
-        assertEquals(a.hashVal(),Rope.substrHash(a,n(0),n(2),new PolynomialHash(n(31),n(2))));
+        assertEquals(a.hashVal(),Rope.substrHash(a,n(0),n(2),new PolynomialHash()));
+        assertThrows(IllegalArgumentException.class, () -> Rope.substrHash(a,n(0),n(2),new PolynomialHash(n(31),n(2))));
         BigInteger q=BigInteger.ONE.shiftLeft(120).add(n(9));Node huge=Rope.repeat(a,q,h);
         BigInteger start=BigInteger.ONE.shiftLeft(110).add(n(1));BigInteger length=BigInteger.ONE.shiftLeft(100).add(n(3));
         BigInteger[] qr=length.divideAndRemainder(n(2));

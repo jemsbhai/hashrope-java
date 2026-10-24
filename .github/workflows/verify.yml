@@ -17,3 +17,8 @@ jobs:
           cache: maven
       - run: mvn -B -ntp -s tools/isolated-settings.xml -gs tools/isolated-settings.xml -f java/pom.xml clean install
       - run: mvn -B -ntp -s tools/isolated-settings.xml -gs tools/isolated-settings.xml -f consumer-smoke/pom.xml clean verify
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -B -m unittest discover -s tests -p test_release_packaging.py -v
+      - run: python -B -m unittest discover -s tests -p test_verify_central_bundle.py -v

@@ -1,8 +1,8 @@
-# Python 0.2.2 → Java parity matrix
+# Hashrope Java API parity matrix
 
 This matrix covers every name in `hashrope.__all__`, public class methods/properties/fields, the module version and the rope module's balance constants. It records the implementation contract and named verification rather than treating the existence of an API as proof of parity. See [COMPATIBILITY.md](COMPATIBILITY.md) for details, assumptions and runtime limits.
 
-**Integrated verification:** 10,608 library JUnit tests passed (including 3,868 arithmetic assertions), plus 2 independent consumer tests; zero failures, errors or skips. All 10,544 golden/error records are exercised. See [VERIFICATION.md](VERIFICATION.md).
+**Historical 0.2.2 verification:** 10,608 library JUnit tests passed (including 3,868 arithmetic assertions), plus 2 independent consumer tests; zero failures, errors or skips. All 10,544 golden/error records are exercised. See [VERIFICATION.md](VERIFICATION.md).
 
 ## Evidence key
 
@@ -28,7 +28,7 @@ Golden result rows are generated exclusively from the SHA256-pinned PyPI wheel. 
 | `MERSENNE_61` | `PolynomialHash.MERSENNE_61` | Exact `2^61-1` BigInteger | A.defaultsAndBytes; D default profile |
 | `MERSENNE_127` | `PolynomialHash.MERSENNE_127` | Exact `2^127-1` BigInteger | A.defaultsAndBytes; D 127-bit profile |
 | `Leaf` | `Leaf` | Immutable owned bytes, weight one, empty-leaf error | R.leafStoresUnsignedBytesAndImmutableMetadata, R.leafRejectsEmptyAndNull; D `rope` / `leaf` errors |
-| `Internal` | `Internal` | Immutable direct join; constructor deliberately does not rebalance | R.internalNodeAndRepetitionMetadata, R.validatorChecksBalanceButDoesNotRehashOrCheckContext; D `rope`, `internal` / `validate` errors |
+| `Internal` | `Internal` | Immutable direct join; constructor deliberately does not rebalance | R.internalNodeAndRepetitionMetadata, R.validatorChecksBalanceAndProfileWithoutRehashing; D `rope`, `internal` / `validate` errors |
 | `RepeatNode` | `RepeatNode` | Immutable repeated child; reps>=2, exact len/weight/hash; nested repeats preserved | R.internalNodeAndRepetitionMetadata, R.repeatsRetainSharingAndUnboundedLogicalSizes; D `rope`, `repeatNode` errors |
 | `Node` | Sealed `Node` interface, with null empty value | Java type adaptation of Optional union; no arbitrary node subclasses | R.emptyRopeAndAccessors; D empty-node cases |
 | `rope_concat` | `Rope.concat` | BB[2/7] persistent join with null identity | R.concatenationAndSplitsPreserveReferencesAndBytes, R.repeatedAppendAndPrependMaintainWeightBalance, R.balancingHandlesRepeatDecompositionAndPersistentSplitHistories; D `rope`; P.seededEditTraces |
@@ -40,14 +40,14 @@ Golden result rows are generated exclusively from the SHA256-pinned PyPI wheel. 
 | `rope_height` | `Rope.height` | Null/leaf→0, repeat child+1, internal max child+1 | R.internalNodeAndRepetitionMetadata; D `rope` / `split` / `sliding` structural heights |
 | `rope_from_bytes` | `Rope.fromBytes` | Empty→null; nonempty→one Leaf | R.emptyRopeAndAccessors; P.seededEditTraces |
 | `rope_to_bytes` | `Rope.toBytes` | Fresh exact byte[]; deliberate checked materialization limit | R.emptyRopeAndAccessors, R.internalNodeAndRepetitionMetadata, R.repeatsRetainSharingAndUnboundedLogicalSizes; D small materialized results; P arbitrary-size failure |
-| `validate_rope` | `Rope.validate(node)` / `Rope.validate(node,h)` | Structural checks and messages; h ignored; hashes not recomputed; explicit AssertionError | R.validatorChecksBalanceButDoesNotRehashOrCheckContext; D `validate` errors; P independent invariants |
+| `validate_rope` | `Rope.validate(node)` / `Rope.validate(node,h)` | Structural checks and messages; supplied h checks profile; hashes not recomputed; explicit AssertionError | R.validatorChecksBalanceAndProfileWithoutRehashing; D `validate` errors; P independent invariants |
 | `SlidingWindow` | `SlidingWindow` | Mutable state and operations mapped below | S; D `sliding`; P.seededStreamingTraces |
 
 Additional public metadata:
 
 | Python name | Java mapping | Verification |
 |---|---|---|
-| `hashrope.__version__` | `Hashrope.VERSION`, value `"0.2.2"` | API |
+| `hashrope.__version__` | `Hashrope.VERSION`, value `"0.3.3"` | API |
 | `hashrope.rope.ALPHA_NUM` | `Rope.ALPHA_NUM`, value 2 | API; BB[2/7] invariant tests |
 | `hashrope.rope.ALPHA_DEN` | `Rope.ALPHA_DEN`, value 7 | API; BB[2/7] invariant tests |
 
@@ -57,7 +57,7 @@ Additional public metadata:
 |---|---|---|
 | `PolynomialHash()` | `new PolynomialHash()` | Default prime/base; A.defaultsAndBytes |
 | `PolynomialHash(prime,base)` | `(BigInteger,BigInteger)` and `(long,long)` constructors | Exact base interval; valid low/high bases; invalid 1, p and negative; D constructor errors |
-| Optional prime/base arguments | Explicit full constructor for nondefault pair | Same selected parameters; no separate profile abstraction |
+| Optional prime/base arguments | Explicit full constructor for nondefault pair | Same selected parameters; immutable HashProfile identity |
 | `.prime` | `.prime()` | Read-only exact modulus; A.defaultsAndBytes |
 | `.base` | `.base()` | Read-only exact base; A.defaultsAndBytes |
 | `.power(n)` | `.power(BigInteger)` / `.power(long)` | Zero/one, cached repeat, huge positive/negative exponent, invertible/noninvertible negative exponent; A.powers; D `power` / power errors |
@@ -123,7 +123,7 @@ Java-only conveniences are additive: `Leaf(byte[])` uses default hash parameters
 | `toBytes` outside int range | Deliberate ArithmeticException, no truncation | R.repeatsRetainSharingAndUnboundedLogicalSizes; P.arbitraryPrecisionRepeatsAndSplits |
 | BigInteger supported magnitude | JDK reference range excludes endpoints +/-2^Integer.MAX_VALUE; arithmetic/allocation failures can occur at implementation limits | Explicit [representation boundary](COMPATIBILITY.md#bytes-integer-sizes-and-ownership); no parity claim beyond it |
 | Heap/stack exhaustion | JVM resource limits remain; not numerically equivalent to Python limits | Documented representation boundary; not tested through deliberate resource exhaustion |
-| Hash context mismatch | Not rejected; stored metadata kept | R.validatorChecksBalanceButDoesNotRehashOrCheckContext |
+| Hash context mismatch | Not rejected; stored metadata kept | R.validatorChecksBalanceAndProfileWithoutRehashing |
 | Validator hash verification | Deliberately absent, matching Python | Same; P separately verifies hashes independently |
 | Negative and oversized split positions | Clamp endpoints | R concat/split test; D split fixtures; P.seededEditTraces |
 | Invalid substring bounds | Preserve shape-dependent Python slicing/periodic behavior | R.outOfDomainSubstringInputsRetainPythonShapeDependentResults; D `substr` |
@@ -173,7 +173,7 @@ Property tests use `(2^61-1,131)`, `(2^127-1,257)`, `(31,3)` and `(127,17)` with
 | `arbitraryPrecisionRepeatsAndSplits` | Repetition count above 2^103; split/rejoin and substring near enormous logical end; independent modular repetition oracle; checked materialization rejection |
 | `byteOwnershipAndSubstringQueriesPreserveExistingGraph` | Input and returned-array mutations, retained graph identities/metadata, many substring queries, raw UTF-8 continuation bytes |
 
-## Final verification
+## Historical 0.2.2 final verification
 
 - Library clean install and separate consumer clean verify: **passed**, 10,608 + 2 JUnit tests, no failures/errors/skips; 3,868 arithmetic assertions execute within the library suite.
 - Fresh golden fixture regeneration: byte-identical manifest and both TSV files; 10,544 oracle records.
@@ -185,3 +185,14 @@ Property tests use `(2^61-1,131)`, `(2^127-1,257)`, `(31,3)` and `(127,17)` with
 - GitHub destination: [jemsbhai/hashrope-java](https://github.com/jemsbhai/hashrope-java), public as requested. Final pushed commit identity is verified separately at delivery to avoid a self-referential commit hash.
 
 See [VERIFICATION.md](VERIFICATION.md) for commands, evidence and deliberate unrun/excluded cases. Intentional language/termination boundaries above remain part of the contract even after all checks pass.
+
+## 0.3.3 exact and profile additions
+
+| Python / Rust feature | Java API | Verification |
+|---|---|---|
+| Exact content equality | Rope.equal | ExactComparisonTest collision, shape, profile, repeat, DAG and byte oracles |
+| Exact byte LCP | Rope.lcp | First/last-byte mismatches and periodic witnesses |
+| Exact checked ranges | Rope.rangeEqual / Rope.rangeLcp, BigInteger and long overloads | Nonzero starts, boundary rejection and arbitrary logical lengths |
+| Immutable profile provenance | HashProfile, PolynomialHash.profile, Node.profile | Direct constructors, identity edit shortcuts, hash queries and streaming guards |
+
+The historical arithmetic fixtures remain pinned to Python 0.2.2. Safety guards deliberately reject mixed profiles that older versions silently accepted; equal-profile subclass dispatch remains covered by the original tests. See RELEASE-0.3.3.md for current validation.

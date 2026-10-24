@@ -12,7 +12,7 @@ class ReleasePackagingTest(unittest.TestCase):
         license_bytes = (ROOT/'LICENSE').read_bytes()
         for classifier in ('', '-sources', '-javadoc'):
             with self.subTest(classifier=classifier):
-                with zipfile.ZipFile(ROOT/f'java/target/hashrope-0.2.2{classifier}.jar') as jar:
+                with zipfile.ZipFile(ROOT/f'java/target/hashrope-0.3.3{classifier}.jar') as jar:
                     self.assertIn('META-INF/LICENSE', jar.namelist(), 'Distribution must carry the MIT notice')
                     self.assertEqual(license_bytes, jar.read('META-INF/LICENSE'))
 

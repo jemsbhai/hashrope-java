@@ -16,6 +16,7 @@ import java.math.BigInteger;
 public class SlidingWindow {
     /** Hash calculator; corresponds to Python's {@code h} slot. */
     public PolynomialHash h;
+    private final HashProfile profile;
     /** Retained bytes after eviction; corresponds to {@code d_max}. */
     public BigInteger dMax;
     /** Extra capacity; corresponds to {@code m_max}. */
@@ -97,6 +98,7 @@ public class SlidingWindow {
             throw new IllegalArgumentException("m_max must be >= 1, got " + mMax);
         }
         this.h = new PolynomialHash(prime, base);
+        this.profile = h.profile();
         this.dMax = dMax;
         this.mMax = mMax;
         this.W = dMax.add(mMax);
@@ -155,6 +157,7 @@ public class SlidingWindow {
     public BigInteger currentHash() {
         // Match Python: the overridable length lookup precedes reading mutable state.
         BigInteger windowLength = windowLen();
+        checkProfile();
         BigInteger windowHash = Rope.hash(rWindow);
         return h.hashConcat(hPrefix, windowLength, windowHash);
     }
@@ -171,11 +174,13 @@ public class SlidingWindow {
      * @param data literal bytes, or null
      */
     public void appendBytes(byte[] data) {
+        checkProfile();
         if (data == null || data.length == 0) {
             return;
         }
         // Hash callbacks can change the current root while the leaf is constructed.
         Leaf leaf = new Leaf(data, h);
+        checkProfile();
         rWindow = Rope.concat(rWindow, leaf, h);
         pos = pos.add(BigInteger.valueOf(data.length));
         evict();
@@ -194,6 +199,7 @@ public class SlidingWindow {
      */
     public void appendCopy(BigInteger offset, BigInteger length) {
         BigInteger windowLength = windowLen();
+        checkProfile();
         if (offset.compareTo(pos) > 0) {
             throw new IllegalArgumentException("Invalid copy: offset " + offset
                     + " exceeds decoded length " + pos);
@@ -243,6 +249,7 @@ public class SlidingWindow {
     }
 
     private void evict() {
+        checkProfile();
         BigInteger windowLength = Rope.len(rWindow);
         if (windowLength.compareTo(W) <= 0) {
             return;
@@ -252,5 +259,12 @@ public class SlidingWindow {
         hPrefix = h.hashConcat(hPrefix, Rope.len(split.left()), Rope.hash(split.left()));
         lPrefix = lPrefix.add(excess);
         rWindow = split.right();
+    }
+
+    private void checkProfile() {
+        if (!profile.equals(h.profile())) {
+            throw new IllegalArgumentException("SlidingWindow hash parameters changed; create a new window");
+        }
+        HashProfile.require(rWindow, h);
     }
 }
