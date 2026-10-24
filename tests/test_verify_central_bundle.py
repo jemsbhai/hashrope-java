@@ -16,10 +16,10 @@ VERIFIER = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(VERIFIER)
 
 FINGERPRINT = '3C8AD6A286A2FB052BF081B29D6C450FD82C949C'
-PREFIX = 'io/github/jemsbhai/hashrope/0.3.3/'
-NAMES = ('hashrope-0.3.3.pom', 'hashrope-0.3.3.jar', 'hashrope-0.3.3-sources.jar', 'hashrope-0.3.3-javadoc.jar')
+PREFIX = 'io/github/jemsbhai/hashrope/0.3.4/'
+NAMES = ('hashrope-0.3.4.pom', 'hashrope-0.3.4.jar', 'hashrope-0.3.4-sources.jar', 'hashrope-0.3.4-javadoc.jar')
 LICENSE = b'MIT License\nCopyright (c) 2026 Muntaser Syed\nPermission is hereby granted, free of charge, to any person obtaining a copy\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND\n'
-POM = b'''<project xmlns="http://maven.apache.org/POM/4.0.0"><modelVersion>4.0.0</modelVersion><groupId>io.github.jemsbhai</groupId><artifactId>hashrope</artifactId><version>0.3.3</version><name>Hashrope</name><description>Polynomial hash ropes</description><url>https://github.com/jemsbhai/hashrope-java</url><licenses><license><name>MIT</name><url>https://opensource.org/licenses/MIT</url></license></licenses><developers><developer><id>jemsbhai</id><name>Muntaser Syed</name></developer></developers><scm><url>https://github.com/jemsbhai/hashrope-java</url><connection>scm:git:https://github.com/jemsbhai/hashrope-java.git</connection><developerConnection>scm:git:ssh://git@github.com/jemsbhai/hashrope-java.git</developerConnection></scm><dependencies><dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><version>5.11.4</version><scope>test</scope></dependency></dependencies></project>'''
+POM = b'''<project xmlns="http://maven.apache.org/POM/4.0.0"><modelVersion>4.0.0</modelVersion><groupId>io.github.jemsbhai</groupId><artifactId>hashrope</artifactId><version>0.3.4</version><name>Hashrope</name><description>Polynomial hash ropes</description><url>https://github.com/jemsbhai/hashrope-java</url><licenses><license><name>MIT</name><url>https://opensource.org/licenses/MIT</url></license></licenses><developers><developer><id>jemsbhai</id><name>Muntaser Syed</name></developer></developers><scm><url>https://github.com/jemsbhai/hashrope-java</url><connection>scm:git:https://github.com/jemsbhai/hashrope-java.git</connection><developerConnection>scm:git:ssh://git@github.com/jemsbhai/hashrope-java.git</developerConnection></scm><dependencies><dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><version>5.11.4</version><scope>test</scope></dependency></dependencies></project>'''
 
 
 def jar(entries):
@@ -66,7 +66,7 @@ class BundleTest(unittest.TestCase):
 
     def test_valid_bundle_reports_only_public_metadata_and_checks_all_signatures(self):
         report = self.verify()
-        self.assertEqual('io.github.jemsbhai:hashrope:0.3.3', report['coordinates'])
+        self.assertEqual('io.github.jemsbhai:hashrope:0.3.4', report['coordinates'])
         self.assertEqual(4, len(self.calls))
         self.assertEqual(4, len(report['artifacts']))
         self.assertEqual(24, report['entry_count'])
@@ -112,7 +112,7 @@ class BundleTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError,'checksum'): self.verify(entries)
 
     def test_coordinates_are_exact(self):
-        data=payloads(); data[NAMES[0]]=POM.replace(b'<version>0.3.3</version>',b'<version>0.2.3</version>')
+        data=payloads(); data[NAMES[0]]=POM.replace(b'<version>0.3.4</version>',b'<version>0.2.3</version>')
         with self.assertRaisesRegex(ValueError,'coordinates'): self.verify(bundle_entries(data))
 
     def test_required_pom_metadata_is_not_blank(self):

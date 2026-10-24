@@ -47,7 +47,7 @@ Additional public metadata:
 
 | Python name | Java mapping | Verification |
 |---|---|---|
-| `hashrope.__version__` | `Hashrope.VERSION`, value `"0.3.3"` | API |
+| `hashrope.__version__` | `Hashrope.VERSION`, value `"0.3.4"` | API |
 | `hashrope.rope.ALPHA_NUM` | `Rope.ALPHA_NUM`, value 2 | API; BB[2/7] invariant tests |
 | `hashrope.rope.ALPHA_DEN` | `Rope.ALPHA_DEN`, value 7 | API; BB[2/7] invariant tests |
 
@@ -195,4 +195,8 @@ See [VERIFICATION.md](VERIFICATION.md) for commands, evidence and deliberate unr
 | Exact checked ranges | Rope.rangeEqual / Rope.rangeLcp, BigInteger and long overloads | Nonzero starts, boundary rejection and arbitrary logical lengths |
 | Immutable profile provenance | HashProfile, PolynomialHash.profile, Node.profile | Direct constructors, identity edit shortcuts, hash queries and streaming guards |
 
-The historical arithmetic fixtures remain pinned to Python 0.2.2. Safety guards deliberately reject mixed profiles that older versions silently accepted; equal-profile subclass dispatch remains covered by the original tests. See RELEASE-0.3.3.md for current validation.
+The historical arithmetic fixtures remain pinned to Python 0.2.2. Safety guards deliberately reject mixed profiles that older versions silently accepted; equal-profile subclass dispatch remains covered by the original tests. See [RELEASE-0.3.3.md](RELEASE-0.3.3.md) for those safety changes and [RELEASE-0.3.4.md](RELEASE-0.3.4.md) for the current parity-only release.
+
+## 0.3.4 parity-only release
+
+Java API behavior, polynomial fingerprints and comparison algorithms are unchanged from 0.3.3; only the reported package version changes. The sibling Rust package includes measured LCP/concat optimizations that have not been ported to Java. Rust evidence still includes an approximately 2% pinned LCP signal and mixed 100 KB comparison estimates; it establishes neither a universal speedup nor cross-language performance equivalence. See [the 0.3.4 release notes](RELEASE-0.3.4.md).
